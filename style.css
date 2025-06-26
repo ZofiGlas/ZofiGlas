@@ -7,13 +7,54 @@ body {
   color: #222;
 }
 
-header {
-  background: url("header-bild.jpg") center/cover no-repeat;
+header.hero {
+  background: url("header-bild.JPG") center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px);
-  padding: 2rem;
   text-align: center;
+}
+
+header.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dunkler Filter für bessere Lesbarkeit */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  background: #4fb3bf;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #3a939f;
+}
+
 }
 }
 
