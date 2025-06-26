@@ -1,14 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to right, #f9f9f9, #e9ecef);
-  color: #222;
-}
-
 header.hero {
-  background: url("header-bild.JPG") center/cover no-repeat;
+  background: url("header-bild.jpg") center/cover no-repeat;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -16,20 +7,6 @@ header.hero {
   position: relative;
   color: white;
   text-align: center;
-}
-
-.logo {
-  height: 60px;
-  width: auto;
-  display: block;
-  margin: 0;
-}
-
-.logo-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
 }
 
 header.hero::before {
@@ -67,50 +44,4 @@ header.hero::before {
 }
 .btn:hover {
   background: #3a939f;
-}
-
-}
-}
-
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #333;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #4fb3bf;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-nav a:hover {
-  color: #222;
-}
-
-section {
-  padding: 3rem 1rem;
-  max-width: 960px;
-  margin: auto;
-}
-
-.gallery-grid img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.gallery-grid img:hover {
-  transform: scale(1.03);
-}
-
-footer {
-  background: #f1f1f1;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #777;
 }
