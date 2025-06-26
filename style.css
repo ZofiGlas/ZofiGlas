@@ -8,7 +8,7 @@ body {
 }
 
 header {
-  background: url("deinbild.jpg") center/cover no-repeat;
+  background: url("header-bild.jpg") center/cover no-repeat;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
   backdrop-filter: blur(4px);
