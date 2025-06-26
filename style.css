@@ -18,6 +18,20 @@ header.hero {
   text-align: center;
 }
 
+.logo {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin: 0;
+}
+
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
 header.hero::before {
   content: "";
   position: absolute;
