@@ -163,13 +163,13 @@ footer {
   
 .ueber-uns-container {
   display: flex;
-  align-items: center; /* sorgt für gleiche Höhe */
+  align-items: center; /*
   margin-left: 20px;
 }
 
 .logo-links {
-  height: 80px; /* je nach Wunsch anpassen */
-  margin-right: 20px; /* Abstand zum Text */
+  height: 80px; /*
+  margin-right: 20px;
 }
 
 .ueber-uns-inhalt {
