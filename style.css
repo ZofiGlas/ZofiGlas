@@ -114,3 +114,10 @@ footer {
   margin: 0 1rem 1rem;
   font-size: 0.95rem;
 }
+.stadtbanner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}
