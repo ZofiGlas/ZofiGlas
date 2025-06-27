@@ -160,7 +160,8 @@ footer {
 
 @keyframes einblenden {
   from { opacity: 0; transform: scale(0.9); }
-  
+  to   { opacity: 1; transform: scale(1); }
+}
 .ueberuns-bereich {
   display: flex;
   align-items: center;
@@ -172,7 +173,4 @@ footer {
   max-height: 100px;
   width: auto;
   display: block;
-}
-
-  to   { opacity: 1; transform: scale(1); }
 }
