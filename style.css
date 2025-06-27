@@ -78,7 +78,7 @@ footer {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* linksbündig */
+  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -89,7 +89,6 @@ footer {
   height: 50px;
   z-index: 1000;
 }
-
 
 /* Modal */
 .modal {
