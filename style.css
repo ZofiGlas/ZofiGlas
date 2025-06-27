@@ -83,8 +83,13 @@ footer {
 }
 
 .footer-logo {
-  height: 400px;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  height: 50px;
+  z-index: 1000;
 }
+
 
 /* Modal */
 .modal {
