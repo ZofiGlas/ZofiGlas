@@ -9,6 +9,7 @@
 </head>
 <body>
   <header class="hero">
+    <img src="zofingen-banner.png" alt="Stadtbanner" class="stadt-banner" />
     <div class="hero-text">
       <h1>ZofiGlas</h1>
       <p>Glasdesign mit Charakter – Qualität, die begeistert.</p>
@@ -18,8 +19,7 @@
 
   <section id="about">
     <h2>Über uns</h2>
-    <p>Ob beschädigte Fenster, zerbrochene Türen oder Undichtigkeiten – wir reparieren Gläser schnell, sauber und zuverlässig bei Ihnen zu Hause oder im Betrieb.
-    <p>Wir gestalten auch individuelle Glaslösungen für moderne Wohn- und Geschäftsräume. Stilvoll. Präzise. ZofiGlas.</p>
+    <p>Wir gestalten individuelle Glaslösungen für moderne Wohn- und Geschäftsräume. Stilvoll. Präzise. ZofiGlas.</p>
   </section>
 
   <footer>
@@ -67,27 +67,3 @@
   </script>
 </body>
 </html>
-<script>
-  function zeigePopup() {
-    document.getElementById("kontaktPopup").style.display = "flex";
-  }
-
-  function schliessePopup() {
-    document.getElementById("kontaktPopup").style.display = "none";
-    document.getElementById("bestaetigung").classList.add("versteckt");
-  }
-
-  function zeigeBestaetigung(event) {
-    event.preventDefault();
-    document.querySelector("#kontaktPopup form").reset();
-    document.getElementById("bestaetigung").classList.remove("versteckt");
-  }
-
-  window.onclick = function (event) {
-    const popup = document.getElementById("kontaktPopup");
-    if (event.target === popup) {
-      popup.style.display = "none";
-      document.getElementById("bestaetigung").classList.add("versteckt");
-    }
-  };
-</script>
