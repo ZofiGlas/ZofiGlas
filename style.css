@@ -149,6 +149,9 @@ footer {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
+  resize: vertical;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .modal form button {
