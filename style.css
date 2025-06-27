@@ -46,7 +46,6 @@ header.hero::before {
   padding: 0.8rem 1.5rem;
   background: #4fb3bf;
   color: white;
-  text-decoration: none;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -71,7 +70,7 @@ footer {
   color: #777;
 }
 
-/* Modal-Styling */
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -134,6 +133,18 @@ footer {
 }
 .modal form button:hover {
   background: #3a939f;
+}
+
+.bestaetigung {
+  margin-top: 1rem;
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.versteckt {
+  display: none;
 }
 
 @keyframes einblenden {
