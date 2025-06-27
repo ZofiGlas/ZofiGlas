@@ -25,17 +25,18 @@
     <p>© 2025 ZofiGlas</p>
   </footer>
 
-  <!-- Pop-up-Kontaktformular -->
+  <!-- Pop-up Kontaktformular -->
   <div id="kontaktPopup" class="modal">
     <div class="modal-inhalt">
       <span class="schliessen" onclick="schliessePopup()">&times;</span>
       <h2>Besichtigungstermin vereinbaren</h2>
-      <form>
+      <form onsubmit="zeigeBestaetigung(event)">
         <input type="text" placeholder="Dein Name" required />
         <input type="email" placeholder="E-Mail-Adresse" required />
         <textarea placeholder="Deine Nachricht" rows="5" required></textarea>
         <button type="submit">Absenden</button>
       </form>
+      <p id="bestaetigung" class="bestaetigung versteckt">Vielen Dank! Deine Nachricht wurde erfolgreich übermittelt.</p>
     </div>
   </div>
 
@@ -46,12 +47,20 @@
 
     function schliessePopup() {
       document.getElementById("kontaktPopup").style.display = "none";
+      document.getElementById("bestaetigung").classList.add("versteckt");
     }
 
-    window.onclick = function (event) {
+    function zeigeBestaetigung(event) {
+      event.preventDefault();
+      document.querySelector("#kontaktPopup form").reset();
+      document.getElementById("bestaetigung").classList.remove("versteckt");
+    }
+
+    window.onclick = function(event) {
       const popup = document.getElementById("kontaktPopup");
       if (event.target === popup) {
         popup.style.display = "none";
+        document.getElementById("bestaetigung").classList.add("versteckt");
       }
     };
   </script>
