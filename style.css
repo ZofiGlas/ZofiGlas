@@ -160,6 +160,7 @@ footer {
 
 @keyframes einblenden {
   from { opacity: 0; transform: scale(0.9); }
+  
   .logo-fix {
   position: fixed;
   bottom: 10px;
