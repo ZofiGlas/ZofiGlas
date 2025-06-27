@@ -82,11 +82,6 @@ footer {
   gap: 1rem;
 }
 
-.mitten-logo {
-  height: 10px;
-  width: auto;
-}
-
 .modal {
   display: none;
   position: fixed;
