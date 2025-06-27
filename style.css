@@ -163,10 +163,10 @@ footer {
   
   .logo-fix {
   position: fixed;
-  bottom: 5px;
-  left: 5px;
-  height: 1cm;
-  width: 1cm;
+  bottom: 10px;
+  left: 10px;
+  height: 40px;
+  width: 40px;
   z-index: 999;
 }
 
