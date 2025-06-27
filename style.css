@@ -69,6 +69,22 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
+footer {
+  position: relative;
+  padding: 2rem;
+  background-color: #f3f3f3;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* linksbündig */
+  gap: 1rem;
+}
+
+.footer-logo {
+  height: 400px;
+}
 
 /* Modal */
 .modal {
