@@ -34,8 +34,8 @@ header.hero::before {
 }
 
 .logo {
-  height: 108px;
-  width: auto;
+  max-width: 180px;
+  height: auto;
 }
 
 .hero-text {
