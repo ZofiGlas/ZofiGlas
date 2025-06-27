@@ -162,15 +162,23 @@ footer {
   from { opacity: 0; transform: scale(0.9); }
   to   { opacity: 1; transform: scale(1); }
 }
-.ueberuns-bereich {
+
+.ueberuns-container {
   display: flex;
-  align-items: center;
-  padding: 2rem;
+  align-items: flex-start;
   gap: 2rem;
+  padding: 3rem 1rem;
+  max-width: 960px;
+  margin: auto;
 }
 
-.logo-links img {
-  max-height: 150px;
+.ueberuns-logo img {
+  max-height: 100px;
   width: auto;
-  display: block;
+  margin-left: 0;
 }
+
+.ueberuns-inhalt {
+  flex: 1;
+}
+
