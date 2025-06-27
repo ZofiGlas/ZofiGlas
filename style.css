@@ -9,7 +9,7 @@ body {
 
 header.hero {
   background: url("zofingen-banner.png") center/cover no-repeat;
-  height: 90vh;
+  height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
