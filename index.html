@@ -44,6 +44,18 @@
     form.scrollIntoView({ behavior: "smooth" });
   }
 </script>
+<div id="kontaktPopup" class="modal">
+  <div class="modal-inhalt">
+    <span class="schliessen" onclick="schliessePopup()">&times;</span>
+    <h2>Besichtigungstermin vereinbaren</h2>
+    <form>
+      <input type="text" placeholder="Dein Name" required>
+      <input type="email" placeholder="E-Mail-Adresse" required>
+      <textarea placeholder="Deine Nachricht" rows="5" required></textarea>
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
+</div>
 
 </body>
 </html>
