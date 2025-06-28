@@ -173,7 +173,7 @@ footer {
 }
 
 .ueberuns-logo {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
