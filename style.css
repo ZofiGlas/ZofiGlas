@@ -172,10 +172,11 @@ footer {
   margin: auto;
 }
 
-.ueberuns-logo img {
-  max-height: 100px;
-  width: auto;
-  margin-left: 0;
+.ueberuns-logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .ueberuns-inhalt {
