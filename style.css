@@ -163,23 +163,23 @@ footer {
   to   { opacity: 1; transform: scale(1); }
 }
 
-.ueberuns-container {
+.ueberuns-bereich {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 1rem;
   gap: 2rem;
-  padding: 3rem 1rem;
-  max-width: 980px;
-  margin: auto;
 }
 
-.ueberuns-logo {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.logo-links img {
+  max-height: 100px;
+  width: auto;
+  display: block;
 }
 
-.ueberuns-inhalt {
+.ueberuns-text {
   flex: 1;
 }
+
 
