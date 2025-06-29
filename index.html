@@ -40,7 +40,7 @@
       <form action="https://formsubmit.co/zofiglas%40gmx.ch" method="POST">
         <input type="text" name="name" placeholder="Dein Name" required />
         <input type="email" name="email" placeholder="E-Mail-Adresse" required />
-        <input type="date" name="datum" required>
+        <input type="date" name="datum" id="terminDatum" required>
         <input type="time" name="uhrzeit" min="08:00" max="19:00" required>
         <textarea name="nachricht" placeholder="Deine Nachricht" rows="5" required></textarea>
 
@@ -69,6 +69,10 @@
       }
     }
   </script>
+  29.06.2025
+  const heute = new Date().toISOString().split('T')[0];
+  document.getElementById("terminDatum").setAttribute("min", heute);
+</script>
 
 </body>
 </html>
