@@ -92,16 +92,16 @@
   };
 
   // Flatpickr initialisieren: nur Montag–Freitag ab heute
-  flatpickr("#terminDatum", {
-    dateFormat: "Y-m-d",
-    minDate: "today",
-    disable: [
-      function (date) {
-        return (date.getDay() === 0 || date.getDay() === 6); // Wochenende blockieren
-      }
-    ],
-    locale: "de"
-  });
+flatpickr("#terminDatum", {
+  dateFormat: "Y-m-d",
+  minDate: "today", // verhindert Auswahl vergangener Tage
+  disable: [
+    function (date) {
+      return (date.getDay() === 0 || date.getDay() === 6); // Wochenende deaktivieren
+    }
+  ],
+  locale: "de"
+});
 </script>
 
 </body>
