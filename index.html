@@ -118,23 +118,20 @@
 
   // Mindestdatum setzen & Wochenende blockieren
   window.onload = function () {
-    const heute = new Date().toISOString().split("T")[0];
-    const dateField = document.getElementById("terminDatum");
-    dateField.setAttribute("min", heute);
+  const heute = new Date().toISOString().split("T")[0];
+  const dateField = document.getElementById("terminDatum");
+  dateField.setAttribute("min", heute);
 
-    dateField.addEventListener("keydown", function (e) {
-      e.preventDefault(); // verhindert manuelles Tippen
-    });
+  dateField.addEventListener("change", function () {
+    const ausgewählt = new Date(this.value);
+    const tag = ausgewählt.getDay(); // 0 = So, 6 = Sa
+    if (tag === 0 || tag === 6) {
+      alert("Am Wochenende sind leider keine Termine möglich.");
+      this.value = "";
+    }
+  });
+};
 
-    dateField.addEventListener("change", function () {
-      const ausgewählt = new Date(this.value);
-      const tag = ausgewählt.getDay(); // 0 = Sonntag, 6 = Samstag
-      if (tag === 0 || tag === 6) {
-        alert("Am Wochenende sind leider keine Termine möglich.");
-        this.value = "";
-      }
-    });
-  };
 </script>
 
 
