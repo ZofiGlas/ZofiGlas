@@ -181,5 +181,38 @@ footer {
 .ueberuns-text {
   flex: 1;
 }
+@media (max-width: 768px) {
+  .ueberuns-bereich {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-links {
+    margin-bottom: 1rem;
+    padding-left: 0;
+  }
+
+  .logo-links img {
+    max-height: 100px;
+  }
+
+  .modal-inhalt {
+    padding: 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 
 
