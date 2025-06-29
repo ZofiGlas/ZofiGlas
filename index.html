@@ -41,7 +41,10 @@
         <input type="text" name="name" placeholder="Dein Name" required />
         <input type="email" name="email" placeholder="E-Mail-Adresse" required />
         <input type="date" name="datum" id="terminDatum" required>
-        <input type="time" name="uhrzeit" min="08:00" max="19:00" step="900" value="09:00" required>
+        <input type="time" name="uhrzeit"
+       id="zeitFeld"
+       min="08:00" max="19:00"
+       step="900" value="09:00" required>
         <textarea name="nachricht" placeholder="Deine Nachricht" rows="5" required></textarea>
 
         <input type="hidden" name="_captcha" value="false">
@@ -69,10 +72,22 @@
     }
   };
 
-  window.onload = function () {
-    const heute = new Date().toISOString().split('T')[0];
-    document.getElementById("terminDatum").setAttribute("min", heute);
-  };
+window.onload = function () {
+  const heute = new Date().toISOString().split('T')[0];
+  const dateField = document.getElementById("terminDatum");
+  dateField.setAttribute("min", heute);
+
+  // Wochentags-Filter: Sa/So blockieren
+  dateField.addEventListener("input", function () {
+    const ausgewählt = new Date(this.value);
+    const tag = ausgewählt.getDay(); // 0 = Sonntag, 6 = Samstag
+    if (tag === 0 || tag === 6) {
+      alert("Bitte wähle einen Werktag (Mo–Fr) aus.");
+      this.value = ""; // Reset Feld
+    }
+  });
+};
+
 </script>
 
 </body>
