@@ -48,26 +48,7 @@
   function zeigePopup() {
     document.getElementById("kontaktPopup").style.display = "flex";
   }
-  //
 </script>
-
-    function schliessePopup() {
-      document.getElementById("kontaktPopup").style.display = "none";
-      document.getElementById("bestaetigung").classList.add("versteckt");
-    }
-
-    function zeigeBestaetigung(event) {
-      event.preventDefault();
-      document.querySelector("#kontaktPopup form").reset();
-      document.getElementById("bestaetigung").classList.remove("versteckt");
-    }
-
-    window.onclick = function(event) {
-      const popup = document.getElementById("kontaktPopup");
-      if (event.target === popup) {
-        popup.style.display = "none";
-        document.getElementById("bestaetigung").classList.add("versteckt");
-      }
   </script>
 </body>
 </html>
