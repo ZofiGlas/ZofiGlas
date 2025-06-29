@@ -78,21 +78,27 @@
     }
   };
 
-window.onload = function () {
-  const heute = new Date().toISOString().split('T')[0];
-  const dateField = document.getElementById("terminDatum");
-  dateField.setAttribute("min", heute);
+<script>
+  window.onload = function () {
+    const heute = new Date().toISOString().split('T')[0];
+    const dateField = document.getElementById("terminDatum");
+    dateField.setAttribute("min", heute);
 
-  dateField.addEventListener("input", function () {
-    const ausgewählt = new Date(this.value);
-    const tag = ausgewählt.getDay(); // 0 = Sonntag, 6 = Samstag
-    if (tag === 0 || tag === 6) {
-      alert("Bitte wähle einen Werktag (Mo–Fr) aus.");
-      this.value = ""; // Reset Feld
-    }
-  });
-};
+    // Blockiere Sa/So schon beim Öffnen
+    dateField.addEventListener("keydown", function (e) {
+      e.preventDefault(); // Verhindert Tippen
+    });
 
+    // Prüfen auf Wochenendtage
+    dateField.addEventListener("change", function () {
+      const ausgewählt = new Date(this.value);
+      const tag = ausgewählt.getDay();
+      if (tag === 0 || tag === 6) {
+        alert("Am Wochenende sind leider keine Termine möglich.");
+        this.value = "";
+      }
+    });
+  };
 </script>
 
 </body>
