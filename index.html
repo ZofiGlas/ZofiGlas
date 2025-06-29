@@ -3,84 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZofiGlas</title>
+  <title>Vielen Dank – ZofiGlas</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      text-align: center;
+      padding: 4rem 1rem;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e9ecef);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+    .btn-zurueck {
+      padding: 0.8rem 1.5rem;
+      background: #4fb3bf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-zurueck:hover {
+      background: #3a939f;
+    }
+    .logo {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-text">
-      <h1>ZofiGlas</h1>
-      <p>Glasdesign mit Charakter – Qualität, die begeistert.</p>
-      <button class="btn" onclick="zeigePopup()">Besichtigungstermin</button>
-    </div>
-  </header>
-  
-<section class="ueberuns-bereich">
-  <div class="logo-links">
-    <img src="logo-bild-svg.jpg" alt="Logo">
-  </div>
-  <div class="ueberuns-text">
-    <h2>Über uns</h2>
-    <p>Ihr Glas ist gesprungen? Wir kommen vorbei. ZofiGlas steht für persönliche Serviceeinsätze in Zofingen und Umgebung – präzise, ehrlich und termingerecht.</p>
-    <p>
-    <p>Wir gestalten auch individuelle Glaslösungen für moderne Wohn- und Geschäftsräume.</p>
-  </div>
-</section>
-
-  <footer>
-    <p>© 2025 ZofiGlas Caner Cagaltay</p>
-  </footer>
-
-  <div id="kontaktPopup" class="modal">
-    <div class="modal-inhalt">
-     <span class="schliessen" onclick="schliessePopup()">&times;</span>
-      <h2>Besichtigungstermin vereinbaren</h2>
-      <form action="https://formsubmit.co/zofiglas%40gmx.ch" method="POST">
-  <input type="text" name="name" placeholder="Dein Name" required>
-  <input type="email" name="email" placeholder="E-Mail-Adresse" required>
-  <textarea name="nachricht" placeholder="Deine Nachricht" rows="5" required></textarea>
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Neue Nachricht von ZofiGlas-Kontaktformular">
-  <input type="hidden" name="_next" value="https://zofiglas.github.io/ZofiGlas/danke.html">
-
-  <button type="submit">Absenden</button>
-</form>
-
-      <p id="bestaetigung" class="bestaetigung versteckt">Vielen Dank! Deine Nachricht wurde erfolgreich übermittelt.</p>
-    </div>
-  </div>
-
-<script>
-  function zeigePopup() {
-    document.getElementById("kontaktPopup").style.display = "flex";
-  }
-</script>
-  <script>
-  function zeigePopup() {
-    document.getElementById("kontaktPopup").style.display = "flex";
-  }
-
-  function schliessePopup() {
-    document.getElementById("kontaktPopup").style.display = "none";
-    document.getElementById("bestaetigung").classList.add("versteckt");
-  }
-
-  function zeigeBestaetigung(event) {
-    event.preventDefault();
-    document.querySelector("#kontaktPopup form").reset();
-    document.getElementById("bestaetigung").classList.remove("versteckt");
-  }
-
-  // Schließen durch Klick außerhalb des Formulars
-  window.onclick = function (event) {
-    const popup = document.getElementById("kontaktPopup");
-    if (event.target === popup) {
-      popup.style.display = "none";
-      document.getElementById("bestaetigung").classList.add("versteckt");
-    }
-  };
-</script>
-
+  <img src="logo-bild-svg.jpg" alt="ZofiGlas Logo" class="logo">
+  <h1>Vielen Dank!</h1>
+  <p>Deine Nachricht wurde erfolgreich übermittelt.<br>Wir melden uns schnellstmöglich bei dir.</p>
+  <a href="index.html" class="btn-zurueck">Zurück zur Startseite</a>
 </body>
 </html>
