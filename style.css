@@ -253,6 +253,8 @@ label {
   background-repeat: no-repeat;
   background-position: right 0.8rem center;
   background-size: 1.2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 select option[hidden] {
