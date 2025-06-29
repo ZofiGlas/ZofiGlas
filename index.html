@@ -69,7 +69,6 @@
     }
   };
 
-  // Mindestdatum (heute) für das Datum-Feld setzen
   window.onload = function () {
     const heute = new Date().toISOString().split('T')[0];
     document.getElementById("terminDatum").setAttribute("min", heute);
