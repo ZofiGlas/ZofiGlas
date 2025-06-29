@@ -83,13 +83,10 @@
     const heute = new Date().toISOString().split('T')[0];
     const dateField = document.getElementById("terminDatum");
     dateField.setAttribute("min", heute);
-
-    // Blockiere Sa/So schon beim Öffnen
     dateField.addEventListener("keydown", function (e) {
       e.preventDefault(); // Verhindert Tippen
     });
 
-    // Prüfen auf Wochenendtage
     dateField.addEventListener("change", function () {
       const ausgewählt = new Date(this.value);
       const tag = ausgewählt.getDay();
