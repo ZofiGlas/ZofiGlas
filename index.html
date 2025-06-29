@@ -53,26 +53,28 @@
     </div>
   </div>
 
-  <script>
-    function zeigePopup() {
-      document.getElementById("kontaktPopup").style.display = "flex";
-    }
+ <script>
+  function zeigePopup() {
+    document.getElementById("kontaktPopup").style.display = "flex";
+  }
 
-    function schliessePopup() {
-      document.getElementById("kontaktPopup").style.display = "none";
-    }
+  function schliessePopup() {
+    document.getElementById("kontaktPopup").style.display = "none";
+  }
 
-    window.onclick = function(event) {
-      const popup = document.getElementById("kontaktPopup");
-      if (event.target === popup) {
-        popup.style.display = "none";
-      }
+  window.onclick = function(event) {
+    const popup = document.getElementById("kontaktPopup");
+    if (event.target === popup) {
+      popup.style.display = "none";
     }
-      };
-<script>
-  const heute = new Date().toISOString().split('T')[0];
-  document.getElementById("terminDatum").setAttribute("min", heute);
+  };
+
+  // Mindestdatum (heute) für das Datum-Feld setzen
+  window.onload = function () {
+    const heute = new Date().toISOString().split('T')[0];
+    document.getElementById("terminDatum").setAttribute("min", heute);
+  };
 </script>
-};
+
 </body>
 </html>
