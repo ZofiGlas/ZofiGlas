@@ -36,12 +36,17 @@
     <div class="modal-inhalt">
      <span class="schliessen" onclick="schliessePopup()">&times;</span>
       <h2>Besichtigungstermin vereinbaren</h2>
-      <form onsubmit="zeigeBestaetigung(event)">
-        <input type="text" placeholder="Dein Name" required />
-        <input type="email" placeholder="E-Mail-Adresse" required />
-        <textarea name="nachricht" placeholder="Deine Nachricht" rows="5" required></textarea>
-        <button type="submit">Absenden</button>
       <form action="https://formsubmit.co/zofiglas%40gmx.ch" method="POST">
+  <input type="text" name="name" placeholder="Dein Name" required>
+  <input type="email" name="email" placeholder="E-Mail-Adresse" required>
+  <textarea name="nachricht" placeholder="Deine Nachricht" rows="5" required></textarea>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Neue Nachricht von ZofiGlas-Kontaktformular">
+  <input type="hidden" name="_next" value="https://zofiglas.github.io/ZofiGlas/danke.html">
+
+  <button type="submit">Absenden</button>
+</form>
+
       <p id="bestaetigung" class="bestaetigung versteckt">Vielen Dank! Deine Nachricht wurde erfolgreich übermittelt.</p>
     </div>
   </div>
