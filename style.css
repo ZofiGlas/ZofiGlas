@@ -1,280 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to right, #f9f9f9, #e9ecef);
-  color: #222;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
 
-header.hero {
-  background: url("In Bearbeitung Sorry") center/cover no-repeat;
-  height: 60vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+body{
+line-height:1.6;
+color:#333;
 }
 
-header.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
 }
 
-.hero-text {
-  position: relative;
-  z-index: 2;
+header{
+background:white;
+border-bottom:1px solid #eee;
 }
 
-.hero-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.hero-text p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
 }
 
-.btn {
-  padding: 0.8rem 1.5rem;
-  background: #4fb3bf;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  cursor: pointer;
-}
-.btn:hover {
-  background: #3a939f;
+.hero{
+height:80vh;
+background-image:url("zofingen-banner.png");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:10%;
+color:white;
 }
 
-section {
-  padding: 3rem 1rem;
-  max-width: 960px;
-  margin: auto;
+.hero-text{
+background:rgba(0,0,0,0.4);
+padding:40px;
+border-radius:6px;
 }
 
-footer {
-  background: #f1f1f1;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #777;
-  position: relative;
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
 }
 
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
+.hero p{
+margin-bottom:20px;
+font-size:20px;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+.button{
+background:#0077cc;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:4px;
 }
 
-.modal-inhalt {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  position: relative;
-  animation: einblenden 0.3s ease-out;
+.section{
+padding:80px 20px;
+text-align:center;
 }
 
-.schliessen {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 2rem;
-  color: #999;
-  cursor: pointer;
+.grey{
+background:#f5f5f5;
 }
 
-.modal form input,
-.modal form textarea {
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  box-sizing: border-box;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+margin-top:40px;
 }
 
-.modal form textarea {
-  resize: vertical;
-  overflow-x: hidden;
+.card{
+background:white;
+padding:30px;
+border-radius:6px;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
-.modal form button {
-  background: #4fb3bf;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.modal form button:hover {
-  background: #3a939f;
+.contact{
+max-width:600px;
+margin:auto;
 }
 
-.bestaetigung {
-  margin-top: 1rem;
-  color: #2e7d32;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: opacity 0.3s ease;
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:20px;
 }
 
-.versteckt {
-  display: none;
+input, textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:4px;
 }
 
-@keyframes einblenden {
-  from { opacity: 0; transform: scale(0.9); }
-  to   { opacity: 1; transform: scale(1); }
+button{
+padding:12px;
+background:#0077cc;
+color:white;
+border:none;
+border-radius:4px;
+cursor:pointer;
 }
 
-.ueberuns-bereich {
-  display: flex;
-  align-items: center;
-  max-width: 960px;
-  margin: 3rem auto;
-  padding: 1rem;
-  gap: 2rem;
-}
-
-.logo-links img {
-  max-height: 140px;
-  width: auto;
-  display: block;
-}
-
-.ueberuns-text {
-  flex: 1;
-}
-@media (max-width: 768px) {
-  .ueberuns-bereich {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo-links {
-    margin-bottom: 1rem;
-    padding-left: 0;
-  }
-
-  .logo-links img {
-    max-height: 100px;
-  }
-
-  .modal-inhalt {
-    padding: 1.5rem;
-  }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-text p {
-    font-size: 1.2rem;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-select {
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-  box-sizing: border-box;
-  background-color: white;
-  appearance: none;
-  background-image: url('zofingen-banner.png');
-  background-repeat: no-repeat;
-  background-position: right 0.8rem center;
-  background-size: 1.2rem;
-}
-
-label {
-  display: block;
-  margin-top: 0.8rem;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-  color: #444;
-}
-
-.flatpickr-input {
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-  box-sizing: border-box;
-  background-color: white;
-  appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 0.8rem center;
-  background-size: 1.2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-select option[hidden] {
-  color: #888;
-}
-
-.hero-banner {
-  height: 80vh;
-  background-image: url("zofingen-banner.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding-left: 10%;
-  color: white;
-}
-
-.hero-text h1 {
-  font-size: 60px;
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  font-size: 22px;
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
 }
