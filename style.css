@@ -259,3 +259,22 @@ select option[hidden] {
   color: #888;
 }
 
+.hero-banner {
+  height: 80vh;
+  background-image: url("zofingen-banner.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 22px;
+}
