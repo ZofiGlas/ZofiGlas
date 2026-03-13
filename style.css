@@ -10,11 +10,15 @@ color:#333;
 line-height:1.6;
 }
 
+/* Container */
+
 .container{
 max-width:1100px;
 margin:auto;
 padding:20px;
 }
+
+/* Header */
 
 header{
 background:white;
@@ -27,12 +31,28 @@ justify-content:space-between;
 align-items:center;
 }
 
+/* Logo */
+
+.logo img{
+height:55px;
+width:auto;
+display:block;
+}
+
+/* Navigation */
+
 nav a{
 margin-left:20px;
 text-decoration:none;
 color:#333;
 font-weight:500;
 }
+
+nav a:hover{
+color:#0077cc;
+}
+
+/* Hero Banner */
 
 .hero{
 height:80vh;
@@ -49,12 +69,15 @@ background:rgba(0,0,0,0.5);
 color:white;
 padding:40px;
 border-radius:6px;
+max-width:500px;
 }
 
 .hero h1{
 font-size:48px;
 margin-bottom:10px;
 }
+
+/* Button */
 
 .button{
 background:#0077cc;
@@ -66,6 +89,12 @@ display:inline-block;
 margin-top:15px;
 }
 
+.button:hover{
+background:#005fa3;
+}
+
+/* Sections */
+
 .section{
 padding:80px 20px;
 text-align:center;
@@ -74,6 +103,8 @@ text-align:center;
 .grey{
 background:#f5f5f5;
 }
+
+/* Cards */
 
 .cards{
 display:grid;
@@ -91,6 +122,8 @@ border-radius:6px;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
+/* Gallery */
+
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -105,10 +138,14 @@ width:100%;
 border-radius:6px;
 }
 
+/* Contact */
+
 .contact{
 max-width:600px;
 margin:auto;
 }
+
+/* Form */
 
 form{
 display:flex;
@@ -117,10 +154,13 @@ gap:10px;
 margin-top:20px;
 }
 
-input,textarea{
+input,
+textarea,
+select{
 padding:12px;
 border:1px solid #ccc;
 border-radius:4px;
+font-size:14px;
 }
 
 button{
@@ -130,7 +170,14 @@ color:white;
 border:none;
 border-radius:4px;
 cursor:pointer;
+font-size:15px;
 }
+
+button:hover{
+background:#005fa3;
+}
+
+/* Map */
 
 .map{
 margin-top:40px;
@@ -142,23 +189,36 @@ height:350px;
 border:none;
 }
 
+/* Footer */
+
 footer{
 background:#222;
 color:white;
 text-align:center;
-padding:30px;
+padding:40px;
 margin-top:40px;
 }
 
-select{
-padding:12px;
-border:1px solid #ccc;
-border-radius:4px;
+/* Mobile */
+
+@media (max-width:768px){
+
+.hero{
+padding-left:5%;
+height:70vh;
 }
 
-footer{
-background:#222;
-color:white;
-padding:40px;
-text-align:center;
+.hero h1{
+font-size:32px;
+}
+
+.nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav a{
+margin:0 10px;
+}
+
 }
