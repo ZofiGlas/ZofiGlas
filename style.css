@@ -10,6 +10,8 @@ color:#333;
 line-height:1.6;
 }
 
+/* Layout */
+
 .container{
 max-width:1100px;
 margin:auto;
@@ -33,7 +35,7 @@ align-items:center;
 }
 
 .logo img{
-height:200px;
+height:90px;
 }
 
 nav a{
@@ -94,33 +96,22 @@ text-align:center;
 background:#f5f5f5;
 }
 
-/* Cards */
+/* Karten */
 
-.cards{
+.cards-4{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+max-width:1100px;
+margin:40px auto;
+}
+
+.cards-3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
 max-width:900px;
 margin:40px auto;
-justify-content:center;
-}
-
-@media (max-width:768px){
-
-.logo img{
-height:110px;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.cards-3{
-grid-template-columns:1fr;
-}
-
-}
-
 }
 
 .card{
@@ -128,23 +119,19 @@ background:white;
 padding:30px;
 border-radius:6px;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
-min-height:200px; /* 🔥 sorgt dafür dass alle gleich hoch sind */
+min-height:200px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 text-align:center;
+transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
-.card{
-min-height:180px;
-}
-
-/* Gallery */
+/* Galerie */
 
 .gallery{
 display:grid;
@@ -158,15 +145,10 @@ margin-top:40px;
 .gallery img{
 width:100%;
 border-radius:6px;
-transition:0.3s;
 cursor:pointer;
 }
 
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-/* Form */
+/* Formular */
 
 .contact{
 max-width:600px;
@@ -192,7 +174,6 @@ background:#0077cc;
 color:white;
 border:none;
 border-radius:4px;
-cursor:pointer;
 }
 
 /* Map */
@@ -211,10 +192,9 @@ background:#222;
 color:white;
 text-align:center;
 padding:40px;
-margin-top:40px;
 }
 
-/* 📞 Call Button */
+/* Call Button */
 
 .call-button{
 position:fixed;
@@ -225,12 +205,9 @@ color:white;
 padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
-font-weight:bold;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
-z-index:999;
 }
 
-/* 🔍 Lightbox */
+/* Lightbox */
 
 .lightbox{
 display:none;
@@ -242,21 +219,19 @@ height:100%;
 background:rgba(0,0,0,0.8);
 justify-content:center;
 align-items:center;
-z-index:1000;
 }
 
 .lightbox img{
 max-width:90%;
 max-height:90%;
-border-radius:6px;
 }
 
-/* 📱 Mobile */
+/* Mobile */
 
 @media (max-width:768px){
 
 .logo img{
-height:80px;
+height:110px;
 }
 
 .nav{
@@ -264,8 +239,12 @@ flex-direction:column;
 gap:10px;
 }
 
-.phone{
-font-size:14px;
+.cards-4{
+grid-template-columns:1fr;
+}
+
+.cards-3{
+grid-template-columns:1fr;
 }
 
 .hero{
@@ -273,40 +252,8 @@ height:65vh;
 padding:5%;
 }
 
-.hero-text{
-padding:20px;
-}
-
 .hero h1{
 font-size:28px;
 }
 
-.hero p{
-font-size:16px;
-}
-
-nav a{
-font-size:14px;
-}
-
-.card{
-padding:20px;
-}
-
-input, textarea, select{
-font-size:16px;
-}
-
-button{
-font-size:16px;
-}
-
-}
-
-.cards-3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-max-width:900px;
-margin:40px auto;
 }
