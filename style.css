@@ -118,7 +118,11 @@ background:white;
 padding:30px;
 border-radius:6px;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
-transition:0.3s;
+min-height:200px; /* 🔥 sorgt dafür dass alle gleich hoch sind */
+display:flex;
+flex-direction:column;
+justify-content:center;
+text-align:center;
 }
 
 .card:hover{
