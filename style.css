@@ -240,7 +240,7 @@ gap:10px;
 }
 
 .cards-4{
-grid-template-columns:1fr;
+grid-template-columns:repeat(2,1fr);
 }
 
 .cards-3{
