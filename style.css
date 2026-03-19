@@ -33,7 +33,7 @@ align-items:center;
 }
 
 .logo img{
-height:100px;
+height:90px;
 }
 
 nav a{
@@ -107,8 +107,18 @@ justify-content:center;
 
 @media (max-width:768px){
 
+.logo img{
+height:110px;
+}
+
 .cards{
 grid-template-columns:1fr;
+}
+
+.cards-3{
+grid-template-columns:1fr;
+}
+
 }
 
 }
@@ -291,4 +301,12 @@ button{
 font-size:16px;
 }
 
+}
+
+.cards-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+max-width:900px;
+margin:40px auto;
 }
