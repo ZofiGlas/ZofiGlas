@@ -75,13 +75,10 @@
 <h2>Referenzen</h2>
 
 <div class="gallery">
-
+<img src="https://images.unsplash.com/photo-1582582494700-75b7d2d53b9c" alt="Glas Dusche">
 <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101" alt="Duschglas modern">
-
 <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115" alt="Fenster">
-
 <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" alt="Glas Interior">
-
 </div>
 
 </section>
@@ -108,7 +105,6 @@
 </div>
 
 </div>
-
 </section>
 
 
@@ -158,30 +154,6 @@
 <p>Tel: 079 662 81 06</p>
 </div>
 </footer>
-
-
-<a href="tel:0796628106" class="call-button">📞 Anrufen</a>
-
-<div id="lightbox" class="lightbox">
-<img id="lightbox-img">
-</div>
-
-<script>
-const images = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-images.forEach(img => {
-img.addEventListener("click", () => {
-lightbox.style.display = "flex";
-lightboxImg.src = img.src;
-});
-});
-
-lightbox.addEventListener("click", () => {
-lightbox.style.display = "none";
-});
-</script>
 
 </body>
 </html>
