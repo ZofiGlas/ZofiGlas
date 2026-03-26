@@ -1,1 +1,91 @@
+<script>
+(function(){
+  const input = document.getElementById('fileInput');
+  const preview = document.getElementById('preview');
+  const form = document.getElementById('offertForm');
 
+  const MAX_FILES = 5;
+  const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
+
+  function formatBytes(bytes){
+    if (bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B','KB','MB','GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+
+  function clearPreview(){
+    preview.innerHTML = '';
+  }
+
+  function showError(msg){
+    clearPreview();
+    const err = document.createElement('div');
+    err.className = 'file-error';
+    err.textContent = msg;
+    preview.appendChild(err);
+  }
+
+  function createThumb(file){
+    const wrapper = document.createElement('div');
+    wrapper.className = 'thumb';
+
+    const img = document.createElement('img');
+    img.alt = file.name;
+    img.loading = 'lazy';
+
+    const info = document.createElement('div');
+    info.className = 'thumb-info';
+    info.innerHTML = `<strong>${file.name}</strong><span>${formatBytes(file.size)}</span>`;
+
+    wrapper.appendChild(img);
+    wrapper.appendChild(info);
+
+    const reader = new FileReader();
+    reader.onload = function(e){
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+
+    return wrapper;
+  }
+
+  input.addEventListener('change', function(){
+    clearPreview();
+    const files = Array.from(input.files);
+
+    if (files.length === 0) return;
+
+    if (files.length > MAX_FILES){
+      showError(`Bitte maximal ${MAX_FILES} Bilder auswählen.`);
+      input.value = '';
+      return;
+    }
+
+    for (const f of files){
+      if (!f.type.startsWith('image/')){
+        showError('Nur Bilddateien sind erlaubt.');
+        input.value = '';
+        return;
+      }
+      if (f.size > MAX_FILE_SIZE){
+        showError(`Die Datei ${f.name} ist zu gross (${formatBytes(f.size)}). Maximal ${formatBytes(MAX_FILE_SIZE)} erlaubt.`);
+        input.value = '';
+        return;
+      }
+      preview.appendChild(createThumb(f));
+    }
+  });
+
+  form.addEventListener('submit', function(e){
+    // Optional: zusätzliche Client‑Prüfung vor Absenden
+    const files = input.files;
+    if (files.length > MAX_FILES){
+      e.preventDefault();
+      showError(`Bitte maximal ${MAX_FILES} Bilder anhängen.`);
+      return;
+    }
+  });
+})();
+</script>
