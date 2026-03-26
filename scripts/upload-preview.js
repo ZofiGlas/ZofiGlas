@@ -4,8 +4,8 @@
   const form = document.getElementById('offerForm');
 
   const MAX_FILES = 5;
-  const MAX_FILE_SIZE = 5 * 1024 * 1024;
-  const MAX_TOTAL_SIZE = 15 * 1024 * 1024;
+  const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB pro Datei
+  const MAX_TOTAL_SIZE = 15 * 1024 * 1024; // 15 MB gesamt
 
   function formatBytes(bytes) {
     if (bytes === 0) return '0 B';
@@ -80,18 +80,51 @@
   input.addEventListener('change', function () {
     const files = Array.from(input.files);
     if (files.length === 0) { currentFiles = []; updatePreview(); return; }
-    if (files.length > MAX_FILES) { showError(`Bitte maximal ${MAX_FILES} Bilder auswählen.`); input.value = ''; currentFiles = []; return; }
-    for (const f of files) {
-      if (!f.type.startsWith('image/')) { showError('Nur Bilddateien sind erlaubt.'); input.value = ''; currentFiles = []; return; }
-      if (f.size > MAX_FILE_SIZE) { showError(`Die Datei ${f.name} ist zu gross (${formatBytes(f.size)}). Maximal ${formatBytes(MAX_FILE_SIZE)} erlaubt.`); input.value = ''; currentFiles = []; return; }
+
+    if (files.length > MAX_FILES) {
+      showError(`Bitte maximal ${MAX_FILES} Bilder auswählen.`);
+      input.value = '';
+      currentFiles = [];
+      return;
     }
-    if (totalSize(files) > MAX_TOTAL_SIZE) { showError(`Gesamtgrösse überschreitet ${formatBytes(MAX_TOTAL_SIZE)}. Bitte kleinere Dateien wählen.`); input.value = ''; currentFiles = []; return; }
+
+    for (const f of files) {
+      if (!f.type.startsWith('image/')) {
+        showError('Nur Bilddateien sind erlaubt.');
+        input.value = '';
+        currentFiles = [];
+        return;
+      }
+      if (f.size > MAX_FILE_SIZE) {
+        showError(`Die Datei ${f.name} ist zu gross (${formatBytes(f.size)}). Maximal ${formatBytes(MAX_FILE_SIZE)} erlaubt.`);
+        input.value = '';
+        currentFiles = [];
+        return;
+      }
+    }
+
+    if (totalSize(files) > MAX_TOTAL_SIZE) {
+      showError(`Gesamtgrösse überschreitet ${formatBytes(MAX_TOTAL_SIZE)}. Bitte kleinere Dateien wählen.`);
+      input.value = '';
+      currentFiles = [];
+      return;
+    }
+
     currentFiles = files.slice();
     updatePreview();
   });
 
   form.addEventListener('submit', function (e) {
-    if (currentFiles.length > MAX_FILES) { e.preventDefault(); showError(`Bitte maximal ${MAX_FILES} Bilder anhängen.`); return; }
-    if (totalSize(currentFiles) > MAX_TOTAL_SIZE) { e.preventDefault(); showError(`Gesamtgrösse überschreitet ${formatBytes(MAX_TOTAL_SIZE)}.`); return; }
+    if (currentFiles.length > MAX_FILES) {
+      e.preventDefault();
+      showError(`Bitte maximal ${MAX_FILES} Bilder anhängen.`);
+      return;
+    }
+    if (totalSize(currentFiles) > MAX_TOTAL_SIZE) {
+      e.preventDefault();
+      showError(`Gesamtgrösse überschreitet ${formatBytes(MAX_TOTAL_SIZE)}.`);
+      return;
+    }
+    // Hinweis: Serverseitige Validierung ist weiterhin erforderlich.
   });
 })();
