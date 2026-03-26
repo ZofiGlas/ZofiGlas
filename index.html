@@ -8,7 +8,6 @@
   <meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen und Umgebung.">
 
   <link rel="stylesheet" href="style.css">
-  <script src="scripts/upload-preview.js" defer></script>
 </head>
 
 <body>
@@ -80,11 +79,6 @@
         <img src="projekte/Windfang_2.jpeg" alt="Windfang Glas" loading="lazy">
         <p>Windfang nach Mass</p>
       </div>
-
-      <div class="project">
-        <img src="projekte/dusche1.jpg" alt="Glasdusche" loading="lazy">
-        <p>Glasdusche nach Mass</p>
-      </div>
     </div>
   </section>
 
@@ -113,8 +107,7 @@
     <h2>Offerte anfragen</h2>
 
     <div class="contact">
-      <!-- Komplettes Formular mit Datei-Upload -->
-      <form id="offerForm" action="https://formsubmit.co/zofiglas@gmx.ch" method="POST" enctype="multipart/form-data">
+      <form id="offerForm" action="https://formsubmit.co/zofiglas@gmx.ch" method="POST">
         <input type="hidden" name="_subject" value="Neue Offertanfrage ZofiGlas">
         <input type="hidden" name="_next" value="https://zofiglas.github.io/ZofiGlas/danke.html">
         <input type="hidden" name="_captcha" value="false">
@@ -151,13 +144,11 @@
           <textarea name="message" placeholder="Beschreibung"></textarea>
         </label>
 
+        <!-- Optional: Feld für Bild‑Link, falls Kunde Bilder per Cloud teilen möchte -->
         <label>
-          Bilder anhängen
-          <input type="file" id="fileInput" name="attachments[]" accept="image/*" multiple>
-          <small id="fileHelp">Max. 5 Bilder, je max. 5 MB, Gesamt max. 15 MB. JPG/PNG/WebP empfohlen.</small>
+          Link zu Bildern (optional)
+          <input type="url" name="images_link" placeholder="https://">
         </label>
-
-        <div id="preview" class="file-preview" aria-live="polite"></div>
 
         <button type="submit">Offerte anfragen</button>
       </form>
@@ -176,3 +167,11 @@
     <p>Email: zofiglas@gmx.ch</p>
     <p>Tel: <a href="tel:+41796628106">079 662 81 06</a></p>
     <p style="margin-top:15px;">
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
