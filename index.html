@@ -1,172 +1,280 @@
-<!DOCTYPE html>
-<html lang="de">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+body{
+color:#333;
+line-height:1.6;
+}
 
-<title>ZofiGlas | Glaserei in Zofingen</title>
-<meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen und Umgebung.">
+/* Layout */
 
-<link rel="stylesheet" href="style.css">
-</head>
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
 
-<body>
+/* Header */
 
-<header class="header">
-<div class="container nav">
+.header{
+position:sticky;
+top:0;
+background:white;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-<div class="logo">
-<img src="logo-bild-svg.jpg" alt="ZofiGlas Logo">
-</div>
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
 
-<nav>
-<a href="#leistungen">Leistungen</a>
-<a href="#referenzen">Referenzen</a>
-<a href="#vorteile">Warum wir</a>
-<a href="#kontakt">Kontakt</a>
-</nav>
+.logo img{
+height:180px;
+}
 
-<div class="phone">
-<a href="tel:0796628106">📞 079 662 81 06</a>
-</div>
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
 
-</div>
-</header>
+nav a:hover{
+color:#0077cc;
+}
 
-<section class="hero">
-<div class="hero-text">
-<h1>Glaslösungen aus Zofingen</h1>
-<p>Massgeschneiderte Glasarbeiten für Privat und Gewerbe</p>
-<a href="#kontakt" class="button">Offerte anfragen</a>
-</div>
-</section>
+.phone a{
+color:#0077cc;
+text-decoration:none;
+font-weight:bold;
+}
 
-<section id="leistungen" class="section">
-<h2>Unsere Leistungen</h2>
+.phone a:hover{
+text-decoration:underline;
+}
 
-<div class="cards-4">
+/* HERO */
 
-<div class="card">
-<h3>Glasreparatur</h3>
-<p>Schnelle Hilfe bei Glasbruch oder beschädigten Fenstern.</p>
-</div>
+.hero{
+height:80vh;
+background-image:url("zofingen-banner.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:flex;
+align-items:center;
+padding-left:10%;
+position:relative;
+}
 
-<div class="card">
-<h3>Duschglas</h3>
-<p>Moderne Glasduschen nach Mass.</p>
-</div>
+/* 🔥 WEICHER VERLAUF OHNE STRICH */
 
-<div class="card">
-<h3>Bürotrennwand</h3>
-<p>Elegante Glaslösungen für Büros.</p>
-</div>
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
 
-<div class="card">
-<h3>Fensterverglasung</h3>
-<p>Neue Verglasungen für Häuser und Wohnungen.</p>
-</div>
+background:linear-gradient(
+to right,
+rgba(0,0,0,0.5) 0%,
+rgba(0,0,0,0.35) 25%,
+rgba(0,0,0,0.15) 55%,
+rgba(0,0,0,0.05) 75%,
+rgba(0,0,0,0) 100%
+);
+}
 
-</div>
-</section>
+.hero-text{
+position:relative;
+color:white;
+padding:40px;
+background:rgba(0,0,0,0.25);
+border-radius:6px;
+max-width:500px;
+}
 
-<section id="referenzen" class="section grey">
-<h2>Referenzen</h2>
+.hero h1{
+font-size:48px;
+}
 
-<div class="gallery">
+/* Button */
 
-<div class="project">
-<img src="projekte/Windfang_1.jpeg" alt="Windfang">
-<p>Windfang nach Mass</p>
-</div>
+.button{
+background:#0077cc;
+padding:12px 25px;
+color:white;
+text-decoration:none;
+border-radius:5px;
+display:inline-block;
+margin-top:15px;
+}
 
-<div class="project">
-<img src="projekte/Windfang_2.jpeg" alt="Windfang">
-<p>Windfang nach Mass</p>
-</div>
+.button:hover{
+background:#005fa3;
+}
 
-</div>
+/* Sections */
 
-</section>
+.section{
+padding:80px 20px;
+text-align:center;
+}
 
-<section id="vorteile" class="section">
-<h2>Warum ZofiGlas</h2>
+.grey{
+background:#f5f5f5;
+}
 
-<div class="cards-3">
+/* Cards */
 
-<div class="card">
-<h3>Lokal</h3>
-<p>Regionaler Service in Zofingen.</p>
-</div>
+.cards-4{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+max-width:1100px;
+margin:40px auto;
+}
 
-<div class="card">
-<h3>Schnell</h3>
-<p>Antwort innerhalb kurzer Zeit.</p>
-</div>
+.cards-3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+max-width:900px;
+margin:40px auto;
+}
 
-<div class="card">
-<h3>Individuell</h3>
-<p>Massgeschneiderte Lösungen.</p>
-</div>
+.card{
+background:white;
+padding:30px;
+border-radius:6px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+min-height:200px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
 
-</div>
-</section>
+/* Gallery */
 
-<section id="kontakt" class="section grey">
-<h2>Offerte anfragen</h2>
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:auto;
+margin-top:40px;
+}
 
-<div class="contact">
+.gallery img{
+width:100%;
+border-radius:6px;
+}
 
-<form action="https://formsubmit.co/zofiglas@gmx.ch" method="POST">
+.project{
+text-align:center;
+}
 
-<input type="hidden" name="_subject" value="Neue Offertanfrage ZofiGlas">
-<input type="hidden" name="_next" value="https://zofiglas.github.io/ZofiGlas/danke.html">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="_honey" style="display:none">
+.project p{
+margin-top:10px;
+}
 
-<select name="arbeit">
-<option>Glasreparatur</option>
-<option>Duschglas</option>
-<option>Bürotrennwand</option>
-<option>Fensterverglasung</option>
-<option>Spezialanfertigung</option>
-</select>
+/* Form */
 
-<input type="text" name="name" placeholder="Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="text" name="telefon" placeholder="Telefon">
-<textarea name="message" placeholder="Beschreibung"></textarea>
+.contact{
+max-width:600px;
+margin:auto;
+}
 
-<button type="submit">Offerte anfragen</button>
+form{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:20px;
+}
 
-</form>
+input, textarea, select{
+padding:12px;
+border:1px solid #ccc;
+border-radius:4px;
+}
 
-</div>
+button{
+padding:12px;
+background:#0077cc;
+color:white;
+border:none;
+border-radius:4px;
+cursor:pointer;
+}
 
-<div class="map">
-<iframe src="https://maps.google.com/maps?q=Zofingen&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-</div>
+button:hover{
+background:#005fa3;
+}
 
-</section>
+/* Map */
 
-<footer>
-<div class="container">
+.map iframe{
+width:100%;
+height:350px;
+border:none;
+margin-top:40px;
+}
 
-<h3>ZofiGlas</h3>
-<p>Glaserei in Zofingen</p>
-<p>Email: zofiglas@gmx.ch</p>
+/* Footer */
 
-<p>
-Tel: <a href="tel:0796628106">079 662 81 06</a>
-</p>
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:40px;
+}
 
-<p style="margin-top:15px;">
-<a href="impressum.html">Impressum</a> | 
-<a href="datenschutz.html">Datenschutz</a>
-</p>
+footer a{
+color:#ccc;
+text-decoration:none;
+}
 
-</div>
-</footer>
+footer a:hover{
+color:white;
+}
 
-</body>
-</html>
+/* Mobile */
+
+@media (max-width:768px){
+
+.logo img{
+height:140px;
+}
+
+.nav{
+flex-direction:column;
+gap:10px;
+}
+
+.cards-4{
+grid-template-columns:repeat(2,1fr);
+}
+
+.cards-3{
+grid-template-columns:1fr;
+}
+
+.hero{
+height:65vh;
+padding:5%;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+}
