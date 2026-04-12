@@ -37,8 +37,28 @@ nav a:hover::after{width:100%}
 .phone a{color:var(--blue);text-decoration:none;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;border:1px solid var(--blue);transition:var(--transition);white-space:nowrap}
 .phone a:hover{background:var(--blue);color:white}
 
-/* Hero (kein Bannerbild standardmäßig) */
-/* Wenn du später ein Banner in projekte/ hinzufügst, entferne die Gradient‑Fallback‑Zeile und aktiviere die background-image Zeile weiter unten. */
+/* Hero als Hintergrundbild (einfügen/ersetzen) */
+.hero{
+  min-height:72vh;
+  background-image: url("Banner_Website.png");
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  align-items:center;
+  padding:60px 10%;
+  position:relative;
+  color: white;
+}
+
+/* Falls du Text auf dem Bild hast: Kontrast sicherstellen */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(120deg, rgba(0,0,0,0.45), rgba(0,0,0,0.18));
+}
+.hero-text{ position:relative; z-index:2; }
+
 .hero{
   min-height:72vh;
   background:linear-gradient(120deg, rgba(11,116,201,0.12), rgba(5,82,143,0.06));
