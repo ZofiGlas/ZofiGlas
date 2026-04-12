@@ -7,7 +7,7 @@
   <meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen und Umgebung.">
 
   <!-- Haupt-CSS -->
-  <link rel="stylesheet" href="style.css?v=2.0">
+  <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 <body>
 
@@ -55,11 +55,40 @@
   <section id="referenzen" class="section grey">
     <h2>Referenzen</h2>
     <div class="gallery" aria-live="polite">
-      <div class="project"><img src="projekte/Windfang_1.jpeg" alt="Windfang Projekt 1" loading="lazy"><p>Windfang nach Mass</p></div>
-      <div class="project"><img src="projekte/Windfang_2.jpeg" alt="Windfang Projekt 2" loading="lazy"><p>Einsatz des Glases</p></div>
-      <div class="project"><img src="projekte/Montage.jpeg" alt="Montagearbeiten" loading="lazy"><p>Montagearbeiten</p></div>
-      <div class="project"><img src="projekte/Trennwand_1.jpeg" alt="Trennwand Projekt 1" loading="lazy"><p>Bürotrennwand</p></div>
-      <div class="project"><img src="projekte/Trennwand_2.jpeg" alt="Trennwand Projekt 2" loading="lazy"><p>Bürotrennwand</p></div>
+      <div class="project">
+        <a href="projekte/Windfang_1.jpeg" target="_blank" rel="noopener">
+          <img src="projekte/Windfang_1.jpeg" alt="Windfang" loading="lazy">
+        </a>
+        <p>Windfang nach Mass</p>
+      </div>
+
+      <div class="project">
+        <a href="projekte/Windfang_2.jpeg" target="_blank" rel="noopener">
+          <img src="projekte/Windfang_2.jpeg" alt="Windfang" loading="lazy">
+        </a>
+        <p>Einsatz des Glases</p>
+      </div>
+
+      <div class="project">
+        <a href="projekte/Montage.jpeg" target="_blank" rel="noopener">
+          <img src="projekte/Montage.jpeg" alt="Montagearbeiten" loading="lazy">
+        </a>
+        <p>Montagearbeiten</p>
+      </div>
+
+      <div class="project">
+        <a href="projekte/Trennwand_1.jpeg" target="_blank" rel="noopener">
+          <img src="projekte/Trennwand_1.jpeg" alt="Trennwand" loading="lazy">
+        </a>
+        <p>Bürotrennwand</p>
+      </div>
+
+      <div class="project">
+        <a href="projekte/Trennwand_2.jpeg" target="_blank" rel="noopener">
+          <img src="projekte/Trennwand_2.jpeg" alt="Trennwand" loading="lazy">
+        </a>
+        <p>Bürotrennwand</p>
+      </div>
     </div>
   </section>
 
@@ -122,155 +151,6 @@
     <p style="margin-top:8px;opacity:0.8;">© 2026 ZofiGlas – Glaserei in Zofingen</p>
   </div>
 </footer>
-
-<!-- Image Modal Viewer (Fenstermodus) -->
-<div id="imgModal" class="img-modal" aria-hidden="true" role="dialog" aria-label="Bildvorschau">
-  <div class="img-modal-overlay" data-close="true"></div>
-
-  <div class="img-window" role="document" aria-modal="true" tabindex="-1">
-    <div class="img-window-title" id="imgWindowTitle">
-      <span class="img-window-caption">Bild</span>
-      <div class="img-window-controls">
-        <button class="img-window-btn prev" aria-label="Vorheriges Bild">◀</button>
-        <button class="img-window-btn next" aria-label="Nächstes Bild">▶</button>
-        <button class="img-window-close" aria-label="Fenster schliessen">✕</button>
-      </div>
-    </div>
-
-    <div class="img-window-body">
-      <img src="" alt="" class="img-window-img">
-      <div class="img-window-meta">
-        <div class="img-window-filename"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Script -->
-<script>
-(function(){
-  const modal = document.getElementById('imgModal');
-  const overlay = modal.querySelector('.img-modal-overlay');
-  const win = modal.querySelector('.img-window');
-  const imgEl = modal.querySelector('.img-window-img');
-  const captionEl = modal.querySelector('.img-window-caption');
-  const filenameEl = modal.querySelector('.img-window-filename');
-  const closeBtn = modal.querySelector('.img-window-close');
-  const prevBtn = modal.querySelector('.img-window-btn.prev');
-  const nextBtn = modal.querySelector('.img-window-btn.next');
-
-  // Collect gallery images
-  const galleryImgs = Array.from(document.querySelectorAll('.gallery .project img'));
-  let currentIndex = -1;
-
-  // Center modal window on open
-  function centerWindow() {
-    win.style.left = '';
-    win.style.top = '';
-    win.style.transform = '';
-  }
-
-  function openModal(index){
-    if(index < 0 || index >= galleryImgs.length) return;
-    currentIndex = index;
-    const source = galleryImgs[index].getAttribute('src');
-    const alt = galleryImgs[index].getAttribute('alt') || '';
-    const caption = galleryImgs[index].closest('.project')?.querySelector('p')?.innerText || alt || '';
-    imgEl.src = source;
-    imgEl.alt = alt;
-    captionEl.textContent = caption;
-    filenameEl.textContent = source.split('/').pop();
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden','false');
-    document.documentElement.style.overflow = 'hidden';
-    centerWindow();
-    // focus for keyboard
-    win.focus();
-  }
-
-  function closeModal(){
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden','true');
-    imgEl.src = '';
-    currentIndex = -1;
-    document.documentElement.style.overflow = '';
-  }
-
-  function showNext(){
-    if(currentIndex < galleryImgs.length - 1) openModal(currentIndex + 1);
-  }
-  function showPrev(){
-    if(currentIndex > 0) openModal(currentIndex - 1);
-  }
-
-  // Attach click handlers
-  galleryImgs.forEach((img, idx) => {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(idx);
-    });
-  });
-
-  // Close handlers
-  overlay.addEventListener('click', closeModal);
-  closeBtn.addEventListener('click', closeModal);
-  nextBtn.addEventListener('click', showNext);
-  prevBtn.addEventListener('click', showPrev);
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if(!modal.classList.contains('open')) return;
-    if(e.key === 'Escape') closeModal();
-    if(e.key === 'ArrowRight') showNext();
-    if(e.key === 'ArrowLeft') showPrev();
-  });
-
-  // Drag to move window (title bar)
-  (function enableDrag(){
-    const title = modal.querySelector('.img-window-title');
-    let isDown = false;
-    let startX = 0, startY = 0;
-    let origLeft = 0, origTop = 0;
-
-    title.addEventListener('pointerdown', (e) => {
-      isDown = true;
-      startX = e.clientX;
-      startY = e.clientY;
-      const rect = win.getBoundingClientRect();
-      origLeft = rect.left;
-      origTop = rect.top;
-      title.setPointerCapture(e.pointerId);
-      win.style.transition = 'none';
-    });
-
-    document.addEventListener('pointermove', (e) => {
-      if(!isDown) return;
-      const dx = e.clientX - startX;
-      const dy = e.clientY - startY;
-      win.style.position = 'fixed';
-      win.style.left = (origLeft + dx) + 'px';
-      win.style.top = (origTop + dy) + 'px';
-      win.style.transform = '';
-    });
-
-    document.addEventListener('pointerup', () => {
-      if(!isDown) return;
-      isDown = false;
-      win.style.transition = '';
-    });
-  })();
-
-  // Simple focus trap while modal open
-  document.addEventListener('focus', function(e){
-    if(modal.classList.contains('open') && !modal.contains(e.target)){
-      e.stopPropagation();
-      win.focus();
-    }
-  }, true);
-
-})();
-</script>
 
 </body>
 </html>
