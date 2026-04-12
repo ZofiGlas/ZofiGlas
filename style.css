@@ -1,3 +1,5 @@
+/* style.css — komplette Datei mit mobilen Verbesserungen */
+
 /* Basis und Variablen */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -29,45 +31,29 @@ body{
   z-index:1000;
   box-shadow:0 2px 12px rgba(0,0,0,0.04);
 }
-.nav{
+
+/* Make header container flexible and wrap on small screens */
+.header .container{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:18px 0;
+  justify-content:space-between;
   gap:20px;
+  padding:18px 20px;
+  flex-wrap:wrap;
 }
 
-/* Logo: neutral rule + specific site-logo override */
+/* Neutral logo rule */
+.logo{display:flex;align-items:center;justify-content:flex-start}
 .logo img{display:block;max-width:100%;width:auto;height:auto}
 
-/* Vergrössertes Logo (Desktop) */
+/* Specific site-logo sizes (desktop/tablet/mobile) */
 .logo .site-logo,
-.logo img.site-logo {
+.logo img.site-logo{
   height:180px;
   max-height:180px;
   width:auto;
-  display:block;
   object-fit:contain;
-}
-
-/* Tablet */
-@media (max-width:900px){
-  .logo .site-logo,
-  .logo img.site-logo {
-    height:130px;
-    max-height:130px;
-  }
-  .nav{padding:14px 0}
-}
-
-/* Mobile */
-@media (max-width:600px){
-  .logo .site-logo,
-  .logo img.site-logo {
-    height:90px;
-    max-height:90px;
-  }
-  .nav{padding:10px 0}
+  display:block;
 }
 
 /* Navigation */
@@ -143,59 +129,35 @@ nav a:hover::after{width:100%}
 
 /* Warum ZofiGlas — zentrierte Karten (Lokal / Schnell / Individuell) */
 .cards-3 {
-  display: grid;
-  gap: 20px;
-  max-width: 1100px;
-  margin: 30px auto 0;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: start;
-  text-align: center;
-  padding: 0 12px;
+  display:grid;
+  gap:20px;
+  max-width:1100px;
+  margin:30px auto 0;
+  grid-template-columns:repeat(3,1fr);
+  justify-items:center;
+  align-items:start;
+  text-align:center;
+  padding:0 12px;
 }
 
-.card {
-  background: #fff;
-  padding: 22px;
-  border-radius: 10px;
-  box-shadow: var(--shadow-soft);
-  min-height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: var(--transition);
-  border: 1px solid rgba(0,0,0,0.03);
-  width: 100%;
-  max-width: 360px;
+.card{
+  background:#fff;
+  padding:22px;
+  border-radius:10px;
+  box-shadow:var(--shadow-soft);
+  min-height:150px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transition:var(--transition);
+  border:1px solid rgba(0,0,0,0.03);
+  width:100%;
+  max-width:360px;
 }
-
-/* Feinschliff: Titel und Text */
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  line-height: 1.1;
-}
-.card p {
-  color: var(--text-soft);
-  font-size: 14px;
-  margin: 0;
-  max-width: 320px;
-}
-
-/* Responsive: bei kleinen Bildschirmen eine Spalte */
-@media (max-width:900px){
-  .cards-3 {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding: 0 18px;
-  }
-  .card {
-    padding: 18px;
-    max-width: 720px;
-  }
-}
+.card h3{margin-bottom:10px;font-size:18px;line-height:1.1}
+.card p{color:var(--text-soft);font-size:14px;margin:0;max-width:320px}
 
 /* Galerie (Bilder im Ordner projekte/) */
 .gallery{
@@ -204,6 +166,7 @@ nav a:hover::after{width:100%}
   gap:18px;
   max-width:1100px;
   margin:36px auto 0;
+  padding:0 12px;
 }
 .project{position:relative;overflow:hidden;border-radius:10px;background:#fff}
 .project a{display:block}
@@ -241,60 +204,55 @@ button:hover{background:var(--blue-dark);transform:translateY(-2px)}
 
 /* --- Mobile Header / Logo Verbesserungen --- */
 
-/* Make header container flexible and wrap on small screens */
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  padding: 12px 16px;
-}
-
-/* Logo: ensure visibility and centering on small screens */
-.logo { order: 1; flex: 0 0 auto; display:flex; align-items:center; justify-content:center; width:100%; }
-.logo .site-logo { height:120px; max-height:120px; width:auto; object-fit:contain; }
-
-/* Navigation: move under logo on mobile, centered */
-nav { order: 2; width:100%; display:flex; justify-content:center; gap:14px; margin-top:8px; flex-wrap:wrap; }
-nav a { padding:8px 10px; font-size:15px; }
-
-/* Phone: place under navigation on mobile */
-.phone { order: 3; width:100%; display:flex; justify-content:center; margin-top:8px; }
-.phone a { padding:8px 12px; }
-
-/* Mobile hero adjustments */
+/* On smaller screens: stack header elements vertically and center them */
 @media (max-width:900px){
+  .header .container{
+    padding:14px 16px;
+    gap:12px;
+  }
+
+  /* Logo centered and slightly smaller */
+  .logo{order:1;width:100%;justify-content:center}
+  .logo .site-logo,
+  .logo img.site-logo{height:120px;max-height:120px}
+
+  /* Navigation moves under logo and centers */
+  nav{order:2;width:100%;display:flex;justify-content:center;gap:12px;margin-top:8px;flex-wrap:wrap}
+  nav a{padding:8px 10px;font-size:15px}
+
+  /* Phone under navigation */
+  .phone{order:3;width:100%;display:flex;justify-content:center;margin-top:8px}
+  .phone a{padding:8px 12px}
+
+  /* Hero adjustments */
   .hero{padding:40px 6%}
   .hero-text{padding:20px}
-  .logo .site-logo{height:110px;max-height:110px}
-}
-
-/* Mobile fine tuning */
-@media (max-width:600px){
-  .logo .site-logo{height:84px;max-height:84px}
-  .header .container{padding:10px 12px}
-  nav a{font-size:14px;padding:6px 8px}
-  .gallery{grid-template-columns:1fr;gap:14px;padding:0 12px}
-  .cards-3{padding:0 12px}
-  .card{max-width:720px;padding:16px}
-}
-
-/* Fallback override in case older rules still apply */
-.logo img { display:block !important; width:auto !important; height:auto !important; }
-
-/* Responsive general */
-@media (max-width:900px){
-  .cards-4{grid-template-columns:repeat(2,1fr)}
-  .cards-3{grid-template-columns:1fr}
-  .form-row{flex-direction:column}
-  .logo img{height:90px}
-  .hero{padding:48px 6%}
   .hero h1{font-size:28px}
 }
+
+/* Fine tuning for small mobile devices */
 @media (max-width:600px){
-  .cards-4{grid-template-columns:1fr}
+  .header .container{padding:10px 12px}
+  .logo .site-logo,
+  .logo img.site-logo{height:90px;max-height:84px}
+  nav a{font-size:14px;padding:6px 8px}
+  .gallery{grid-template-columns:1fr;gap:14px;padding:0 12px}
+  .cards-3{padding:0 12px;grid-template-columns:1fr}
+  .card{max-width:720px;padding:16px}
   .hero{padding:36px 5%}
   .hero h1{font-size:22px}
   .section{padding:40px 12px}
+  .logo img{height:auto!important;max-height:84px!important}
+}
+
+/* Fallback override in case older rules still apply */
+.logo img{display:block!important;width:auto!important;height:auto!important}
+
+/* Responsive general (keeps other breakpoints consistent) */
+@media (max-width:900px){
+  .cards-4{grid-template-columns:repeat(2,1fr)}
+  .form-row{flex-direction:column}
+}
+@media (max-width:480px){
+  .hero-text{padding:16px}
 }
