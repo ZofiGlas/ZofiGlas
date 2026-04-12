@@ -33,11 +33,11 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:18px 0; /* etwas mehr Platz für größeres Logo */
+  padding:18px 0;
   gap:20px;
 }
 
-/* Logo: benutze class="site-logo" im HTML */
+/* Logo: neutral rule + specific site-logo override */
 .logo img{display:block;max-width:100%;width:auto;height:auto}
 
 /* Vergrössertes Logo (Desktop) */
@@ -193,6 +193,7 @@ button:hover{background:var(--blue-dark);transform:translateY(-2px)}
 
 /* Image Modal / Window style */
 .img-modal{display:none;position:fixed;inset:0;z-index:2000;font-family:inherit}
+.img-modal.open{display:block}
 .img-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(2px)}
 .img-window{
   width:84%;
