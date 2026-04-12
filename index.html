@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ZofiGlas – Glaserei in Zofingen</title>
-  <meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen. Schnelle, lokale und massgeschneiderte Lösungen.">
+  <meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen. Schnell, lokal und massgeschneidert.">
   <meta name="theme-color" content="#0B74C9">
 
   <!-- Open Graph -->
@@ -21,31 +21,25 @@
     "name":"ZofiGlas",
     "image":["logo-bild-svg.jpg"],
     "telephone":"+41796628106",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Zofingen",
-      "addressCountry":"CH"
-    },
+    "address":{"@type":"PostalAddress","addressLocality":"Zofingen","addressCountry":"CH"},
     "description":"Glaserei in Zofingen – Reparaturen, Duschglas, Trennwände und Verglasungen.",
     "url":"https://zofiglas.github.io/ZofiGlas"
   }
   </script>
 
-  <!-- Haupt-CSS -->
-  <link rel="stylesheet" href="style.css?v=3.0">
+  <link rel="stylesheet" href="style.css?v=4.0">
 </head>
 <body>
   <a class="sr-only" href="#main">Zum Inhalt springen</a>
 
   <header class="header" role="banner">
     <div class="container header-inner">
-      <div class="logo" aria-hidden="false">
+      <div class="logo">
         <a href="index.html" aria-label="ZofiGlas Startseite">
           <img src="logo-bild-svg.jpg" alt="ZofiGlas Logo" class="site-logo" width="320" height="auto">
         </a>
       </div>
 
-      <!-- Hamburger für Mobil -->
       <button id="navToggle" class="nav-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Menü öffnen">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -59,14 +53,13 @@
         <a href="#kontakt">Kontakt</a>
       </nav>
 
-      <div class="phone" aria-hidden="false">
+      <div class="phone">
         <a href="tel:+41796628106" class="phone-cta" aria-label="Anrufen 079 662 81 06">📞 079 662 81 06</a>
       </div>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <!-- Hero -->
     <section class="hero" role="region" aria-label="Banner">
       <div class="container">
         <div class="hero-text">
@@ -77,87 +70,57 @@
       </div>
     </section>
 
-    <!-- Leistungen -->
     <section id="leistungen" class="section" aria-labelledby="leistungen-title">
       <div class="container">
         <h2 id="leistungen-title">Unsere Leistungen</h2>
         <p class="lead">Von Reparaturen bis zu kompletten Verglasungen — wir finden die passende Lösung.</p>
 
         <div class="cards-4">
-          <article class="card" aria-labelledby="c1">
-            <h3 id="c1">Glasreparatur</h3>
-            <p>Schnelle Hilfe bei Glasbruch und Notfällen.</p>
-          </article>
-
-          <article class="card" aria-labelledby="c2">
-            <h3 id="c2">Duschglas</h3>
-            <p>Massgeschneiderte Glasduschen in verschiedenen Ausführungen.</p>
-          </article>
-
-          <article class="card" aria-labelledby="c3">
-            <h3 id="c3">Bürotrennwand</h3>
-            <p>Elegante, schallreduzierende Trennwände für Büros.</p>
-          </article>
-
-          <article class="card" aria-labelledby="c4">
-            <h3 id="c4">Fensterverglasung</h3>
-            <p>Neue Verglasungen mit Fokus auf Energieeffizienz.</p>
-          </article>
+          <article class="card" aria-labelledby="c1"><h3 id="c1">Glasreparatur</h3><p>Schnelle Hilfe bei Glasbruch und Notfällen.</p></article>
+          <article class="card" aria-labelledby="c2"><h3 id="c2">Duschglas</h3><p>Massgeschneiderte Glasduschen in verschiedenen Ausführungen.</p></article>
+          <article class="card" aria-labelledby="c3"><h3 id="c3">Bürotrennwand</h3><p>Elegante, schallreduzierende Trennwände für Büros.</p></article>
+          <article class="card" aria-labelledby="c4"><h3 id="c4">Fensterverglasung</h3><p>Neue Verglasungen mit Fokus auf Energieeffizienz.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Referenzen / Galerie -->
-   <!-- Referenzen / Galerie (Bilder liegen im Root: Windfang_1.jpeg etc.) -->
-<section id="referenzen" class="section grey" aria-labelledby="ref-title">
-  <div class="container">
-    <h2 id="ref-title">Referenzen</h2>
-    <p class="lead">Einige unserer abgeschlossenen Projekte.</p>
+    <section id="referenzen" class="section grey" aria-labelledby="ref-title">
+      <div class="container">
+        <h2 id="ref-title">Referenzen</h2>
+        <p class="lead">Einige unserer abgeschlossenen Projekte.</p>
 
-    <div class="gallery" aria-live="polite">
-      <div class="project">
-        <a href="Windfang_1.jpeg" target="_blank" rel="noopener">
-          <img src="Windfang_1.jpeg" alt="Windfang Projekt 1" loading="lazy">
-        </a>
-        <p>Windfang nach Mass</p>
-      </div>
-
-      <div class="project">
-        <a href="Windfang_2.jpeg" target="_blank" rel="noopener">
-          <img src="Windfang_2.jpeg" alt="Windfang Projekt 2" loading="lazy">
-        </a>
-        <p>Einsatz des Glases</p>
-      </div>
-
-      <div class="project">
-        <a href="Montage.jpeg" target="_blank" rel="noopener">
-          <img src="Montage.jpeg" alt="Montagearbeiten" loading="lazy">
-        </a>
-        <p>Montagearbeiten</p>
-      </div>
-
-      <div class="project">
-        <a href="Trennwand_1.jpeg" target="_blank" rel="noopener">
-          <img src="Trennwand_1.jpeg" alt="Trennwand Projekt 1" loading="lazy">
-        </a>
-        <p>Bürotrennwand</p>
-      </div>
-
-      <div class="project">
-        <a href="Trennwand_2.jpeg" target="_blank" rel="noopener">
-          <img src="Trennwand_2.jpeg" alt="Trennwand Projekt 2" loading="lazy">
-        </a>
-        <p>Bürotrennwand</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="gallery" aria-live="polite">
           <div class="project">
-            <a href="Trennwand_2.jpeg" target="_blank" rel="noopener">
-              <img src="Trennwand_2-800.webp"
-                   srcset="projekte/Trennwand_2-480.webp 480w, projekte/Trennwand_2-800.webp 800w, projekte/Trennwand_2-1200.webp 1200w"
-                   sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw"
-                   alt="Trennwand" loading="lazy">
+            <a href="projekte/Windfang_1.jpeg" target="_blank" rel="noopener">
+              <img src="projekte/Windfang_1.jpeg" alt="Windfang Projekt 1" loading="lazy">
+            </a>
+            <p>Windfang nach Mass</p>
+          </div>
+
+          <div class="project">
+            <a href="projekte/Windfang_2.jpeg" target="_blank" rel="noopener">
+              <img src="projekte/Windfang_2.jpeg" alt="Windfang Projekt 2" loading="lazy">
+            </a>
+            <p>Einsatz des Glases</p>
+          </div>
+
+          <div class="project">
+            <a href="projekte/Montage.jpeg" target="_blank" rel="noopener">
+              <img src="projekte/Montage.jpeg" alt="Montagearbeiten" loading="lazy">
+            </a>
+            <p>Montagearbeiten</p>
+          </div>
+
+          <div class="project">
+            <a href="projekte/Trennwand_1.jpeg" target="_blank" rel="noopener">
+              <img src="projekte/Trennwand_1.jpeg" alt="Trennwand Projekt 1" loading="lazy">
+            </a>
+            <p>Bürotrennwand</p>
+          </div>
+
+          <div class="project">
+            <a href="projekte/Trennwand_2.jpeg" target="_blank" rel="noopener">
+              <img src="projekte/Trennwand_2.jpeg" alt="Trennwand Projekt 2" loading="lazy">
             </a>
             <p>Bürotrennwand</p>
           </div>
@@ -165,7 +128,6 @@
       </div>
     </section>
 
-    <!-- Warum ZofiGlas -->
     <section id="vorteile" class="section" aria-labelledby="vorteile-title">
       <div class="container">
         <h2 id="vorteile-title">Warum ZofiGlas</h2>
@@ -177,7 +139,6 @@
       </div>
     </section>
 
-    <!-- Kontakt -->
     <section id="kontakt" class="section grey" aria-labelledby="kontakt-title">
       <div class="container">
         <h2 id="kontakt-title">Offerte anfragen</h2>
@@ -229,21 +190,32 @@
   </main>
 
   <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
-        <h3>ZofiGlas</h3>
-        <p style="margin:0;">© 2026 ZofiGlas – Glaserei in Zofingen</p>
-        <p style="margin:6px 0;"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
-      </div>
+    <div class="container" style="padding:28px 0;display:flex;flex-direction:column;align-items:center;gap:8px;">
+      <a href="index.html" style="color:inherit;text-decoration:none;font-weight:700;">ZofiGlas</a>
+      <nav aria-label="Footer Navigation" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </nav>
+      <p style="margin:6px 0 0;color:rgba(255,255,255,0.85);font-size:14px;">© 2026 ZofiGlas – Glaserei in Zofingen</p>
     </div>
   </footer>
 
-  <!-- Minimaler JS: Hamburger + einfache Formular-Validierung -->
   <script>
   (function(){
-    // Hamburger toggle
     const navToggle = document.getElementById('navToggle');
     const mainNav = document.getElementById('mainNav');
+
+    function setNavInitial() {
+      if (window.matchMedia('(max-width:900px)').matches) {
+        mainNav.hidden = true;
+        navToggle.setAttribute('aria-expanded','false');
+      } else {
+        mainNav.hidden = false;
+        navToggle.setAttribute('aria-expanded','true');
+      }
+    }
+
     navToggle.addEventListener('click', function(){
       const expanded = this.getAttribute('aria-expanded') === 'true';
       this.setAttribute('aria-expanded', String(!expanded));
@@ -251,16 +223,9 @@
       mainNav.hidden = expanded;
     });
 
-    // Ensure nav hidden on small screens initially for accessibility
-    if (window.matchMedia('(max-width:900px)').matches) {
-      mainNav.hidden = true;
-      navToggle.setAttribute('aria-expanded','false');
-    } else {
-      mainNav.hidden = false;
-      navToggle.setAttribute('aria-expanded','true');
-    }
+    window.addEventListener('resize', setNavInitial);
+    setNavInitial();
 
-    // Simple client-side validation to improve UX (keeps server-side intact)
     const form = document.getElementById('offerForm');
     form.addEventListener('submit', function(e){
       const name = form.querySelector('#name');
@@ -273,7 +238,6 @@
       }
     });
 
-    // Close nav when clicking outside (mobile)
     document.addEventListener('click', function(e){
       if (!mainNav.contains(e.target) && !navToggle.contains(e.target) && mainNav.classList.contains('open')) {
         mainNav.classList.remove('open');
