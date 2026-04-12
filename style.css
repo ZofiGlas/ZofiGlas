@@ -37,7 +37,7 @@ nav a:hover::after{width:100%}
 .phone a{color:var(--blue);text-decoration:none;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;border:1px solid var(--blue);transition:var(--transition);white-space:nowrap}
 .phone a:hover{background:var(--blue);color:white}
 
-/* Hero als Hintergrundbild (einfügen/ersetzen) */
+/* Hero (Banner im Root: Banner_Website.png) */
 .hero{
   min-height:72vh;
   background-image: url("Banner_Website.png");
@@ -49,48 +49,15 @@ nav a:hover::after{width:100%}
   position:relative;
   color: white;
 }
-
-/* Falls du Text auf dem Bild hast: Kontrast sicherstellen */
 .hero::before{
   content:"";
   position:absolute;
   inset:0;
   background: linear-gradient(120deg, rgba(0,0,0,0.45), rgba(0,0,0,0.18));
 }
-.hero-text{ position:relative; z-index:2; }
-
-.hero{
-  min-height:72vh;
-  background-image: url("Banner_Website.png");
-  background-size: cover;
-  background-position: center;
-  display:flex;
-  align-items:center;
-  padding:60px 10%;
-  position:relative;
-  color: white;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(120deg, rgba(0,0,0,0.45), rgba(0,0,0,0.18));
-}
-
-.hero-text{ position:relative; z-index:2; }
-.hero h1{font-size:34px;line-height:1.12;margin-bottom:8px;color:var(--blue-dark)}
-.hero p{font-size:16px;color:var(--text-soft)}
-
-/* Optional (aktivieren wenn Banner vorhanden):
-.hero{
-  background-image:url("projekte/Banner_Website.png");
-  background-size:cover;
-  background-position:center;
-  color:white;
-}
-.hero-text{background:rgba(0,0,0,0.35);color:#fff}
-*/
+.hero-text{ position:relative; z-index:2; max-width:560px; padding:28px 32px; background:rgba(0,0,0,0.35); border-radius:8px; }
+.hero h1{font-size:34px;line-height:1.12;margin-bottom:8px;color:#fff}
+.hero p{font-size:16px;color:#f1f1f1}
 
 /* Button */
 .button{
@@ -132,7 +99,7 @@ nav a:hover::after{width:100%}
 .card p{color:var(--text-soft);font-size:14px}
 .card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,0.08)}
 
-/* Galerie (Bilder liegen im Ordner projekte/) */
+/* Galerie (Bilder im Ordner projekte/) */
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -168,6 +135,11 @@ button:hover{background:var(--blue-dark);transform:translateY(-2px)}
 .center{text-align:center}
 .muted{color:var(--text-soft);font-size:14px}
 
+/* Footer */
+.footer{background:#222;color:#fff;margin-top:40px}
+.footer a{color:#fff;text-decoration:none;opacity:0.95}
+.footer a:hover{opacity:1}
+
 /* Responsive */
 @media (max-width:900px){
   .cards-4{grid-template-columns:repeat(2,1fr)}
@@ -181,4 +153,5 @@ button:hover{background:var(--blue-dark);transform:translateY(-2px)}
   .cards-4{grid-template-columns:1fr}
   .hero{padding:36px 5%}
   .hero h1{font-size:22px}
+  .section{padding:40px 12px}
 }
