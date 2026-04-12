@@ -1,5 +1,6 @@
 /* =========================
-   style.css — Professionell & seniorenfreundlich
+   style.css — Logo größer & Button-Farbe abgeschwächt
+   (komplette Datei, ersetze deine aktuelle style.css damit)
    ========================= */
 
 /* Basis und Variablen */
@@ -8,8 +9,9 @@
   --bg:#ffffff;
   --surface:#ffffff;
   --muted:#f6f7f9;
-  --accent:#0B74C9;
-  --accent-600:#05528F;
+  /* Accent: etwas weniger grell, wärmer und gedämpfter */
+  --accent:#0A6BA8;        /* Hauptfarbe für Buttons/Links (gedämpfter) */
+  --accent-600:#054f78;    /* dunklere Variante für Hover */
   --text:#0f1724;
   --text-soft:#4b5563;
   --border:#e6e9ee;
@@ -19,11 +21,12 @@
   --gap:20px;
   --container:1100px;
   --transition:180ms cubic-bezier(.2,.9,.3,1);
-  --logo-desktop:160px;
-  --logo-tablet:120px;
-  --logo-mobile:88px;
+  /* Logo-Größen erhöht */
+  --logo-desktop:200px;
+  --logo-tablet:140px;
+  --logo-mobile:110px;
   --card-max-width:420px;
-  --focus-ring: 0 0 0 5px rgba(11,116,201,0.14);
+  --focus-ring: 0 0 0 5px rgba(10,107,168,0.14);
   --base-font:18px;
 }
 
@@ -65,10 +68,16 @@ body{
   color:var(--text-soft);text-decoration:none;font-weight:700;font-size:1.05rem;padding:10px 12px;border-radius:10px;
   transition:background var(--transition), color var(--transition), transform var(--transition);
 }
-.main-nav a:hover,.main-nav a:focus{color:var(--accent-600);background:rgba(11,116,201,0.06);transform:translateY(-2px);outline:none;box-shadow:var(--focus-ring)}
+.main-nav a:hover,.main-nav a:focus{
+  color:var(--accent-600);
+  background:rgba(10,107,168,0.06);
+  transform:translateY(-2px);
+  outline:none;
+  box-shadow:var(--focus-ring);
+}
 
 /* Phone CTA */
-.phone-cta{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--accent);border:1px solid rgba(11,116,201,0.12);padding:10px 16px;border-radius:999px;font-weight:800;text-decoration:none}
+.phone-cta{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--accent);border:1px solid rgba(10,107,168,0.12);padding:10px 16px;border-radius:999px;font-weight:800;text-decoration:none}
 .phone-cta:hover{background:var(--accent);color:#fff;box-shadow:var(--shadow-sm)}
 
 /* Hamburger button (mobile) */
@@ -83,9 +92,23 @@ body{
 .hero h1{font-size:2.1rem;line-height:1.05;margin-bottom:10px;font-weight:800}
 .hero p.lead{font-size:1.05rem;color:rgba(255,255,255,0.95)}
 
-/* Button */
-.button{display:inline-block;background:var(--accent);color:#fff;padding:14px 22px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 14px 36px rgba(11,116,201,0.14)}
-.button:hover{transform:translateY(-3px);box-shadow:0 20px 48px rgba(11,116,201,0.18)}
+/* Button: Farbe angepasst, weniger grell, weicherer Hover */
+.button{
+  display:inline-block;
+  background:var(--accent);
+  color:#ffffff;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(10,107,168,0.12);
+  transition:transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.button:hover{
+  background:var(--accent-600);
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px rgba(5,79,120,0.14);
+}
 
 /* Sections & Cards */
 .section{padding:56px 0}
@@ -120,8 +143,8 @@ input:focus,textarea:focus,select:focus{outline:none;box-shadow:var(--focus-ring
 textarea{min-height:160px;resize:vertical}
 .form-row{display:flex;gap:12px}
 .form-row .half{flex:1}
-button[type="submit"]{background:var(--accent);color:#fff;padding:14px 20px;border-radius:999px;border:none;font-weight:800;cursor:pointer;box-shadow:0 16px 40px rgba(11,116,201,0.14)}
-button[type="submit"]:hover{transform:translateY(-3px);box-shadow:0 22px 48px rgba(11,116,201,0.18)}
+button[type="submit"]{background:var(--accent);color:#fff;padding:14px 20px;border-radius:999px;border:none;font-weight:800;cursor:pointer;box-shadow:0 16px 40px rgba(10,107,168,0.14)}
+button[type="submit"]:hover{background:var(--accent-600);transform:translateY(-3px);box-shadow:0 22px 48px rgba(5,79,120,0.18)}
 
 /* Footer */
 .footer{background:#0f1724;color:#e6eef8;padding:36px 0;margin-top:48px}
