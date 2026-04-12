@@ -7,7 +7,7 @@
   <meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen und Umgebung.">
 
   <!-- Haupt-CSS (liegt im Root als style.css) -->
-  <link rel="stylesheet" href="style.css?v=1.0">
+  <link rel="stylesheet" href="style.css?v=1.8">
 </head>
 <body>
 
@@ -32,7 +32,7 @@
 
 <main>
   <!-- Hero: Banner liegt im Root als Banner_Website.png -->
-  <section class="hero">
+  <section class="hero" role="region" aria-label="Banner">
     <div class="hero-text">
       <h1>Glaslösungen aus Zofingen</h1>
       <p>Massgeschneiderte Glasarbeiten für Privat und Gewerbe</p>
@@ -40,8 +40,8 @@
     </div>
   </section>
 
-  <section id="leistungen" class="section">
-    <h2>Unsere Leistungen</h2>
+  <section id="leistungen" class="section" aria-labelledby="leistungen-title">
+    <h2 id="leistungen-title">Unsere Leistungen</h2>
     <div class="cards-4">
       <div class="card">
         <h3>Glasreparatur</h3>
@@ -62,38 +62,38 @@
     </div>
   </section>
 
-  <section id="referenzen" class="section grey">
-    <h2>Referenzen</h2>
-    <div class="gallery">
+  <section id="referenzen" class="section grey" aria-labelledby="referenzen-title">
+    <h2 id="referenzen-title">Referenzen</h2>
+    <div class="gallery" aria-live="polite">
       <div class="project">
-        <img src="projekte/Windfang_1.jpeg" alt="Windfang 1" loading="lazy">
+        <img src="projekte/Windfang_1.jpeg" alt="Windfang Projekt 1" loading="lazy">
         <p>Windfang nach Mass</p>
       </div>
 
       <div class="project">
-        <img src="projekte/Windfang_2.jpeg" alt="Windfang 2" loading="lazy">
+        <img src="projekte/Windfang_2.jpeg" alt="Windfang Projekt 2" loading="lazy">
         <p>Einsatz des Glases</p>
       </div>
 
       <div class="project">
-        <img src="projekte/Montage.jpeg" alt="Montage" loading="lazy">
+        <img src="projekte/Montage.jpeg" alt="Montagearbeiten" loading="lazy">
         <p>Montagearbeiten</p>
       </div>
 
       <div class="project">
-        <img src="projekte/Trennwand_1.jpeg" alt="Trennwand 1" loading="lazy">
+        <img src="projekte/Trennwand_1.jpeg" alt="Trennwand Projekt 1" loading="lazy">
         <p>Bürotrennwand</p>
       </div>
 
       <div class="project">
-        <img src="projekte/Trennwand_2.jpeg" alt="Trennwand 2" loading="lazy">
+        <img src="projekte/Trennwand_2.jpeg" alt="Trennwand Projekt 2" loading="lazy">
         <p>Bürotrennwand</p>
       </div>
     </div>
   </section>
 
-  <section id="vorteile" class="section">
-    <h2>Warum ZofiGlas</h2>
+  <section id="vorteile" class="section" aria-labelledby="vorteile-title">
+    <h2 id="vorteile-title">Warum ZofiGlas</h2>
     <div class="cards-3">
       <div class="card"><h3>Lokal</h3><p>Regionaler Service in Zofingen.</p></div>
       <div class="card"><h3>Schnell</h3><p>Antwort innerhalb kurzer Zeit.</p></div>
@@ -101,8 +101,8 @@
     </div>
   </section>
 
-  <section id="kontakt" class="section grey">
-    <h2>Offerte anfragen</h2>
+  <section id="kontakt" class="section grey" aria-labelledby="kontakt-title">
+    <h2 id="kontakt-title">Offerte anfragen</h2>
 
     <div class="contact">
       <form id="offerForm" action="https://formsubmit.co/zofiglas@gmx.ch" method="POST">
@@ -151,8 +151,8 @@
       </form>
     </div>
 
-    <div class="map">
-      <iframe src="https://maps.google.com/maps?q=Zofingen&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+    <div class="map" aria-hidden="false">
+      <iframe src="https://maps.google.com/maps?q=Zofingen&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Karte Zofingen"></iframe>
     </div>
   </section>
 </main>
@@ -169,6 +169,143 @@
     <p style="margin-top:8px;opacity:0.8;">© 2026 ZofiGlas – Glaserei in Zofingen</p>
   </div>
 </footer>
+
+<!-- Image Modal Viewer (Fenstermodus) -->
+<div id="imgModal" class="img-modal" aria-hidden="true" role="dialog" aria-label="Bildvorschau">
+  <div class="img-modal-overlay" data-close="true"></div>
+
+  <div class="img-window" role="document" aria-modal="true" tabindex="-1">
+    <div class="img-window-title" id="imgWindowTitle">
+      <span class="img-window-caption">Bild</span>
+      <div class="img-window-controls">
+        <button class="img-window-btn prev" aria-label="Vorheriges Bild">◀</button>
+        <button class="img-window-btn next" aria-label="Nächstes Bild">▶</button>
+        <button class="img-window-close" aria-label="Fenster schliessen">✕</button>
+      </div>
+    </div>
+
+    <div class="img-window-body">
+      <img src="" alt="" class="img-window-img">
+      <div class="img-window-meta">
+        <div class="img-window-filename"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Script -->
+<script>
+(function(){
+  const modal = document.getElementById('imgModal');
+  const overlay = modal.querySelector('.img-modal-overlay');
+  const win = modal.querySelector('.img-window');
+  const imgEl = modal.querySelector('.img-window-img');
+  const captionEl = modal.querySelector('.img-window-caption');
+  const filenameEl = modal.querySelector('.img-window-filename');
+  const closeBtn = modal.querySelector('.img-window-close');
+  const prevBtn = modal.querySelector('.img-window-btn.prev');
+  const nextBtn = modal.querySelector('.img-window-btn.next');
+
+  const galleryImgs = Array.from(document.querySelectorAll('.gallery .project img'));
+  let currentIndex = -1;
+
+  function openModal(index){
+    if(index < 0 || index >= galleryImgs.length) return;
+    currentIndex = index;
+    const source = galleryImgs[index].getAttribute('src');
+    const alt = galleryImgs[index].getAttribute('alt') || '';
+    const caption = galleryImgs[index].closest('.project')?.querySelector('p')?.innerText || alt || '';
+    imgEl.src = source;
+    imgEl.alt = alt;
+    captionEl.textContent = caption;
+    filenameEl.textContent = source.split('/').pop();
+    modal.setAttribute('aria-hidden','false');
+    modal.style.display = 'block';
+    win.focus();
+    document.documentElement.style.overflow = 'hidden';
+    // reset window position
+    win.style.left = '';
+    win.style.top = '';
+    win.style.transform = '';
+  }
+
+  function closeModal(){
+    modal.setAttribute('aria-hidden','true');
+    modal.style.display = 'none';
+    imgEl.src = '';
+    currentIndex = -1;
+    document.documentElement.style.overflow = '';
+  }
+
+  function showNext(){
+    if(currentIndex < galleryImgs.length - 1) openModal(currentIndex + 1);
+  }
+  function showPrev(){
+    if(currentIndex > 0) openModal(currentIndex - 1);
+  }
+
+  galleryImgs.forEach((img, idx) => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal(idx);
+    });
+  });
+
+  overlay.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  nextBtn.addEventListener('click', showNext);
+  prevBtn.addEventListener('click', showPrev);
+
+  document.addEventListener('keydown', (e) => {
+    if(modal.getAttribute('aria-hidden') === 'false'){
+      if(e.key === 'Escape') closeModal();
+      if(e.key === 'ArrowRight') showNext();
+      if(e.key === 'ArrowLeft') showPrev();
+    }
+  });
+
+  (function enableDrag(){
+    const title = modal.querySelector('.img-window-title');
+    let isDown = false;
+    let startX, startY, origX, origY;
+
+    title.addEventListener('pointerdown', (e) => {
+      isDown = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      const rect = win.getBoundingClientRect();
+      origX = rect.left;
+      origY = rect.top;
+      title.setPointerCapture(e.pointerId);
+      win.style.transition = 'none';
+    });
+
+    document.addEventListener('pointermove', (e) => {
+      if(!isDown) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      win.style.left = (origX + dx) + 'px';
+      win.style.top = (origY + dy) + 'px';
+      win.style.position = 'fixed';
+    });
+
+    document.addEventListener('pointerup', () => {
+      if(!isDown) return;
+      isDown = false;
+      win.style.transition = '';
+    });
+  })();
+
+  document.addEventListener('focus', function(e){
+    if(modal.getAttribute('aria-hidden') === 'false' && !modal.contains(e.target)){
+      e.stopPropagation();
+      win.focus();
+    }
+  }, true);
+
+})();
+</script>
 
 </body>
 </html>
