@@ -40,7 +40,7 @@ nav a:hover::after{width:100%}
 /* Hero */
 .hero{
   min-height:75vh;
-  background-image:url("Banner%20Website.png"); /* repariert */
+  background-image:url("projekte/Banner_Website.png");
   background-size:cover;
   background-position:center;
   display:flex;
