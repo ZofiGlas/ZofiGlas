@@ -25,6 +25,31 @@ body{
 .header{position:sticky;top:0;background:white;z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
 .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:20px}
 .logo img{height:110px;display:block;max-width:100%}
+/* Logo (Datei im Root: logo-bild-svg.jpg) */
+.logo .site-logo,
+.logo img.site-logo {
+  height:110px;
+  max-height:110px;
+  width:auto;
+  display:block;
+  object-fit:contain;
+}
+
+/* Kleinere Geräte */
+@media (max-width:900px){
+  .logo .site-logo,
+  .logo img.site-logo {
+    height:90px;
+    max-height:90px;
+  }
+}
+@media (max-width:600px){
+  .logo .site-logo,
+  .logo img.site-logo {
+    height:72px;
+    max-height:72px;
+  }
+}
 
 /* Navigation */
 nav{display:flex;align-items:center;gap:18px}
