@@ -140,15 +140,51 @@ nav a:hover::after{width:100%}
   margin:30px auto 0;
 }
 .cards-4{grid-template-columns:repeat(4,1fr)}
-.cards-3{grid-template-columns:repeat(3,1fr)}
-.card{
-  background:white;padding:20px;border-radius:10px;box-shadow:var(--shadow-soft);
-  min-height:150px;display:flex;flex-direction:column;justify-content:center;text-align:left;
-  transition:var(--transition);border:1px solid rgba(0,0,0,0.03);
+/* Warum ZofiGlas — zentrierte Karten (Lokal / Schnell / Individuell) */
+.cards-3 {
+  display: grid;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 30px auto 0;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;      /* zentriert die Karten innerhalb des Grid */
+  align-items: start;
+  text-align: center;         /* Standard-Textzentrierung für die Karten */
 }
-.card h3{margin-bottom:6px;font-size:16px}
-.card p{color:var(--text-soft);font-size:14px}
-.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,0.08)}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-soft);
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* zentriert vertikal den Inhalt */
+  align-items: center;        /* zentriert horizontal (Titel, Text, Buttons) */
+  text-align: center;         /* sicherstellen, dass Text zentriert ist */
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Feinschliff: Titel und Text */
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.1;
+}
+.card p {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin: 0;
+  max-width: 320px;           /* verhindert zu breite Textzeilen */
+}
+
+/* Responsive: bei kleinen Bildschirmen eine Spalte */
+@media (max-width:900px){
+  .cards-3 { grid-template-columns: 1fr; gap: 18px; }
+  .card { padding: 18px; max-width: 520px; }
+}
 
 /* Galerie (Bilder im Ordner projekte/) */
 .gallery{
