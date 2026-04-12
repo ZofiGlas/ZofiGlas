@@ -3,23 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>ZofiGlas | Glaserei in Zofingen</title>
   <meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen und Umgebung.">
 
   <!-- Haupt-CSS (liegt im Root als style.css) -->
-  <link rel="stylesheet" href="style.css?v=1.5">
-
-  <!-- Lightbox (optional) - entferne wenn nicht gebraucht -->
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="style.css?v=1.0">
 </head>
-
 <body>
 
 <header class="header">
   <div class="container nav">
     <div class="logo">
-      <img src="logo-bild-svg.jpg" alt="ZofiGlas Logo" loading="lazy">
+      <img src="projekte/logo-bild-svg.jpg" alt="ZofiGlas Logo" loading="lazy">
     </div>
 
     <nav>
@@ -36,6 +31,7 @@
 </header>
 
 <main>
+  <!-- Hero: Banner liegt im Root als Banner_Website.png -->
   <section class="hero">
     <div class="hero-text">
       <h1>Glaslösungen aus Zofingen</h1>
@@ -46,23 +42,19 @@
 
   <section id="leistungen" class="section">
     <h2>Unsere Leistungen</h2>
-
     <div class="cards-4">
       <div class="card">
         <h3>Glasreparatur</h3>
         <p>Schnelle Hilfe bei Glasbruch oder beschädigten Fenstern.</p>
       </div>
-
       <div class="card">
         <h3>Duschglas</h3>
         <p>Moderne Glasduschen nach Mass.</p>
       </div>
-
       <div class="card">
         <h3>Bürotrennwand</h3>
         <p>Elegante Glaslösungen für Büros.</p>
       </div>
-
       <div class="card">
         <h3>Fensterverglasung</h3>
         <p>Neue Verglasungen für Häuser und Wohnungen.</p>
@@ -70,67 +62,42 @@
     </div>
   </section>
 
-<section id="referenzen" class="section grey">
+  <section id="referenzen" class="section grey">
     <h2>Referenzen</h2>
-
     <div class="gallery">
-
       <div class="project">
-        <a href="projekte/Windfang_1.jpeg" data-lightbox="referenzen" data-title="Windfang nach Mass">
-          <img src="projekte/Windfang_1.jpeg" alt="Windfang Glas" loading="lazy">
-        </a>
+        <img src="projekte/Windfang_1.jpeg" alt="Windfang 1" loading="lazy">
         <p>Windfang nach Mass</p>
       </div>
 
       <div class="project">
-        <a href="projekte/Windfang_2.jpeg" data-lightbox="referenzen" data-title="Windfang nach Mass">
-          <img src="projekte/Windfang_2.jpeg" alt="Windfang Glas" loading="lazy">
-        </a>
+        <img src="projekte/Windfang_2.jpeg" alt="Windfang 2" loading="lazy">
         <p>Einsatz des Glases</p>
       </div>
 
       <div class="project">
-        <a href="projekte/Montage.jpeg" data-lightbox="referenzen" data-title="Montagearbeiten">
-          <img src="projekte/Montage.jpeg" alt="Montagearbeiten Glas" loading="lazy">
-        </a>
+        <img src="projekte/Montage.jpeg" alt="Montage" loading="lazy">
         <p>Montagearbeiten</p>
       </div>
 
       <div class="project">
-        <a href="projekte/Trennwand_1.jpeg" data-lightbox="referenzen" data-title="Bürotrennwand – Projekt 1">
-          <img src="projekte/Trennwand_1.jpeg" alt="Bürotrennwand Glas" loading="lazy">
-        </a>
+        <img src="projekte/Trennwand_1.jpeg" alt="Trennwand 1" loading="lazy">
         <p>Bürotrennwand</p>
       </div>
 
       <div class="project">
-        <a href="projekte/Trennwand_2.jpeg" data-lightbox="referenzen" data-title="Bürotrennwand – Projekt 2">
-          <img src="projekte/Trennwand_2.jpeg" alt="Bürotrennwand Glas" loading="lazy">
-        </a>
+        <img src="projekte/Trennwand_2.jpeg" alt="Trennwand 2" loading="lazy">
         <p>Bürotrennwand</p>
       </div>
-
     </div>
-</section>
+  </section>
 
   <section id="vorteile" class="section">
     <h2>Warum ZofiGlas</h2>
-
     <div class="cards-3">
-      <div class="card">
-        <h3>Lokal</h3>
-        <p>Regionaler Service in Zofingen.</p>
-      </div>
-
-      <div class="card">
-        <h3>Schnell</h3>
-        <p>Antwort innerhalb kurzer Zeit.</p>
-      </div>
-
-      <div class="card">
-        <h3>Individuell</h3>
-        <p>Massgeschneiderte Lösungen.</p>
-      </div>
+      <div class="card"><h3>Lokal</h3><p>Regionaler Service in Zofingen.</p></div>
+      <div class="card"><h3>Schnell</h3><p>Antwort innerhalb kurzer Zeit.</p></div>
+      <div class="card"><h3>Individuell</h3><p>Massgeschneiderte Lösungen.</p></div>
     </div>
   </section>
 
@@ -155,10 +122,20 @@
           </select>
         </label>
 
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Name" required>
-        </label>
+        <div class="form-row">
+          <div class="half">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Name" required>
+            </label>
+          </div>
+          <div class="half">
+            <label>
+              Telefon
+              <input type="text" name="telefon" placeholder="Telefon">
+            </label>
+          </div>
+        </div>
 
         <label>
           Email
@@ -166,13 +143,8 @@
         </label>
 
         <label>
-          Telefon
-          <input type="text" name="telefon" placeholder="Telefon">
-        </label>
-
-        <label>
           Beschreibung
-          <textarea name="message" placeholder="Beschreibung"></textarea>
+          <textarea name="message" placeholder="Beschreibe kurz dein Anliegen"></textarea>
         </label>
 
         <button type="submit">Offerte anfragen</button>
@@ -185,24 +157,18 @@
   </section>
 </main>
 
-<footer style="background:#222; color:white; padding:25px 0; margin-top:40px;">
-    <div style="max-width:1100px; margin:0 auto; text-align:center;">
-
-        <h3>ZofiGlas</h3>
-
-        <p style="margin:0; font-size:15px;">
-            <a href="index.html" style="color:white;">Startseite</a> |
-            <a href="impressum.html" style="color:white;">Impressum</a> |
-            <a href="datenschutz.html" style="color:white;">Datenschutz</a> |
-            <a href="agb.html" style="color:white;">AGB</a>
-        </p>
-
-        <p style="margin-top:15px; font-size:14px; opacity:0.7;">
-            © 2026 ZofiGlas – Glaserei in Zofingen
-        </p>
-
-    </div>
+<footer class="footer">
+  <div class="container center" style="padding:24px 0;">
+    <h3>ZofiGlas</h3>
+    <p style="margin:6px 0;">
+      <a href="index.html">Startseite</a> |
+      <a href="impressum.html">Impressum</a> |
+      <a href="datenschutz.html">Datenschutz</a> |
+      <a href="agb.html">AGB</a>
+    </p>
+    <p style="margin-top:8px;opacity:0.8;">© 2026 ZofiGlas – Glaserei in Zofingen</p>
+  </div>
 </footer>
-  
+
 </body>
 </html>
