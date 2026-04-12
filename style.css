@@ -110,3 +110,15 @@ footer a:hover{color:white}
   .gallery{margin-top:30px}
   .phone{order:3}
 }
+
+/* Lightbox Close Button oben rechts */
+.lb-close {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    width: 40px !important;
+    height: 40px !important;
+    opacity: 1 !important;
+    filter: invert(100%) !important; /* macht das X weiss */
+    cursor: pointer;
+}
