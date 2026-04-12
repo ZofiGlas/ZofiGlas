@@ -7,8 +7,8 @@
   <title>ZofiGlas | Glaserei in Zofingen</title>
   <meta name="description" content="ZofiGlas – Glaslösungen, Reparaturen und Verglasungen in Zofingen und Umgebung.">
 
-  <!-- Haupt-CSS (ROOT) -->
-  <link rel="stylesheet" href="style.css?v=1.2">
+  <!-- CSS im Ordner projekte -->
+  <link rel="stylesheet" href="projekte/style.css?v=1.4">
 
   <!-- Lightbox CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
@@ -104,13 +104,16 @@
 
   <section id="kontakt" class="section grey">
     <h2>Offerte anfragen</h2>
+
     <div class="contact">
       <form id="offerForm" action="https://formsubmit.co/zofiglas@gmx.ch" method="POST">
         <input type="hidden" name="_subject" value="Neue Offertanfrage ZofiGlas">
         <input type="hidden" name="_next" value="https://zofiglas.github.io/ZofiGlas/danke.html">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" style="display:none">
-        <label>Leistung
+
+        <label>
+          Leistung
           <select name="arbeit" required>
             <option>Glasreparatur</option>
             <option>Duschglas</option>
@@ -119,10 +122,32 @@
             <option>Spezialanfertigung</option>
           </select>
         </label>
-        <label>Name<input type="text" name="name" placeholder="Name" required></label>
-        <label>Email<input type="email" name="email" placeholder="Email" required></label>
-        <label>Telefon<input type="text" name="telefon" placeholder="Telefon"></label>
-        <label>Beschreibung<textarea name="message" placeholder="Beschreibung"></textarea></label>
+
+        <div class="form-row">
+          <div class="half">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Name" required>
+            </label>
+          </div>
+          <div class="half">
+            <label>
+              Telefon
+              <input type="text" name="telefon" placeholder="Telefon">
+            </label>
+          </div>
+        </div>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="Email" required>
+        </label>
+
+        <label>
+          Beschreibung
+          <textarea name="message" placeholder="Beschreibe kurz dein Anliegen"></textarea>
+        </label>
+
         <button type="submit">Offerte anfragen</button>
       </form>
     </div>
@@ -146,7 +171,7 @@
   </div>
 </footer>
 
-<!-- Lightbox JS am Ende laden -->
+<!-- Lightbox JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
