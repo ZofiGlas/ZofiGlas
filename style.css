@@ -37,7 +37,7 @@ nav a:hover::after{width:100%}
 .phone a{color:var(--blue);text-decoration:none;font-weight:600;font-size:15px;padding:8px 14px;border-radius:999px;border:1px solid var(--blue);transition:var(--transition);white-space:nowrap}
 .phone a:hover{background:var(--blue);color:white}
 
-/* Hero (Banner) */
+/* Hero (Banner) - Bild liegt im Ordner projekte/ */
 .hero{
   min-height:75vh;
   background-image:url("projekte/Banner_Website.png");
