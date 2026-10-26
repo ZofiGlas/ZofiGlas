@@ -1,6 +1,6 @@
 /* =========================
    style.css – ZofiGlas
-   Bereinigte vollständige Version
+   Vollständig bereinigte Version
    ========================= */
 
 
@@ -39,7 +39,6 @@
 
   --logo-desktop:200px;
   --logo-tablet:160px;
-  --logo-mobile:420px;
 
   --card-max-width:420px;
 
@@ -90,7 +89,7 @@ img{
 
 
 /* =========================
-   Accessibility
+   Barrierefreiheit
    ========================= */
 
 .sr-only{
@@ -177,7 +176,7 @@ img{
 
 
 /* =========================
-   Navigation Desktop
+   Desktop-Navigation
    ========================= */
 
 .main-nav{
@@ -281,7 +280,7 @@ img{
 
 
 /* =========================
-   Hero
+   Hero-Bereich
    ========================= */
 
 .hero{
@@ -617,10 +616,11 @@ button[type="submit"]:hover{
 
 
 /* =========================
-   Karte
+   Google-Karte
    ========================= */
 
 .map{
+  margin-top:18px;
   overflow:hidden;
   border-radius:12px;
   box-shadow:var(--shadow-sm);
@@ -658,6 +658,33 @@ button[type="submit"]:hover{
 .footer p{
   font-size:0.98rem;
   opacity:0.95;
+}
+
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  padding:28px 18px;
+}
+
+.footer-brand{
+  color:inherit;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.footer-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+}
+
+.footer-copyright{
+  margin:6px 0 0;
+  color:rgba(255,255,255,0.85);
+  font-size:14px;
 }
 
 
@@ -855,6 +882,11 @@ button[type="submit"]:hover{
     margin-top:-16px;
   }
 
+  .phone-cta{
+    padding:9px 14px;
+    font-size:0.95rem;
+  }
+
   .hero h1{
     font-size:1.2rem;
   }
@@ -912,34 +944,4 @@ label{
     animation-duration:0.01ms !important;
     animation-iteration-count:1 !important;
   }
-}
-.map{
-  margin-top:18px;
-}
-
-.footer-inner{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-  padding:28px 18px;
-}
-
-.footer-brand{
-  color:inherit;
-  font-weight:700;
-  text-decoration:none;
-}
-
-.footer-nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-}
-
-.footer-copyright{
-  margin:6px 0 0;
-  color:rgba(255,255,255,0.85);
-  font-size:14px;
 }
