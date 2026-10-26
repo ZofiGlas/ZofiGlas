@@ -370,10 +370,9 @@ textarea{min-height:160px;resize:vertical}
   .project img{
     height:160px;
   }
-}
-
    
 }
+
 /* Senior-friendly tweaks */
 a,button,input,select,textarea{touch-action:manipulation}
 .section h2,.card h3,.project p{color:var(--text)}
