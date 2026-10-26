@@ -110,6 +110,30 @@ body{
   box-shadow:0 10px 25px rgba(36,169,243,0.25);
 }
 
+/* Hamburger button (mobile) */
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:none;
+  padding:8px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.nav-toggle:focus{
+  outline:none;
+  box-shadow:var(--focus-ring);
+}
+
+.hamburger-line{
+  display:block;
+  width:26px;
+  height:3px;
+  background:var(--text);
+  margin:5px 0;
+  border-radius:3px;
+  transition:transform 160ms ease;
+}
 
 /* Hero */
 .hero{min-height:60vh;display:flex;align-items:center;padding:56px 0;background-image:url("Banner_Website.png");background-size:cover;background-position:center;position:relative;color:#fff}
