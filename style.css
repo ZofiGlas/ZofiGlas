@@ -268,27 +268,122 @@ textarea{min-height:160px;resize:vertical}
     grid-template-columns:repeat(2,1fr);
   }
 
-/* Responsive / Mobile */
- @media (max-width:600px){
+/* =========================
+   Responsive / Tablet
+   ========================= */
+
+@media (max-width:900px){
+
+  :root{
+    --logo-desktop:var(--logo-tablet);
+  }
+
+  .header-inner{
+    padding:14px 0;
+  }
+
+  .hero{
+    min-height:52vh;
+    padding:40px 0;
+  }
+
+  .hero .hero-text{
+    max-width:560px;
+    padding:20px;
+  }
+
+  .cards-4{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .cards-3{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+
+/* =========================
+   Responsive / Mobile
+   ========================= */
+
+@media (max-width:600px){
 
   .header-inner{
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:0;
-    padding:0;
+    justify-content:center;
+    gap:8px;
+    padding:8px 0 14px;
   }
 
   .logo{
-    margin-bottom:-100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin:0;
+  }
+
+  .logo a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+  }
+
+  .site-logo{
+    display:block;
+    width:95%;
+    max-width:420px;
+    height:auto;
+    max-height:none;
+    margin:0 auto -35px;
+    object-fit:contain;
   }
 
   .nav-toggle{
-    margin-top:-50px;
-    padding-top:0;
+    display:inline-block;
+    margin:0;
+    padding:8px;
   }
 
-}
+  .main-nav{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    width:100%;
+    margin:0;
+    padding:8px 12px;
+    text-align:center;
+  }
+
+  .main-nav.open{
+    display:flex;
+  }
+
+  .main-nav a{
+    display:block;
+    width:100%;
+    max-width:320px;
+    padding:10px 12px;
+  }
+
+  .phone{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin:0;
+  }
+
+  .phone-cta{
+    margin:0;
+  }
 
   .hero{
     min-height:46vh;
@@ -334,13 +429,17 @@ textarea{min-height:160px;resize:vertical}
 }
 
 
-/* Sehr kleine Displays */
+/* =========================
+   Sehr kleine Displays
+   ========================= */
+
 @media (max-width:420px){
 
   .site-logo{
-    width:95%;
+    width:100%;
     max-width:380px;
     height:auto;
+    margin-bottom:-30px;
   }
 
   .hero h1{
@@ -350,11 +449,28 @@ textarea{min-height:160px;resize:vertical}
   .project img{
     height:160px;
   }
-   
 }
 
 /* Senior-friendly tweaks */
-a,button,input,select,textarea{touch-action:manipulation}
-.section h2,.card h3,.project p{color:var(--text)}
-a:focus,button:focus,input:focus,select:focus,textarea:focus{box-shadow:var(--focus-ring);border-color:var(--accent)}
-p,li,label{line-height:1.7}
+a,button,input,select,textarea{
+   touch-action:manipulation;
+}
+   
+.section h2,
+.card h3,
+.project p{
+color:var(--text);
+}
+   
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus{
+   box-shadow:var(--focus-ring);
+   border-color:var(--accent);
+}
+   
+p,li,label{
+   line-height:1.7;
+}
