@@ -696,8 +696,6 @@ button[type="submit"]:hover{
   .gallery{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
-}
-
 
 /* =========================
    Mobile bis 600 px
@@ -713,18 +711,21 @@ button[type="submit"]:hover{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
     gap:6px;
-    padding:8px 0 12px;
+    padding:6px 0 12px;
   }
 
-  /* Beschneidet die weisse Fläche innerhalb der Logo-Datei */
+  /*
+   * Fester Ausschnitt für das Logo.
+   * Die weißen Ränder der JPEG-Datei werden abgeschnitten.
+   */
   .logo{
     display:flex;
     justify-content:center;
     align-items:center;
     width:100%;
-    height:190px;
+    height:180px;
     margin:0;
     overflow:hidden;
   }
@@ -738,16 +739,15 @@ button[type="submit"]:hover{
     overflow:hidden;
   }
 
-  /* Logo wird innerhalb des beschnittenen Bereichs vergrössert */
   .site-logo{
     display:block;
-    width:100%;
-    max-width:430px;
+    width:410px;
+    max-width:none;
     height:auto;
     max-height:none;
     margin:0;
     object-fit:contain;
-    transform:scale(1.38);
+    transform:scale(1.32);
     transform-origin:center;
   }
 
@@ -831,11 +831,8 @@ button[type="submit"]:hover{
   .section{
     padding:36px 0;
   }
-
-  .map iframe{
-    min-height:300px;
-  }
 }
+
 
 /* =========================
    Sehr kleine Displays
@@ -844,14 +841,14 @@ button[type="submit"]:hover{
 @media (max-width:420px){
 
   .logo{
-    height:175px;
+    height:165px;
   }
 
   .site-logo{
-    width:100%;
-    max-width:400px;
+    width:390px;
+    max-width:none;
     height:auto;
-    transform:scale(1.42);
+    transform:scale(1.34);
   }
 
   .hero h1{
