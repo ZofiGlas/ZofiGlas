@@ -271,11 +271,19 @@ textarea{min-height:160px;resize:vertical}
 }
 
 @media (max-width:420px){
-  .site-logo{height:220px}
-  .max-height:220px;
-  .width:auto;
-  .hero h1{font-size:1.2rem}
-  .project img{height:160px}
+  .site-logo{
+    height:220px;
+    max-height:220px;
+    width:auto;
+  }
+
+  .hero h1{
+    font-size:1.2rem;
+  }
+
+  .project img{
+    height:160px;
+  }
 }
 
 /* Senior-friendly tweaks */
