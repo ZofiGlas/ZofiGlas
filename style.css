@@ -326,6 +326,24 @@ textarea{min-height:160px;resize:vertical}
   .section{
     padding:36px 0;
   }
+
+   @media (max-width:420px){
+
+  .site-logo{
+    width:95%;
+    max-width:340px;
+    height:auto;
+  }
+
+  .hero h1{
+    font-size:1.2rem;
+  }
+
+  .project img{
+    height:160px;
+  }
+}
+   
 }
 /* Senior-friendly tweaks */
 a,button,input,select,textarea{touch-action:manipulation}
