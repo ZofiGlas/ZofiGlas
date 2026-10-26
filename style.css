@@ -248,45 +248,85 @@ textarea{min-height:160px;resize:vertical}
 
 @media (max-width:600px){
 
+  .header-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:2px;
+    padding:12px 0;
+  }
+
+  .logo{
+    justify-content:center;
+    width:100%;
+  }
+
   .site-logo{
     width:90%;
-    max-width:320px;
+    max-width:380px;
     height:auto !important;
     max-height:none !important;
   }
 
-}
-  .main-nav{display:none;flex-direction:column;gap:8px;width:100%;text-align:center;padding:8px 12px}
-  .main-nav.open{display:flex}
-  .nav-toggle{display:inline-block}
-  .hero{min-height:46vh;padding:28px 0}
-  .hero .hero-text{padding:14px}
-  .hero h1{font-size:1.4rem}
-  .gallery{grid-template-columns:1fr;gap:14px}
-  .project img{height:200px}
-  .cards-4{grid-template-columns:1fr}
-  .card{padding:18px}
-  .form-row{flex-direction:column}
-  .contact{padding:0 12px}
-  .section{padding:36px 0}
-}
+  .main-nav{
+    display:none;
+    flex-direction:column;
+    gap:8px;
+    width:100%;
+    text-align:center;
+    padding:8px 12px;
+  }
 
-@media (max-width:420px){
-  .site-logo{
-    height:220px;
-    max-height:220px;
-    width:auto;
+  .main-nav.open{
+    display:flex;
+  }
+
+  .nav-toggle{
+    display:inline-block;
+  }
+
+  .hero{
+    min-height:46vh;
+    padding:28px 0;
+  }
+
+  .hero .hero-text{
+    padding:14px;
   }
 
   .hero h1{
-    font-size:1.2rem;
+    font-size:1.4rem;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+    gap:14px;
   }
 
   .project img{
-    height:160px;
+    height:200px;
+  }
+
+  .cards-4{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  .form-row{
+    flex-direction:column;
+  }
+
+  .contact{
+    padding:0 12px;
+  }
+
+  .section{
+    padding:36px 0;
   }
 }
-
 /* Senior-friendly tweaks */
 a,button,input,select,textarea{touch-action:manipulation}
 .section h2,.card h3,.project p{color:var(--text)}
