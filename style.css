@@ -712,22 +712,18 @@ button[type="submit"]:hover{
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
-    gap:6px;
-    padding:6px 0 12px;
+    gap:5px;
+    padding:8px 0 12px;
   }
 
-  /*
-   * Fester Ausschnitt für das Logo.
-   * Die weißen Ränder der JPEG-Datei werden abgeschnitten.
-   */
   .logo{
     display:flex;
     justify-content:center;
     align-items:center;
     width:100%;
-    height:180px;
+    height:auto;
     margin:0;
-    overflow:hidden;
+    overflow:visible;
   }
 
   .logo a{
@@ -735,25 +731,23 @@ button[type="submit"]:hover{
     justify-content:center;
     align-items:center;
     width:100%;
-    height:100%;
-    overflow:hidden;
+    height:auto;
   }
 
   .site-logo{
     display:block;
-    width:410px;
-    max-width:none;
+    width:auto;
     height:auto;
-    max-height:none;
-    margin:0;
+    max-width:92%;
+    max-height:210px;
+    margin:0 auto;
     object-fit:contain;
-    transform:scale(1.32);
-    transform-origin:center;
+    transform:none;
   }
 
   .nav-toggle{
     display:inline-block;
-    margin:0;
+    margin:-18px 0 0;
     padding:6px 10px;
   }
 
@@ -830,6 +824,39 @@ button[type="submit"]:hover{
 
   .section{
     padding:36px 0;
+  }
+
+  .map iframe{
+    min-height:300px;
+  }
+}
+
+
+/* =========================
+   Sehr kleine Displays
+   ========================= */
+
+@media (max-width:420px){
+
+  .site-logo{
+    width:auto;
+    height:auto;
+    max-width:94%;
+    max-height:190px;
+    margin:0 auto;
+    transform:none;
+  }
+
+  .nav-toggle{
+    margin-top:-16px;
+  }
+
+  .hero h1{
+    font-size:1.2rem;
+  }
+
+  .project img{
+    height:160px;
   }
 }
 
