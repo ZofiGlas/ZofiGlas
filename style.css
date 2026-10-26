@@ -913,3 +913,33 @@ label{
     animation-iteration-count:1 !important;
   }
 }
+.map{
+  margin-top:18px;
+}
+
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  padding:28px 18px;
+}
+
+.footer-brand{
+  color:inherit;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.footer-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+}
+
+.footer-copyright{
+  margin:6px 0 0;
+  color:rgba(255,255,255,0.85);
+  font-size:14px;
+}
