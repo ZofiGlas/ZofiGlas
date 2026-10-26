@@ -113,19 +113,19 @@ body{
 .hero p.lead{font-size:1.05rem;color:rgba(255,255,255,0.95)}
 
 /* Button */
-.button{
-  display:inline-block;
+button[type="submit"]{
   background:linear-gradient(
     135deg,
     #24A9F3,
     #1289D1
   );
-  color:#ffffff;
-  padding:14px 22px;
+  color:#fff;
+  padding:14px 20px;
   border-radius:999px;
+  border:none;
   font-weight:800;
-  text-decoration:none;
-  box-shadow:0 12px 30px rgba(36,169,243,.25);
+  cursor:pointer;
+  box-shadow:0 16px 40px rgba(36,169,243,.25);
   transition:all .25s ease;
 }
 
