@@ -714,16 +714,19 @@ button[type="submit"]:hover{
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    gap:4px;
-    padding:4px 0 12px;
+    gap:6px;
+    padding:8px 0 12px;
   }
 
+  /* Beschneidet die weisse Fläche innerhalb der Logo-Datei */
   .logo{
     display:flex;
     justify-content:center;
     align-items:center;
     width:100%;
+    height:190px;
     margin:0;
+    overflow:hidden;
   }
 
   .logo a{
@@ -731,16 +734,21 @@ button[type="submit"]:hover{
     justify-content:center;
     align-items:center;
     width:100%;
+    height:100%;
+    overflow:hidden;
   }
 
+  /* Logo wird innerhalb des beschnittenen Bereichs vergrössert */
   .site-logo{
     display:block;
-    width:95%;
-    max-width:420px;
+    width:100%;
+    max-width:430px;
     height:auto;
     max-height:none;
-    margin:0 auto -38px;
+    margin:0;
     object-fit:contain;
+    transform:scale(1.38);
+    transform-origin:center;
   }
 
   .nav-toggle{
@@ -829,18 +837,21 @@ button[type="submit"]:hover{
   }
 }
 
-
 /* =========================
    Sehr kleine Displays
    ========================= */
 
 @media (max-width:420px){
 
+  .logo{
+    height:175px;
+  }
+
   .site-logo{
     width:100%;
-    max-width:380px;
+    max-width:400px;
     height:auto;
-    margin-bottom:-34px;
+    transform:scale(1.42);
   }
 
   .hero h1{
