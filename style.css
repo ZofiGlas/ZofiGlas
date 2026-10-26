@@ -252,7 +252,7 @@ textarea{min-height:160px;resize:vertical}
   .logo{justify-content:center;width:100%}
   .site-logo{
   height:240px;
-  max-height:240px;
+  max-height:none;
   width:auto;
 }
   .main-nav{display:none;flex-direction:column;gap:8px;width:100%;text-align:center;padding:8px 12px}
