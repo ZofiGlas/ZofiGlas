@@ -251,7 +251,7 @@ textarea{min-height:160px;resize:vertical}
     padding:40px 0;
   }
 
-  .hero .hero-text{
+  .hero-text{
     max-width:560px;
     padding:20px;
   }
@@ -267,8 +267,6 @@ textarea{min-height:160px;resize:vertical}
   .gallery{
     grid-template-columns:repeat(2,1fr);
   }
-}
-
 
 /* Responsive / Mobile */
  @media (max-width:600px){
@@ -286,7 +284,7 @@ textarea{min-height:160px;resize:vertical}
   }
 
   .nav-toggle{
-    margin-top:-25;
+    margin-top:-25px;
   }
 
 }
