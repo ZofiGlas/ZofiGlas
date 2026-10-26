@@ -696,6 +696,8 @@ button[type="submit"]:hover{
   .gallery{
     grid-template-columns:repeat(2,minmax(0,1fr));
   }
+}
+
 
 /* =========================
    Mobile bis 600 px
@@ -712,8 +714,8 @@ button[type="submit"]:hover{
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
-    gap:5px;
-    padding:8px 0 12px;
+    gap:4px;
+    padding:6px 0 12px;
   }
 
   .logo{
@@ -839,43 +841,18 @@ button[type="submit"]:hover{
 @media (max-width:420px){
 
   .site-logo{
+    display:block;
     width:auto;
     height:auto;
     max-width:94%;
     max-height:190px;
     margin:0 auto;
+    object-fit:contain;
     transform:none;
   }
 
   .nav-toggle{
     margin-top:-16px;
-  }
-
-  .hero h1{
-    font-size:1.2rem;
-  }
-
-  .project img{
-    height:160px;
-  }
-}
-
-
-/* =========================
-   Sehr kleine Displays
-   ========================= */
-
-@media (max-width:420px){
-
-  .logo{
-    height:165px;
-  }
-
-  .site-logo{
-    width:390px;
-    max-width:none;
-    height:auto;
-    transform:scale(1.34);
   }
 
   .hero h1{
