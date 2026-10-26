@@ -184,7 +184,7 @@ button[type="submit"]:hover{background:var(--accent-600);transform:translateY(-3
 }
 
 @media (max-width:420px){
-  .site-logo{height:80px}
+  .site-logo{height:65px}
   .hero h1{font-size:1.2rem}
   .project img{height:160px}
 }
