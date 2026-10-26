@@ -271,44 +271,26 @@ textarea{min-height:160px;resize:vertical}
 
 
 /* Responsive / Mobile */
-@media (max-width:600px){
+ @media (max-width:600px){
 
   .header-inner{
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:2px;
-    padding:12px 0;
+    gap:0;
+    padding:0;
   }
 
   .logo{
-    justify-content:center;
-    width:100%;
-  }
-
-  .site-logo{
-    width:95%;
-    max-width:420px;
-    height:auto !important;
-    max-height:none !important;
-  }
-
-  .main-nav{
-    display:none;
-    flex-direction:column;
-    gap:8px;
-    width:100%;
-    text-align:center;
-    padding:8px 12px;
-  }
-
-  .main-nav.open{
-    display:flex;
+    margin-bottom:-60px;
   }
 
   .nav-toggle{
-    display:inline-block;
+    margin-top:0;
+    padding-top:0;
   }
+
+}
 
   .hero{
     min-height:46vh;
