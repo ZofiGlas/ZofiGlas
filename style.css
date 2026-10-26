@@ -248,11 +248,11 @@ textarea{min-height:160px;resize:vertical}
 
 @media (max-width:600px){
   :root{--logo-desktop:var(--logo-mobile)}
-  .header-inner{display:flex;flex-direction:column;align-items:center;gap:10px;padding:12px 0}
+  .header-inner{display:flex;flex-direction:column;align-items:center;gap:2px;padding:12px 0}
   .logo{justify-content:center;width:100%}
   .site-logo{
-  height:180px;
-  max-height:180px;
+  height:170px;
+  max-height:170px;
   width:auto;
 }
   .main-nav{display:none;flex-direction:column;gap:8px;width:100%;text-align:center;padding:8px 12px}
