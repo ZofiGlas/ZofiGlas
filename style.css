@@ -280,11 +280,12 @@ textarea{min-height:160px;resize:vertical}
   }
 
   .logo{
-    margin-bottom:-70px;
+    margin-bottom:-100px;
   }
 
   .nav-toggle{
-    margin-top:-25px;
+    margin-top:-50px;
+    padding-top:0;
   }
 
 }
