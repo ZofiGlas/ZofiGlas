@@ -1,466 +1,743 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+  <meta charset="utf-8">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
 
-<title>ZofiGlas – Glaserei in Zofingen</title>
+  <title>ZofiGlas – Glaserei in Zofingen</title>
 
-<meta
-  name="description"
-  content="ZofiGlas bietet Glaslösungen, Glasreparaturen, Duschglas, Bürotrennwände und Verglasungen in Zofingen. Schnell, lokal und zuverlässig.">
+  <meta
+    name="description"
+    content="ZofiGlas bietet Glaslösungen, Reparaturen und Verglasungen in Zofingen. Schnell, lokal und massgeschneidert.">
 
-<meta name="theme-color" content="#24A9F3">
+  <meta
+    name="theme-color"
+    content="#24A9F3">
 
-<link rel="canonical" href="https://zofiglas.github.io/ZofiGlas/">
+  <link
+    rel="canonical"
+    href="https://zofiglas.github.io/ZofiGlas/">
 
-<link rel="stylesheet" href="style.css?v=11.2">
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="ZofiGlas – Glaserei in Zofingen">
 
-<!-- Open Graph -->
+  <meta
+    property="og:description"
+    content="Glaslösungen, Reparaturen und Verglasungen in Zofingen. Schnell, lokal und massgeschneidert.">
 
-<meta property="og:title" content="ZofiGlas – Glaserei in Zofingen">
-<meta property="og:description" content="Glaslösungen, Reparaturen und Verglasungen in Zofingen.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://zofiglas.github.io/ZofiGlas/">
-<meta property="og:image" content="https://zofiglas.github.io/ZofiGlas/Banner_Website.png">
+  <meta
+    property="og:type"
+    content="website">
 
-<!-- Strukturierte Daten -->
+  <meta
+    property="og:url"
+    content="https://zofiglas.github.io/ZofiGlas/">
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"ZofiGlas",
-  "url":"https://zofiglas.github.io/ZofiGlas/",
-  "email":"zofiglas@gmx.ch",
-  "telephone":"+41796628106",
-  "image":"https://zofiglas.github.io/ZofiGlas/logo-bild-svg.jpeg",
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Zofingen",
-    "addressCountry":"CH"
+  <meta
+    property="og:image"
+    content="https://zofiglas.github.io/ZofiGlas/Banner_Website.png">
+
+  <meta
+    property="og:image:alt"
+    content="ZofiGlas – Glaserei in Zofingen">
+
+  <meta
+    property="og:locale"
+    content="de_CH">
+
+  <!-- Strukturierte Daten für Suchmaschinen -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ZofiGlas",
+    "description": "Glaserei in Zofingen für Glasreparaturen, Duschglas, Bürotrennwände, Fensterverglasungen und Spezialanfertigungen.",
+    "image": "https://zofiglas.github.io/ZofiGlas/logo-bild-svg.jpeg",
+    "logo": "https://zofiglas.github.io/ZofiGlas/logo-bild-svg.jpeg",
+    "telephone": "+41796628106",
+    "email": "zofiglas@gmx.ch",
+    "url": "https://zofiglas.github.io/ZofiGlas/",
+    "areaServed": {
+      "@type": "City",
+      "name": "Zofingen"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Zofingen",
+      "addressCountry": "CH"
+    }
   }
-}
-</script>
+  </script>
 
+  <!-- Versionsnummer bei späteren CSS-Änderungen erhöhen -->
+  <link
+    rel="stylesheet"
+    href="style.css?v=11.2">
 </head>
 
 <body>
 
-<a class="sr-only" href="#main">
-  Zum Inhalt springen
-</a>
+  <!-- Sprunglink für Tastatur und Screenreader -->
+  <a class="sr-only" href="#main">
+    Zum Inhalt springen
+  </a>
 
-<header class="header">
+  <!-- =========================
+       Header
+       ========================= -->
 
-  <div class="container header-inner">
+  <header class="header">
 
-    <div class="logo">
-      <a href="index.html" aria-label="ZofiGlas Startseite">
+    <div class="container header-inner">
 
-        <img
-          src="logo-bild-svg.jpeg"
-          alt="ZofiGlas Logo"
-          class="site-logo">
+      <div class="logo">
 
-      </a>
-    </div>
+        <a
+          href="index.html"
+          aria-label="ZofiGlas Startseite">
 
-    <button
-      id="navToggle"
-      class="nav-toggle"
-      type="button"
-      aria-controls="mainNav"
-      aria-expanded="false"
-      aria-label="Menü öffnen">
+          <img
+            src="logo-bild-svg.jpeg"
+            alt="ZofiGlas – Präzision in Glas, direkt aus Zofingen"
+            class="site-logo">
 
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
+        </a>
 
-    </button>
+      </div>
 
-    <nav
-      id="mainNav"
-      class="main-nav"
-      aria-label="Hauptnavigation">
+      <button
+        id="navToggle"
+        class="nav-toggle"
+        type="button"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Menü öffnen">
 
-      <a href="#leistungen">Leistungen</a>
-      <a href="#referenzen">Referenzen</a>
-      <a href="#vorteile">Warum wir</a>
-      <a href="#kontakt">Kontakt</a>
+        <span
+          class="hamburger-line"
+          aria-hidden="true"></span>
 
-    </nav>
+        <span
+          class="hamburger-line"
+          aria-hidden="true"></span>
 
-    <div class="phone">
+        <span
+          class="hamburger-line"
+          aria-hidden="true"></span>
 
-      <a
-        href="tel:+41796628106"
-        class="phone-cta">
+      </button>
 
-        ☎ 079 662 81 06
+      <nav
+        id="mainNav"
+        class="main-nav"
+        aria-label="Hauptnavigation">
 
-      </a>
+        <a href="#leistungen">
+          Leistungen
+        </a>
 
-    </div>
+        <a href="#referenzen">
+          Referenzen
+        </a>
 
-  </div>
+        <a href="#vorteile">
+          Warum wir
+        </a>
 
-</header>
+        <a href="#kontakt">
+          Kontakt
+        </a>
 
-<main id="main">
+      </nav>
 
-  <!-- Hero -->
+      <div class="phone">
 
-  <section class="hero">
+        <a
+          href="tel:+41796628106"
+          class="phone-cta"
+          aria-label="ZofiGlas anrufen unter 079 662 81 06">
 
-    <div class="container">
+          <span aria-hidden="true">☎</span>
+          <span>079 662 81 06</span>
 
-      <div class="hero-text">
-
-        <h1>
-          ZofiGlas – Glaslösungen aus Zofingen
-        </h1>
-
-        <p class="lead">
-          Massgeschneiderte Glasarbeiten für Privat und Gewerbe.
-          Schnell, lokal und zuverlässig.
-        </p>
-
-        <a href="#kontakt" class="button">
-          Offerte anfragen
         </a>
 
       </div>
 
     </div>
 
-  </section>
+  </header>
 
-  <!-- Leistungen -->
+  <!-- =========================
+       Hauptinhalt
+       ========================= -->
 
-  <section
-    id="leistungen"
-    class="section">
+  <main id="main" tabindex="-1">
 
-    <div class="container">
+    <!-- =========================
+         Hero
+         ========================= -->
 
-      <h2>Unsere Leistungen</h2>
+    <section
+      class="hero"
+      aria-labelledby="hero-title">
 
-      <p class="lead">
-        Von Reparaturen bis zu kompletten Verglasungen.
-      </p>
+      <div class="container">
 
-      <div class="cards-4">
+        <div class="hero-text">
 
-        <article class="card">
-          <h3>Glasreparatur</h3>
-          <p>Schnelle Hilfe bei Glasbruch und Schäden.</p>
-        </article>
+          <h1 id="hero-title">
+            ZofiGlas – Glaslösungen aus Zofingen
+          </h1>
 
-        <article class="card">
-          <h3>Duschglas</h3>
-          <p>Massgefertigte Glasduschen nach Wunsch.</p>
-        </article>
+          <p class="lead">
+            Massgeschneiderte Glasarbeiten für Privat und Gewerbe.
+            Schnell, lokal und zuverlässig.
+          </p>
 
-        <article class="card">
-          <h3>Bürotrennwände</h3>
-          <p>Moderne und elegante Trennwände aus Glas.</p>
-        </article>
+          <a
+            href="#kontakt"
+            class="button">
 
-        <article class="card">
-          <h3>Fensterverglasung</h3>
-          <p>Energieeffiziente Lösungen für Neu- und Umbauten.</p>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Referenzen -->
-
-  <section
-    id="referenzen"
-    class="section grey">
-
-    <div class="container">
-
-      <h2>Referenzen</h2>
-
-<p class="lead">
-  Einblicke in abgeschlossene Projekte.
-</p>
-
-<div class="gallery">
-
-  <a href="projekte/Windfang_1.jpeg" target="_blank">
-    <img src="projekte/Windfang_1.jpeg" alt="Windfang">
-  </a>
-
-  <a href="projekte/Windfang_2.jpeg" target="_blank">
-    <img src="projekte/Windfang_2.jpeg" alt="Windfang">
-  </a>
-
-  <a href="projekte/Montage.jpeg" target="_blank">
-    <img src="projekte/Montage.jpeg" alt="Montage">
-  </a>
-
-  <a href="projekte/Trennwand_1.jpeg" target="_blank">
-    <img src="projekte/Trennwand_1.jpeg" alt="Trennwand">
-  </a>
-
-  <a href="projekte/Trennwand_2.jpeg" target="_blank">
-    <img src="projekte/Trennwand_2.jpeg" alt="Trennwand">
-  </a>
-
-</div>
-
-    </div>
-
-  </section>
-
-  <!-- Vorteile -->
-
-  <section
-    id="vorteile"
-    class="section">
-
-    <div class="container">
-
-      <h2>Warum ZofiGlas</h2>
-
-      <div class="cards-3">
-
-        <article class="card">
-          <h3>Lokal</h3>
-          <p>Regional und schnell vor Ort.</p>
-        </article>
-
-        <article class="card">
-          <h3>Schnell</h3>
-          <p>Kurze Reaktionszeiten.</p>
-        </article>
-
-        <article class="card">
-          <h3>Individuell</h3>
-          <p>Massgeschneiderte Lösungen.</p>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Kontakt -->
-
-  <section
-    id="kontakt"
-    class="section grey">
-
-    <div class="container">
-
-      <h2>Offerte anfragen</h2>
-
-      <p class="lead">
-        Beschreiben Sie kurz Ihr Anliegen.
-      </p>
-
-      <div class="contact">
-
-        <form
-          action="https://formsubmit.co/zofiglas@gmx.ch"
-          method="POST">
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="Neue Offertanfrage">
-
-          <input
-            type="hidden"
-            name="_captcha"
-            value="false">
-
-          <label for="arbeit">
-            Leistung
-          </label>
-
-          <select
-            id="arbeit"
-            name="arbeit"
-            required>
-
-            <option value="">Bitte wählen</option>
-            <option>Glasreparatur</option>
-            <option>Duschglas</option>
-            <option>Bürotrennwand</option>
-            <option>Fensterverglasung</option>
-            <option>Spezialanfertigung</option>
-
-          </select>
-
-          <div class="form-row">
-
-            <div class="half">
-
-              <label for="name">
-                Name
-              </label>
-
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required>
-
-            </div>
-
-            <div class="half">
-
-              <label for="telefon">
-                Telefon
-              </label>
-
-              <input
-                id="telefon"
-                name="telefon"
-                type="tel">
-
-            </div>
-
-          </div>
-
-          <label for="email">
-            E-Mail
-          </label>
-
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required>
-
-          <label for="message">
-            Beschreibung
-          </label>
-
-          <textarea
-            id="message"
-            name="message"
-            required></textarea>
-
-          <button type="submit">
             Offerte anfragen
-          </button>
 
-        </form>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         Leistungen
+         ========================= -->
+
+    <section
+      id="leistungen"
+      class="section"
+      aria-labelledby="leistungen-title">
+
+      <div class="container">
+
+        <h2 id="leistungen-title">
+          Unsere Leistungen
+        </h2>
+
+        <p class="lead">
+          Von Reparaturen bis zu kompletten Verglasungen finden wir
+          die passende Lösung.
+        </p>
+
+        <div class="cards-4">
+
+          <article
+            class="card"
+            aria-labelledby="leistung-glasreparatur">
+
+            <h3 id="leistung-glasreparatur">
+              Glasreparatur
+            </h3>
+
+            <p>
+              Schnelle Hilfe bei Glasbruch und Notfällen.
+            </p>
+
+          </article>
+
+          <article
+            class="card"
+            aria-labelledby="leistung-duschglas">
+
+            <h3 id="leistung-duschglas">
+              Duschglas
+            </h3>
+
+            <p>
+              Massgeschneiderte Glasduschen in verschiedenen
+              Ausführungen.
+            </p>
+
+          </article>
+
+          <article
+            class="card"
+            aria-labelledby="leistung-trennwand">
+
+            <h3 id="leistung-trennwand">
+              Bürotrennwand
+            </h3>
+
+            <p>
+              Elegante und schallreduzierende Trennwände für Büros.
+            </p>
+
+          </article>
+
+          <article
+            class="card"
+            aria-labelledby="leistung-fenster">
+
+            <h3 id="leistung-fenster">
+              Fensterverglasung
+            </h3>
+
+            <p>
+              Neue Verglasungen mit Fokus auf Energieeffizienz.
+            </p>
+
+          </article>
+
+        </div>
 
       </div>
 
-      <div class="map">
+    </section>
 
-        <iframe
-          src="https://maps.google.com/maps?q=Zofingen&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          loading="lazy"
-          title="Standort Zofingen">
-        </iframe>
+    <!-- =========================
+         Referenzen
+         ========================= -->
+
+    <section
+      id="referenzen"
+      class="section grey"
+      aria-labelledby="referenzen-title">
+
+      <div class="container">
+
+        <h2 id="referenzen-title">
+          Referenzen
+        </h2>
+
+        <p class="lead">
+          Einige unserer abgeschlossenen Projekte.
+        </p>
+
+        <div class="gallery">
+
+          <article class="project">
+
+            <a
+              href="projekte/Windfang_1.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="projekte/Windfang_1.jpeg"
+                alt="Massgefertigter Windfang aus Glas"
+                loading="lazy"
+                decoding="async">
+
+            </a>
+
+            <p>Windfang nach Mass</p>
+
+          </article>
+
+          <article class="project">
+
+            <a
+              href="projekte/Windfang_2.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="projekte/Windfang_2.jpeg"
+                alt="Einsetzen einer Glasscheibe bei einem Windfang"
+                loading="lazy"
+                decoding="async">
+
+            </a>
+
+            <p>Einsatz des Glases</p>
+
+          </article>
+
+          <article class="project">
+
+            <a
+              href="projekte/Montage.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="projekte/Montage.jpeg"
+                alt="Montagearbeiten an einer Glaskonstruktion"
+                loading="lazy"
+                decoding="async">
+
+            </a>
+
+            <p>Montagearbeiten</p>
+
+          </article>
+
+          <article class="project">
+
+            <a
+              href="projekte/Trennwand_1.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="projekte/Trennwand_1.jpeg"
+                alt="Massgefertigte Bürotrennwand aus Glas"
+                loading="lazy"
+                decoding="async">
+
+            </a>
+
+            <p>Bürotrennwand</p>
+
+          </article>
+
+          <article class="project">
+
+            <a
+              href="projekte/Trennwand_2.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <img
+                src="projekte/Trennwand_2.jpeg"
+                alt="Fertig montierte Bürotrennwand aus Glas"
+                loading="lazy"
+                decoding="async">
+
+            </a>
+
+            <p>Bürotrennwand</p>
+
+          </article>
+
+        </div>
 
       </div>
+
+    </section>
+
+    <!-- =========================
+         Vorteile
+         ========================= -->
+
+    <section
+      id="vorteile"
+      class="section"
+      aria-labelledby="vorteile-title">
+
+      <div class="container">
+
+        <h2 id="vorteile-title">
+          Warum ZofiGlas
+        </h2>
+
+        <div class="cards-3">
+
+          <article class="card">
+
+            <h3>Lokal</h3>
+
+            <p>
+              Regionaler Service in Zofingen und schnell vor Ort.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <h3>Schnell</h3>
+
+            <p>
+              Kurze Reaktionszeiten und transparente Offerten.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <h3>Individuell</h3>
+
+            <p>
+              Massgeschneiderte Lösungen nach Ihren Wünschen.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         Kontaktformular
+         ========================= -->
+
+    <section
+      id="kontakt"
+      class="section grey"
+      aria-labelledby="kontakt-title">
+
+      <div class="container">
+
+        <h2 id="kontakt-title">
+          Offerte anfragen
+        </h2>
+
+        <p class="lead">
+          Beschreiben Sie kurz Ihr Anliegen. Wir melden uns schnell
+          bei Ihnen zurück.
+        </p>
+
+        <div class="contact">
+
+          <form
+            id="offerForm"
+            action="https://formsubmit.co/zofiglas@gmx.ch"
+            method="POST">
+
+            <!-- Betreff der erhaltenen E-Mail -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Neue Offertanfrage über die ZofiGlas-Website">
+
+            <!-- Deutsche Bestätigungsseite nach erfolgreichem Versand -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://zofiglas.github.io/ZofiGlas/danke.html">
+
+            <!-- FormSubmit-Captcha deaktivieren -->
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false">
+
+            <!-- Tabellenformat für erhaltene E-Mail -->
+            <input
+              type="hidden"
+              name="_template"
+              value="table">
+
+            <!-- Spam-Schutz -->
+            <div
+              class="honeypot"
+              aria-hidden="true">
+
+              <label for="website">
+                Dieses Feld bitte leer lassen
+              </label>
+
+              <input
+                id="website"
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off">
+
+            </div>
+
+            <label for="arbeit">
+              Leistung
+            </label>
+
+            <select
+              id="arbeit"
+              name="Leistung"
+              required>
+
+              <option value="">
+                Bitte wählen
+              </option>
+
+              <option value="Glasreparatur">
+                Glasreparatur
+              </option>
+
+              <option value="Duschglas">
+                Duschglas
+              </option>
+
+              <option valuebel>
+
+            <textarea
+              id="message"
+              name="Beschreibung"
+              placeholder="Beschreiben Sie kurz Ihr Anliegen"
+              required></textarea>
+
+            <button
+              type="submit"
+              class="submit-btn">
+
+              Offerte anfragen
+
+            </button>
+
+          </form>
+
+        </div>
+
+        <!-- =========================
+             Google-Karte
+             ========================= -->
+
+        <div class="map">
+
+          <iframe
+            src="https://maps.google.com/maps?q=Zofingen&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            title="Karte mit Standort Zofingen"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================
+       Footer
+       ========================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <a
+        href="index.html"
+        class="footer-brand">
+
+        ZofiGlas
+
+      </a>
+
+      <nav
+        class="footer-nav"
+        aria-label="Footer-Navigation">
+
+        <a href="impressum.html">
+          Impressum
+        </a>
+
+        <a href="datenschutz.html">
+          Datenschutz
+        </a>
+
+        <a href="agb.html">
+          AGB
+        </a>
+
+      </nav>
+
+      <p class="footer-copyright">
+        © 2026 ZofiGlas – Glaserei in Zofingen
+      </p>
 
     </div>
 
-  </section>
+  </footer>
 
-</main>
+  <!-- =========================
+       JavaScript
+       ========================= -->
 
-<footer class="footer">
+  <script>
+    (function () {
+      const navToggle = document.getElementById('navToggle');
+      const mainNav = document.getElementById('mainNav');
+      const mobileQuery = window.matchMedia('(max-width:600px)');
 
-  <div class="container footer-inner">
+      function closeNavigation() {
+        mainNav.classList.remove('open');
+        mainNav.hidden = true;
 
-    <a
-      href="index.html"
-      class="footer-brand">
-      ZofiGlas
-    </a>
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Menü öffnen');
+      }
 
-    <nav
-      class="footer-nav">
+      function setNavigationState() {
+        mainNav.classList.remove('open');
 
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="agb.html">AGB</a>
+        if (mobileQuery.matches) {
+          closeNavigation();
+        } else {
+          mainNav.hidden = false;
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.setAttribute('aria-label', 'Menü öffnen');
+        }
+      }
 
-    </nav>
+      navToggle.addEventListener('click', function () {
+        const isOpen =
+          navToggle.getAttribute('aria-expanded') === 'true';
 
-    <p class="footer-copyright">
-      © 2026 ZofiGlas – Glaserei in Zofingen
-    </p>
+        if (isOpen) {
+          closeNavigation();
+        } else {
+          mainNav.hidden = false;
+          mainNav.classList.add('open');
 
-  </div>
+          navToggle.setAttribute('aria-expanded', 'true');
+          navToggle.setAttribute('aria-label', 'Menü schließen');
+        }
+      });
 
-</footer>
+      mainNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (mobileQuery.matches) {
+            closeNavigation();
+          }
+        });
+      });
 
-<script>
-(function(){
+      document.addEventListener('click', function (event) {
+        const clickImMenue = mainNav.contains(event.target);
+        const clickAufBurger = navToggle.contains(event.target);
 
-  const navToggle =
-    document.getElementById("navToggle");
+        if (
+          mobileQuery.matches &&
+          !clickImMenue &&
+          !clickAufBurger &&
+          mainNav.classList.contains('open')
+        ) {
+          closeNavigation();
+        }
+      });
 
-  const mainNav =
-    document.getElementById("mainNav");
+      document.addEventListener('keydown', function (event) {
+        if (
+          event.key === 'Escape' &&
+          mainNav.classList.contains('open')
+        ) {
+          closeNavigation();
+          navToggle.focus();
+        }
+      });
 
-  const mobileQuery =
-    window.matchMedia("(max-width:600px)");
+      if (typeof mobileQuery.addEventListener === 'function') {
+        mobileQuery.addEventListener(
+          'change',
+          setNavigationState
+        );
+      } else {
+        mobileQuery.addListener(setNavigationState);
+      }
 
-  function closeMenu(){
-    mainNav.classList.remove("open");
-    mainNav.hidden = true;
-    navToggle.setAttribute("aria-expanded","false");
-  }
-
-  function updateMenu(){
-
-    if(mobileQuery.matches){
-
-      mainNav.hidden = true;
-
-    } else {
-
-      mainNav.hidden = false;
-      mainNav.classList.remove("open");
-
-    }
-  }
-
-  navToggle.addEventListener("click",function(){
-
-    const open =
-      navToggle.getAttribute("aria-expanded") === "true";
-
-    if(open){
-
-      closeMenu();
-
-    } else {
-
-      mainNav.hidden = false;
-      mainNav.classList.add("open");
-      navToggle.setAttribute("aria-expanded","true");
-
-    }
-
-  });
-
-  mobileQuery.addEventListener("change",updateMenu);
-
-  updateMenu();
-
-})();
-</script>
+      setNavigationState();
+    })();
+  </script>
 
 </body>
+
 </html>
