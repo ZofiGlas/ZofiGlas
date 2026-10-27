@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1">
@@ -12,7 +11,7 @@
 
   <meta
     name="description"
-    content="ZofiGlas bietet Glaslösungen, Reparaturen und Verglasungen in Zofingen. Schnell, lokal und massgeschneidert.">
+    content="ZofiGlas bietet Glasreparaturen, Duschglas, Bürotrennwände und Fensterverglasungen in Zofingen. Schnell, lokal und massgeschneidert.">
 
   <meta
     name="theme-color"
@@ -51,7 +50,7 @@
     property="og:locale"
     content="de_CH">
 
-  <!-- Strukturierte Daten für Suchmaschinen -->
+  <!-- Strukturierte Daten -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,13 +75,17 @@
   </script>
 
   <!-- Versionsnummer nach CSS-Änderungen erhöhen -->
-  style.css?v=11.2
+  <link
+    rel="stylesheet"
+    href="style.css?v=12.0">
 </head>
 
 <body>
 
   <!-- Sprunglink für Tastatur und Screenreader -->
-  #main
+  <a
+    class="sr-only"
+    href="#main">
     Zum Inhalt springen
   </a>
 
@@ -97,12 +100,12 @@
       <div class="logo">
 
         <a
-          href="index.html"
+          href="./"
           aria-label="ZofiGlas Startseite">
 
           <img
             src="logo-bild-svg.jpeg"
-            alt="ZofiGlas – Präzision in Glas, direkt aus Zofingen"
+            alt="ZofiGlas"
             class="site-logo">
 
         </a>
@@ -117,9 +120,17 @@
         aria-expanded="false"
         aria-label="Menü öffnen">
 
-        <span class="hamburger-line" aria-hidden="true"></span>
-        <span class="hamburger-line" aria-hidden="true"></span>
-        <span class="hamburger-line" aria-hidden="true"></span>
+        <span
+          class="hamburger-line"
+          aria-hidden="true"></span>
+
+        <span
+          class="hamburger-line"
+          aria-hidden="true"></span>
+
+        <span
+          class="hamburger-line"
+          aria-hidden="true"></span>
 
       </button>
 
@@ -128,16 +139,19 @@
         class="main-nav"
         aria-label="Hauptnavigation">
 
-        #leistungenLeistungen</a>
-        #referenzenReferenzen</a>
-        #vorteileWarum wir</a>
-        #kontaktKontakt</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#referenzen">Referenzen</a>
+        <a href="#vorteile">Warum wir</a>
+        <a href="#kontakt">Kontakt</a>
 
       </nav>
 
       <div class="phone">
 
-        tel:+41796628106
+        <a
+          href="tel:+41796628106"
+          class="phone-cta"
+          aria-label="ZofiGlas anrufen unter 079 662 81 06">
 
           <span aria-hidden="true">☎</span>
           <span>079 662 81 06</span>
@@ -154,11 +168,11 @@
        Hauptinhalt
        ========================= -->
 
-  <main id="main" tabindex="-1">
+  <main
+    id="main"
+    tabindex="-1">
 
-    <!-- =========================
-         Hero
-         ========================= -->
+    <!-- Hero -->
 
     <section
       class="hero"
@@ -177,10 +191,10 @@
             Schnell, lokal und zuverlässig.
           </p>
 
-          #kontakt
-
+          <a
+            href="#kontakt"
+            class="button">
             Offerte anfragen
-
           </a>
 
         </div>
@@ -211,13 +225,9 @@
 
         <div class="cards-4">
 
-          <article
-            class="card"
-            aria-labelledby="leistung-glasreparatur">
+          <article class="card">
 
-            <h3 id="leistung-glasreparatur">
-              Glasreparatur
-            </h3>
+            <h3>Glasreparatur</h3>
 
             <p>
               Schnelle Hilfe bei Glasbruch und Notfällen.
@@ -225,13 +235,9 @@
 
           </article>
 
-          <article
-            class="card"
-            aria-labelledby="leistung-duschglas">
+          <article class="card">
 
-            <h3 id="leistung-duschglas">
-              Duschglas
-            </h3>
+            <h3>Duschglas</h3>
 
             <p>
               Massgeschneiderte Glasduschen in verschiedenen
@@ -240,13 +246,9 @@
 
           </article>
 
-          <article
-            class="card"
-            aria-labelledby="leistung-trennwand">
+          <article class="card">
 
-            <h3 id="leistung-trennwand">
-              Bürotrennwand
-            </h3>
+            <h3>Bürotrennwand</h3>
 
             <p>
               Elegante und schallreduzierende Trennwände für Büros.
@@ -254,13 +256,9 @@
 
           </article>
 
-          <article
-            class="card"
-            aria-labelledby="leistung-fenster">
+          <article class="card">
 
-            <h3 id="leistung-fenster">
-              Fensterverglasung
-            </h3>
+            <h3>Fensterverglasung</h3>
 
             <p>
               Neue Verglasungen mit Fokus auf Energieeffizienz.
@@ -297,9 +295,16 @@
 
           <article class="project">
 
-            projekte/Windfang_1.jpeg
+            <a
+              href="projekte/Windfang_1.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
 
-              projekte/Windfang_1.jpeg
+              <img
+                src="projekte/Windfang_1.jpeg"
+                alt="Massgefertigter Windfang aus Glas"
+                loading="lazy"
+                decoding="async">
 
             </a>
 
@@ -309,9 +314,16 @@
 
           <article class="project">
 
-            projekte/Windfang_2.jpeg
+            <a
+              href="projekte/Windfang_2.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
 
-              projekte/Windfang_2.jpeg
+              <img
+                src="projekte/Windfang_2.jpeg"
+                alt="Einsetzen einer Glasscheibe bei einem Windfang"
+                loading="lazy"
+                decoding="async">
 
             </a>
 
@@ -321,9 +333,16 @@
 
           <article class="project">
 
-            projekte/Montage.jpeg
+            <a
+              href="projekte/Montage.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
 
-              projekte/Montage.jpeg
+              <img
+                src="projekte/Montage.jpeg"
+                alt="Montagearbeiten an einer Glaskonstruktion"
+                loading="lazy"
+                decoding="async">
 
             </a>
 
@@ -333,9 +352,16 @@
 
           <article class="project">
 
-            projekte/Trennwand_1.jpeg
+            <a
+              href="projekte/Trennwand_1.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
 
-              projekte/Trennwand_1.jpeg
+              <img
+                src="projekte/Trennwand_1.jpeg"
+                alt="Massgefertigte Bürotrennwand aus Glas"
+                loading="lazy"
+                decoding="async">
 
             </a>
 
@@ -345,9 +371,16 @@
 
           <article class="project">
 
-            projekte/Trennwand_2.jpeg
+            <a
+              href="projekte/Trennwand_2.jpeg"
+              target="_blank"
+              rel="noopener noreferrer">
 
-              projekte/Trennwand_2.jpeg
+              <img
+                src="projekte/Trennwand_2.jpeg"
+                alt="Fertig montierte Bürotrennwand aus Glas"
+                loading="lazy"
+                decoding="async">
 
             </a>
 
@@ -415,7 +448,7 @@
     </section>
 
     <!-- =========================
-         Kontakt
+         Kontaktformular
          ========================= -->
 
     <section
@@ -441,7 +474,7 @@
             action="https://formsubmit.co/zofiglas@gmx.ch"
             method="POST">
 
-            <!-- Betreff der E-Mail -->
+            <!-- Betreff der zugestellten E-Mail -->
             <input
               type="hidden"
               name="_subject"
@@ -453,26 +486,21 @@
               name="_next"
               value="https://zofiglas.github.io/ZofiGlas/danke.html">
 
-            <!-- FormSubmit-Captcha deaktivieren -->
+            <!-- FormSubmit-Einstellungen -->
             <input
               type="hidden"
               name="_captcha"
               value="false">
 
-            <!-- Tabellenformat in der E-Mail -->
             <input
               type="hidden"
               name="_template"
               value="table">
 
-            <!-- Automatische Antwort an Kunden -->
-            <input
-              type="hidden"
-              name="_autoresponse"
-              value="Vielen Dank für Ihre Anfrage bei ZofiGlas. Wir haben Ihre Nachricht erhalten und melden uns so schnell wie möglich bei Ihnen. Freundliche Grüsse, Ihr ZofiGlas-Team.">
-
-            <!-- Spam-Schutz -->
-            <div class="honeypot" aria-hidden="true">
+            <!-- Unsichtbarer Spam-Schutz -->
+            <div
+              class="honeypot"
+              aria-hidden="true">
 
               <label for="website">
                 Dieses Feld bitte leer lassen
@@ -584,18 +612,14 @@
             <button
               type="submit"
               class="submit-btn">
-
               Offerte anfragen
-
             </button>
 
           </form>
 
         </div>
 
-        <!-- =========================
-             Karte
-             ========================= -->
+        <!-- Karte -->
 
         <div class="map">
 
@@ -623,11 +647,9 @@
     <div class="container footer-inner">
 
       <a
-        href="index.html"
+        href="./"
         class="footer-brand">
-
         ZofiGlas
-
       </a>
 
       <nav
@@ -657,7 +679,7 @@
   </footer>
 
   <!-- =========================
-       JavaScript
+       Mobile Navigation
        ========================= -->
 
   <script>
@@ -681,6 +703,7 @@
           closeNavigation();
         } else {
           mainNav.hidden = false;
+
           navToggle.setAttribute('aria-expanded', 'false');
           navToggle.setAttribute('aria-label', 'Menü öffnen');
         }
