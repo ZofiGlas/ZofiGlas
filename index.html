@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-CH">
 
 <head>
   <meta charset="utf-8">
@@ -75,7 +75,7 @@
   }
   </script>
 
-  <!-- Versionsnummer bei späteren CSS-Änderungen erhöhen -->
+  <!-- Versionsnummer nach CSS-Änderungen erhöhen -->
   <link
     rel="stylesheet"
     href="style.css?v=11.2">
@@ -119,17 +119,9 @@
         aria-expanded="false"
         aria-label="Menü öffnen">
 
-        <span
-          class="hamburger-line"
-          aria-hidden="true"></span>
-
-        <span
-          class="hamburger-line"
-          aria-hidden="true"></span>
-
-        <span
-          class="hamburger-line"
-          aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
+        <span class="hamburger-line" aria-hidden="true"></span>
 
       </button>
 
@@ -138,21 +130,10 @@
         class="main-nav"
         aria-label="Hauptnavigation">
 
-        <a href="#leistungen">
-          Leistungen
-        </a>
-
-        <a href="#referenzen">
-          Referenzen
-        </a>
-
-        <a href="#vorteile">
-          Warum wir
-        </a>
-
-        <a href="#kontakt">
-          Kontakt
-        </a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#referenzen">Referenzen</a>
+        <a href="#vorteile">Warum wir</a>
+        <a href="#kontakt">Kontakt</a>
 
       </nav>
 
@@ -476,7 +457,7 @@
     </section>
 
     <!-- =========================
-         Kontaktformular
+         Kontakt
          ========================= -->
 
     <section
@@ -502,13 +483,13 @@
             action="https://formsubmit.co/zofiglas@gmx.ch"
             method="POST">
 
-            <!-- Betreff der erhaltenen E-Mail -->
+            <!-- Betreff der E-Mail -->
             <input
               type="hidden"
               name="_subject"
               value="Neue Offertanfrage über die ZofiGlas-Website">
 
-            <!-- Deutsche Bestätigungsseite nach erfolgreichem Versand -->
+            <!-- Deutsche Bestätigungsseite -->
             <input
               type="hidden"
               name="_next"
@@ -520,16 +501,20 @@
               name="_captcha"
               value="false">
 
-            <!-- Tabellenformat für erhaltene E-Mail -->
+            <!-- Tabellenformat in der E-Mail -->
             <input
               type="hidden"
               name="_template"
               value="table">
 
+            <!-- Automatische Antwort an Kunden -->
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Vielen Dank für Ihre Anfrage bei ZofiGlas. Wir haben Ihre Nachricht erhalten und melden uns so schnell wie möglich bei Ihnen. Freundliche Grüsse, Ihr ZofiGlas-Team.">
+
             <!-- Spam-Schutz -->
-            <div
-              class="honeypot"
-              aria-hidden="true">
+            <div class="honeypot" aria-hidden="true">
 
               <label for="website">
                 Dieses Feld bitte leer lassen
@@ -554,18 +539,17 @@
               required>
 
               <option value="">
-                Bitte wählen
-              </option>
+   "
+              name="email"
+              type="email"
+              inputmode="email"
+              placeholder="name@example.com"
+              autocomplete="email"
+              required>
 
-              <option value="Glasreparatur">
-                Glasreparatur
-              </option>
-
-              <option value="Duschglas">
-                Duschglas
-              </option>
-
-              <option valuebel>
+            <label for="message">
+              Beschreibung
+            </label>
 
             <textarea
               id="message"
@@ -586,7 +570,7 @@
         </div>
 
         <!-- =========================
-             Google-Karte
+             Karte
              ========================= -->
 
         <div class="map">
@@ -702,8 +686,11 @@
       });
 
       document.addEventListener('click', function (event) {
-        const clickImMenue = mainNav.contains(event.target);
-        const clickAufBurger = navToggle.contains(event.target);
+        const clickImMenue =
+          mainNav.contains(event.target);
+
+        const clickAufBurger =
+          navToggle.contains(event.target);
 
         if (
           mobileQuery.matches &&
