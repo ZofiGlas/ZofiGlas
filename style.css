@@ -1,13 +1,9 @@
 /* =========================
-   style.css – ZofiGlas
-   Vollständig bereinigte Version
+   ZofiGlas – style.css
+   Kompakte, optimierte Version
    ========================= */
 
-
-/* =========================
-   Basis und Variablen
-   ========================= */
-
+/* Basis */
 *{
   margin:0;
   padding:0;
@@ -15,8 +11,8 @@
 }
 
 :root{
-  --bg:#ffffff;
-  --surface:#ffffff;
+  --bg:#fff;
+  --surface:#fff;
   --muted:#f6f7f9;
 
   --accent:#24A9F3;
@@ -27,30 +23,23 @@
   --text-soft:#4b5563;
   --border:#e6e9ee;
 
-  --shadow-sm:0 8px 24px rgba(16,24,40,0.06);
-  --shadow-md:0 24px 60px rgba(16,24,40,0.10);
+  --shadow-sm:0 8px 24px rgba(16,24,40,.06);
+  --shadow-md:0 24px 60px rgba(16,24,40,.10);
 
   --radius:12px;
   --gap:20px;
   --container:1100px;
-
   --transition:180ms cubic-bezier(.2,.9,.3,1);
 
   --logo-desktop:200px;
   --logo-tablet:160px;
-
   --card-max-width:420px;
 
-  --focus-ring:0 0 0 5px rgba(36,169,243,0.20);
-
+  --focus-ring:0 0 0 5px rgba(36,169,243,.20);
   --base-font:18px;
 }
 
-
-/* =========================
-   Grundlegendes
-   ========================= */
-
+/* Dokument */
 html,
 body{
   min-height:100%;
@@ -63,24 +52,37 @@ html{
 
 body{
   overflow-x:hidden;
-  font-family:"Inter","Segoe UI",Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
+  font-family:"Inter","Segoe UI",Arial,sans-serif;
+  font-size:var(--base-font);
+  line-height:1.65;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  line-height:1.65;
-  font-size:var(--base-font);
 }
 
 img{
+  display:block;
   max-width:100%;
+  height:auto;
 }
 
+a,
+button,
+input,
+select,
+textarea{
+  touch-action:manipulation;
+}
 
-/* =========================
-   Container
-   ========================= */
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
 
+/* Container */
 .container{
   width:100%;
   max-width:var(--container);
@@ -88,11 +90,7 @@ img{
   padding:0 18px;
 }
 
-
-/* =========================
-   Barrierefreiheit
-   ========================= */
-
+/* Barrierefreiheit */
 .sr-only{
   position:absolute;
   width:1px;
@@ -117,7 +115,7 @@ img{
   overflow:visible;
   clip:auto;
   white-space:normal;
-  background:#ffffff;
+  background:#fff;
   color:var(--text);
   border:2px solid var(--accent);
   border-radius:8px;
@@ -131,24 +129,31 @@ img{
   overflow:hidden;
 }
 
+/* Fokus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:var(--focus-ring);
+}
 
-/* =========================
-   Header
-   ========================= */
-
+/* Header */
 .header{
   position:sticky;
   top:0;
   z-index:1200;
   background:linear-gradient(
     180deg,
-    rgba(255,255,255,0.98),
-    rgba(255,255,255,0.96)
+    rgba(255,255,255,.98),
+    rgba(255,255,255,.96)
   );
+  border-bottom:2px solid rgba(36,169,243,.15);
+  box-shadow:0 8px 24px rgba(16,24,40,.03);
   backdrop-filter:blur(6px);
   -webkit-backdrop-filter:blur(6px);
-  border-bottom:2px solid rgba(36,169,243,0.15);
-  box-shadow:0 8px 24px rgba(16,24,40,0.03);
 }
 
 .header-inner{
@@ -159,11 +164,7 @@ img{
   padding:18px 0;
 }
 
-
-/* =========================
-   Logo
-   ========================= */
-
+/* Logo */
 .logo{
   display:flex;
   align-items:center;
@@ -180,13 +181,14 @@ img{
   height:var(--logo-desktop);
   max-height:var(--logo-desktop);
   object-fit:contain;
+  transition:transform var(--transition);
 }
 
+.logo a:hover .site-logo{
+  transform:scale(1.02);
+}
 
-/* =========================
-   Desktop-Navigation
-   ========================= */
-
+/* Navigation */
 .main-nav{
   display:flex;
   align-items:center;
@@ -206,24 +208,20 @@ img{
   font-weight:700;
   border-radius:10px;
   transition:
-    background var(--transition),
     color var(--transition),
+    background var(--transition),
     transform var(--transition);
 }
 
 .main-nav a:hover,
-.main-nav a:focus-visible{
+.main-nav a:focus-visible,
+.main-nav a.active{
   color:var(--accent-600);
-  background:rgba(36,169,243,0.10);
+  background:rgba(36,169,243,.10);
   transform:translateY(-2px);
-  outline:none;
 }
 
-
-/* =========================
-   Telefonnummer
-   ========================= */
-
+/* Telefonnummer */
 .phone{
   display:flex;
   align-items:center;
@@ -238,7 +236,7 @@ img{
   padding:10px 16px;
   background:transparent;
   color:var(--accent);
-  border:1px solid rgba(36,169,243,0.25);
+  border:1px solid rgba(36,169,243,.25);
   border-radius:999px;
   font-weight:800;
   text-decoration:none;
@@ -252,30 +250,21 @@ img{
 }
 
 .phone-cta:hover{
-  color:#ffffff;
+  color:#fff;
   background:var(--accent);
   border-color:var(--accent);
-  box-shadow:0 10px 25px rgba(36,169,243,0.25);
+  box-shadow:0 10px 25px rgba(36,169,243,.25);
   transform:translateY(-2px);
 }
 
-
-/* =========================
-   Hamburger-Menü
-   ========================= */
-
+/* Hamburger-Menü */
 .nav-toggle{
   display:none;
   padding:8px;
   background:transparent;
-  border:none;
+  border:0;
   border-radius:8px;
   cursor:pointer;
-}
-
-.nav-toggle:focus-visible{
-  outline:none;
-  box-shadow:var(--focus-ring);
 }
 
 .hamburger-line{
@@ -302,21 +291,18 @@ img{
   transform:translateY(-9px) rotate(-45deg);
 }
 
-
-/* =========================
-   Hero
-   ========================= */
-
+/* Hero */
 .hero{
   position:relative;
   display:flex;
   align-items:center;
   min-height:60vh;
   padding:56px 0;
-  color:#ffffff;
-  background-image:url("Banner_Website.png");
-  background-size:cover;
-  background-position:center;
+  color:#fff;
+  background:
+    url("Banner_Website.png")
+    center / cover
+    no-repeat;
 }
 
 .hero::before{
@@ -325,8 +311,8 @@ img{
   inset:0;
   background:linear-gradient(
     120deg,
-    rgba(0,0,0,0.50),
-    rgba(0,0,0,0.20)
+    rgba(0,0,0,.50),
+    rgba(0,0,0,.20)
   );
 }
 
@@ -335,72 +321,67 @@ img{
   z-index:2;
 }
 
-.hero .hero-text{
-  position:relative;
+.hero-text{
   max-width:720px;
   padding:28px 32px;
   background:linear-gradient(
     180deg,
-    rgba(0,0,0,0.28),
-    rgba(0,0,0,0.12)
+    rgba(0,0,0,.28),
+    rgba(0,0,0,.12)
   );
-  border-radius:12px;
+  border-radius:var(--radius);
   box-shadow:var(--shadow-md);
 }
 
 .hero h1{
   margin-bottom:10px;
   font-size:2.1rem;
-  line-height:1.15;
   font-weight:800;
+  line-height:1.15;
 }
 
 .hero p.lead{
   margin-bottom:20px;
-  color:rgba(255,255,255,0.95);
+  color:rgba(255,255,255,.95);
   font-size:1.05rem;
 }
 
-
-/* =========================
-   Buttons
-   ========================= */
-
-.button{
+/* Buttons */
+.button,
+button[type="submit"]{
   display:inline-block;
   padding:14px 22px;
-  color:#ffffff;
+  color:#fff;
   background:linear-gradient(
     135deg,
     var(--accent),
     var(--accent-600)
   );
+  border:0;
   border-radius:999px;
   font-weight:800;
   text-decoration:none;
-  box-shadow:0 12px 30px rgba(36,169,243,0.25);
+  cursor:pointer;
+  box-shadow:0 14px 34px rgba(36,169,243,.25);
   transition:
+    background var(--transition),
     transform var(--transition),
-    box-shadow var(--transition),
-    background var(--transition);
+    box-shadow var(--transition);
 }
 
-.button:hover{
-  color:#ffffff;
+.button:hover,
+button[type="submit"]:hover{
+  color:#fff;
   background:linear-gradient(
     135deg,
     var(--accent-600),
     var(--accent-700)
   );
   transform:translateY(-3px);
-  box-shadow:0 18px 40px rgba(36,169,243,0.35);
+  box-shadow:0 20px 44px rgba(36,169,243,.35);
 }
 
-
-/* =========================
-   Sektionen
-   ========================= */
-
+/* Sektionen */
 .section{
   padding:56px 0;
 }
@@ -423,14 +404,11 @@ img{
   font-size:1.05rem;
 }
 
-
-/* =========================
-   Karten
-   ========================= */
-
+/* Karten */
 .cards-4,
 .cards-3{
   display:grid;
+  align-items:stretch;
   gap:20px;
   max-width:var(--container);
   margin:20px auto 0;
@@ -464,18 +442,16 @@ img{
 
 .card:hover{
   transform:translateY(-4px);
-  border-color:rgba(36,169,243,0.25);
-  box-shadow:0 14px 34px rgba(16,24,40,0.09);
+  border-color:rgba(36,169,243,.25);
+  box-shadow:0 14px 34px rgba(16,24,40,.09);
 }
 
 .card h3{
-  margin:0;
   color:var(--text);
   font-size:1.1rem;
 }
 
 .card p{
-  margin:0;
   color:var(--text-soft);
   font-size:1rem;
 }
@@ -486,43 +462,59 @@ img{
   text-align:center;
 }
 
-
-/* =========================
-   Galerie
-   ========================= */
-
+/* Galerie */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(2,minmax(0,1fr));
   align-items:start;
   gap:18px;
   margin-top:18px;
   padding:0 6px;
 }
 
-.gallery a{
-  display:block;
+.project{
   overflow:hidden;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
-.gallery img{
+.project:hover{
+  transform:translateY(-5px);
+  box-shadow:0 16px 36px rgba(16,24,40,.10);
+}
+
+.project a{
+  display:block;
+  overflow:hidden;
+}
+
+.project img{
   width:100%;
   height:250px;
   object-fit:cover;
-  display:block;
-  transition:transform .3s ease;
+  transition:
+    transform 300ms ease,
+    filter 300ms ease;
 }
 
-.gallery img:hover{
+.project:hover img{
   transform:scale(1.05);
+  filter:brightness(1.03);
 }
 
-/* =========================
-   Kontaktformular
-   ========================= */
+.project p{
+  padding:14px;
+  color:var(--text);
+  font-size:1rem;
+  font-weight:700;
+}
 
+/* Kontaktformular */
 .contact{
   max-width:820px;
   margin:0 auto;
@@ -539,7 +531,7 @@ form{
 label{
   display:block;
   color:var(--text-soft);
-  font-size:0.95rem;
+  font-size:.95rem;
 }
 
 input,
@@ -548,14 +540,14 @@ select{
   width:100%;
   padding:14px 16px;
   color:var(--text);
-  background:linear-gradient(180deg,#ffffff,#fbfdff);
+  background:linear-gradient(180deg,#fff,#fbfdff);
   border:1px solid var(--border);
   border-radius:10px;
-  font-family:inherit;
-  font-size:1rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.03);
+  font:inherit;
   transition:
-    box-shadow var(--transition),
-    border-color var(--transition);
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 input:focus,
@@ -582,44 +574,14 @@ textarea{
 
 button[type="submit"]{
   padding:14px 20px;
-  color:#ffffff;
-  background:linear-gradient(
-    135deg,
-    var(--accent),
-    var(--accent-600)
-  );
-  border:none;
-  border-radius:999px;
-  font-family:inherit;
   font-size:1rem;
-  font-weight:800;
-  cursor:pointer;
-  box-shadow:0 16px 40px rgba(36,169,243,0.25);
-  transition:
-    transform var(--transition),
-    box-shadow var(--transition),
-    background var(--transition);
 }
 
-button[type="submit"]:hover{
-  background:linear-gradient(
-    135deg,
-    var(--accent-600),
-    var(--accent-700)
-  );
-  transform:translateY(-3px);
-  box-shadow:0 22px 48px rgba(36,169,243,0.35);
-}
-
-
-/* =========================
-   Google-Karte
-   ========================= */
-
+/* Google-Karte */
 .map{
   margin-top:18px;
   overflow:hidden;
-  border-radius:12px;
+  border-radius:var(--radius);
   box-shadow:var(--shadow-sm);
 }
 
@@ -630,16 +592,13 @@ button[type="submit"]:hover{
   border:0;
 }
 
-
-/* =========================
-   Footer
-   ========================= */
-
+/* Footer */
 .footer{
   margin-top:48px;
   padding:36px 0;
   color:#e6eef8;
   background:#0f1724;
+  border-top:3px solid rgba(36,169,243,.25);
 }
 
 .footer a{
@@ -648,7 +607,7 @@ button[type="submit"]:hover{
 }
 
 .footer a:hover{
-  color:#ffffff;
+  color:#fff;
   text-decoration:underline;
 }
 
@@ -663,7 +622,6 @@ button[type="submit"]:hover{
 .footer-brand{
   color:inherit;
   font-weight:700;
-  text-decoration:none;
 }
 
 .footer-nav{
@@ -674,19 +632,14 @@ button[type="submit"]:hover{
 }
 
 .footer-copyright{
-  margin:6px 0 0;
-  color:rgba(255,255,255,0.85);
+  margin-top:6px;
+  color:rgba(255,255,255,.85);
   font-size:14px;
   text-align:center;
 }
 
-
-/* =========================
-   Tablet bis 900 Pixel
-   ========================= */
-
+/* Tablet */
 @media (max-width:900px){
-
   :root{
     --logo-desktop:var(--logo-tablet);
   }
@@ -700,7 +653,7 @@ button[type="submit"]:hover{
     padding:40px 0;
   }
 
-  .hero .hero-text{
+  .hero-text{
     max-width:560px;
     padding:20px;
   }
@@ -712,19 +665,10 @@ button[type="submit"]:hover{
   .cards-3{
     grid-template-columns:1fr;
   }
-
-  .gallery{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
 }
 
-
-/* =========================
-   Mobile bis 600 Pixel
-   ========================= */
-
+/* Mobile */
 @media (max-width:600px){
-
   html{
     scroll-padding-top:10px;
   }
@@ -734,31 +678,21 @@ button[type="submit"]:hover{
   }
 
   .header-inner{
-    display:flex;
     flex-direction:column;
-    align-items:center;
     justify-content:flex-start;
     gap:4px;
     padding:6px 0 12px;
   }
 
-  .logo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
-    margin:0;
-  }
-
+  .logo,
   .logo a{
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     width:100%;
   }
 
   .site-logo{
-    display:block;
     width:auto;
     height:auto;
     max-width:92%;
@@ -797,14 +731,8 @@ button[type="submit"]:hover{
   }
 
   .phone{
-    display:flex;
     justify-content:center;
     width:100%;
-    margin:0;
-  }
-
-  .phone-cta{
-    margin:0;
   }
 
   .hero{
@@ -812,7 +740,7 @@ button[type="submit"]:hover{
     padding:28px 0;
   }
 
-  .hero .hero-text{
+  .hero-text{
     padding:14px;
   }
 
@@ -820,17 +748,17 @@ button[type="submit"]:hover{
     font-size:1.4rem;
   }
 
+  .cards-4,
   .gallery{
     grid-template-columns:1fr;
+  }
+
+  .gallery{
     gap:14px;
   }
 
   .project img{
     height:200px;
-  }
-
-  .cards-4{
-    grid-template-columns:1fr;
   }
 
   .card{
@@ -854,12 +782,11 @@ button[type="submit"]:hover{
   }
 }
 
-
-/* =========================
-   Sehr kleine Displays
-   ========================= */
-
+/* Kleine Smartphones */
 @media (max-width:420px){
+  body{
+    font-size:16px;
+  }
 
   .site-logo{
     width:auto;
@@ -867,8 +794,6 @@ button[type="submit"]:hover{
     max-width:94%;
     max-height:190px;
     margin:0 auto;
-    object-fit:contain;
-    transform:none;
   }
 
   .nav-toggle{
@@ -877,11 +802,11 @@ button[type="submit"]:hover{
 
   .phone-cta{
     padding:9px 14px;
-    font-size:0.95rem;
+    font-size:.95rem;
   }
 
   .hero h1{
-    font-size:1.2rem;
+    font-size:1.3rem;
   }
 
   .project img{
@@ -889,42 +814,8 @@ button[type="submit"]:hover{
   }
 }
 
-
-/* =========================
-   Bedienbarkeit und Fokus
-   ========================= */
-
-a,
-button,
-input,
-select,
-textarea{
-  touch-action:manipulation;
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible{
-  outline:none;
-  border-color:var(--accent);
-  box-shadow:var(--focus-ring);
-}
-
-p,
-li,
-label{
-  line-height:1.7;
-}
-
-
-/* =========================
-   Reduzierte Animationen
-   ========================= */
-
+/* Reduzierte Animationen */
 @media (prefers-reduced-motion:reduce){
-
   html{
     scroll-behavior:auto;
   }
@@ -933,8 +824,8 @@ label{
   *::before,
   *::after{
     scroll-behavior:auto !important;
-    transition-duration:0.01ms !important;
-    animation-duration:0.01ms !important;
+    transition-duration:.01ms !important;
+    animation-duration:.01ms !important;
     animation-iteration-count:1 !important;
   }
 }
