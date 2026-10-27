@@ -469,153 +469,156 @@
 
         <div class="contact">
 
-          <form
-            id="offerForm"
-            action="https://formsubmit.co/zofiglas@gmx.ch"
-            method="POST">
+<form
+  id="offerForm"
+  action="https://formsubmit.co/zofiglas@gmx.ch"
+  method="POST">
 
-            <!-- Betreff der zugestellten E-Mail -->
-            <input
-              type="hidden"
-              name="_subject"
-              value="Neue Offertanfrage über die ZofiGlas-Website">
+  <!-- E-Mail-Betreff für ZofiGlas -->
+  <input
+    type="hidden"
+    name="_subject"
+    value="Neue Offertanfrage für ZofiGlas">
 
-            <!-- Deutsche Bestätigungsseite -->
-            <input
-              type="hidden"
-              name="_next"
-              value="https://zofiglas.github.io/ZofiGlas/danke.html">
+  <!-- Deutsche Seite nach erfolgreichem Versand -->
+  <input
+    type="hidden"
+    name="_next"
+    value="https://zofiglas.github.io/ZofiGlas/danke.html">
 
-            <!-- FormSubmit-Einstellungen -->
-            <input
-              type="hidden"
-              name="_captcha"
-              value="false">
+  <!-- Übersichtliche Tabellenansicht -->
+  <input
+    type="hidden"
+    name="_template"
+    value="table">
 
-            <input
-              type="hidden"
-              name="_template"
-              value="table">
+  <!-- FormSubmit-Captcha deaktivieren -->
+  <input
+    type="hidden"
+    name="_captcha"
+    value="false">
 
-            <!-- Unsichtbarer Spam-Schutz -->
-            <div
-              class="honeypot"
-              aria-hidden="true">
+  <!-- Deutsche automatische Bestätigung an den Kunden -->
+  <input
+    type="hidden"
+    name="_autoresponse"
+    value="Vielen Dank für Ihre Anfrage bei ZofiGlas. Ihre Anfrage ist bei uns eingegangen. Wir prüfen Ihr Anliegen und melden uns schnellstmöglich bei Ihnen. In dringenden Fällen erreichen Sie uns unter 079 662 81 06. Freundliche Grüsse, Ihr ZofiGlas-Team">
 
-              <label for="website">
-                Dieses Feld bitte leer lassen
-              </label>
+  <!-- Unsichtbarer Spam-Schutz -->
+  <div class="honeypot" aria-hidden="true">
+    <label for="website">
+      Dieses Feld bitte leer lassen
+    </label>
 
-              <input
-                id="website"
-                type="text"
-                name="_honey"
-                tabindex="-1"
-                autocomplete="off">
+    <input
+      id="website"
+      type="text"
+      name="_honey"
+      tabindex="-1"
+      autocomplete="off">
+  </div>
 
-            </div>
+  <label for="arbeit">
+    Leistung
+  </label>
 
-            <label for="arbeit">
-              Leistung
-            </label>
+  <select
+    id="arbeit"
+    name="Gewünschte Leistung"
+    required>
 
-            <select
-              id="arbeit"
-              name="Leistung"
-              required>
+    <option value="">
+      Bitte wählen
+    </option>
 
-              <option value="">
-                Bitte wählen
-              </option>
+    <option value="Glasreparatur">
+      Glasreparatur
+    </option>
 
-              <option value="Glasreparatur">
-                Glasreparatur
-              </option>
+    <option value="Duschglas">
+      Duschglas
+    </option>
 
-              <option value="Duschglas">
-                Duschglas
-              </option>
+    <option value="Bürotrennwand">
+      Bürotrennwand
+    </option>
 
-              <option value="Bürotrennwand">
-                Bürotrennwand
-              </option>
+    <option value="Fensterverglasung">
+      Fensterverglasung
+    </option>
 
-              <option value="Fensterverglasung">
-                Fensterverglasung
-              </option>
+    <option value="Spezialanfertigung">
+      Spezialanfertigung
+    </option>
 
-              <option value="Spezialanfertigung">
-                Spezialanfertigung
-              </option>
+  </select>
 
-            </select>
+  <div class="form-row">
 
-            <div class="form-row">
+    <div class="half">
 
-              <div class="half">
+      <label for="name">
+        Name
+      </label>
 
-                <label for="name">
-                  Name
-                </label>
+      <input
+        id="name"
+        name="Name des Kunden"
+        type="text"
+        placeholder="Vorname Nachname"
+        autocomplete="name"
+        required>
 
-                <input
-                  id="name"
-                  name="Name"
-                  type="text"
-                  placeholder="Vorname Nachname"
-                  autocomplete="name"
-                  required>
+    </div>
 
-              </div>
+    <div class="half">
 
-              <div class="half">
+      <label for="telefon">
+        Telefon, optional
+      </label>
 
-                <label for="telefon">
-                  Telefon, optional
-                </label>
+      <input
+        id="telefon"
+        name="Telefonnummer"
+        type="tel"
+        inputmode="tel"
+        placeholder="079 662 81 06"
+        autocomplete="tel">
 
-                <input
-                  id="telefon"
-                  name="Telefon"
-                  type="tel"
-                  inputmode="tel"
-                  placeholder="079 662 81 06"
-                  autocomplete="tel">
+    </div>
 
-              </div>
+  </div>
 
-            </div>
+  <label for="email">
+    E-Mail-Adresse
+  </label>
 
-            <label for="email">
-              E-Mail
-            </label>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    inputmode="email"
+    placeholder="name@example.com"
+    autocomplete="email"
+    required>
 
-            <input
-              id="email"
-              name="email"
-              type="email"
-              inputmode="email"
-              placeholder="name@example.com"
-              autocomplete="email"
-              required>
+  <label for="message">
+    Beschreibung
+  </label>
 
-            <label for="message">
-              Beschreibung
-            </label>
+  <textarea
+    id="message"
+    name="Beschreibung der Anfrage"
+    placeholder="Beschreiben Sie kurz Ihr Anliegen"
+    required></textarea>
 
-            <textarea
-              id="message"
-              name="Beschreibung"
-              placeholder="Beschreiben Sie kurz Ihr Anliegen"
-              required></textarea>
+  <button
+    type="submit"
+    class="submit-btn">
+    Offerte anfragen
+  </button>
 
-            <button
-              type="submit"
-              class="submit-btn">
-              Offerte anfragen
-            </button>
-
-          </form>
+</form>
 
         </div>
 
