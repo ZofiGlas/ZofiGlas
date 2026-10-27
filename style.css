@@ -1101,3 +1101,200 @@ label{
     animation-iteration-count:1 !important;
   }
 }
+
+/* =========================
+   Deutsche Danke-Seite
+   ========================= */
+
+.thank-you-body{
+  min-height:100vh;
+  margin:0;
+  background:linear-gradient(
+    135deg,
+    #f6f7f9,
+    #ffffff
+  );
+}
+
+.thank-you-page{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:100vh;
+  padding:32px 18px;
+}
+
+.thank-you-card{
+  width:100%;
+  max-width:680px;
+  padding:40px 32px;
+  text-align:center;
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-top:5px solid var(--accent);
+  border-radius:16px;
+  box-shadow:var(--shadow-md);
+}
+
+.thank-you-logo-link{
+  display:inline-block;
+  text-decoration:none;
+}
+
+.thank-you-logo{
+  display:block;
+  width:auto;
+  max-width:320px;
+  max-height:160px;
+  margin:0 auto 18px;
+  object-fit:contain;
+}
+
+.thank-you-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:72px;
+  height:72px;
+  margin:0 auto 20px;
+  color:#ffffff;
+  background:linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-600)
+  );
+  border-radius:50%;
+  font-size:36px;
+  font-weight:800;
+  box-shadow:0 12px 30px rgba(36,169,243,0.25);
+}
+
+.thank-you-card h1{
+  margin-bottom:12px;
+  color:var(--text);
+  font-size:2rem;
+  line-height:1.2;
+}
+
+.thank-you-card p{
+  max-width:540px;
+  margin:0 auto 14px;
+  color:var(--text-soft);
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+.thank-you-card .thank-you-lead{
+  color:var(--text);
+  font-weight:700;
+}
+
+.thank-you-note{
+  margin-top:20px;
+  padding:14px 18px;
+  color:var(--accent-700);
+  background:rgba(36,169,243,0.09);
+  border:1px solid rgba(36,169,243,0.20);
+  border-radius:10px;
+  font-weight:700;
+}
+
+.thank-you-note a{
+  color:var(--accent-700);
+  text-decoration:underline;
+}
+
+.thank-you-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:26px;
+}
+
+.thank-you-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:12px 22px;
+  color:#ffffff;
+  background:linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-600)
+  );
+  border:1px solid transparent;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(36,169,243,0.22);
+  transition:
+    color var(--transition),
+    background var(--transition),
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.thank-you-button:hover{
+  color:#ffffff;
+  background:linear-gradient(
+    135deg,
+    var(--accent-600),
+    var(--accent-700)
+  );
+  transform:translateY(-2px);
+  box-shadow:0 16px 36px rgba(36,169,243,0.32);
+}
+
+.thank-you-button-secondary{
+  color:var(--accent-600);
+  background:#ffffff;
+  border-color:rgba(36,169,243,0.35);
+  box-shadow:none;
+}
+
+.thank-you-button-secondary:hover{
+  color:#ffffff;
+  background:var(--accent-600);
+  border-color:var(--accent-600);
+}
+
+
+/* Danke-Seite auf Mobilgeräten */
+
+@media (max-width:600px){
+
+  .thank-you-page{
+    padding:20px 14px;
+  }
+
+  .thank-you-card{
+    padding:30px 20px;
+  }
+
+  .thank-you-logo{
+    max-width:260px;
+    max-height:130px;
+  }
+
+  .thank-you-icon{
+    width:64px;
+    height:64px;
+    font-size:32px;
+  }
+
+  .thank-you-card h1{
+    font-size:1.6rem;
+  }
+
+  .thank-you-actions{
+    flex-direction:column;
+  }
+
+  .thank-you-button{
+    width:100%;
+  }
+}
