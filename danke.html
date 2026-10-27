@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-CH">
 
 <head>
   <meta charset="utf-8">
@@ -22,12 +22,167 @@
     name="robots"
     content="noindex, follow">
 
-  <link
-    rel="stylesheet"
-    href="style.css?v=11.2">
+  style.css?v=12.0
+
+  <style>
+    .thank-you-page{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:32px 18px;
+      background:linear-gradient(
+        135deg,
+        #f6f7f9,
+        #ffffff
+      );
+    }
+
+    .thank-you-card{
+      width:100%;
+      max-width:680px;
+      padding:40px 32px;
+      text-align:center;
+      background:#ffffff;
+      border:1px solid #e6e9ee;
+      border-top:5px solid #24A9F3;
+      border-radius:16px;
+      box-shadow:0 24px 60px rgba(16,24,40,0.10);
+    }
+
+    .thank-you-logo{
+      display:block;
+      width:auto;
+      max-width:320px;
+      max-height:160px;
+      margin:0 auto 18px;
+      object-fit:contain;
+    }
+
+    .thank-you-icon{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:72px;
+      height:72px;
+      margin:0 auto 20px;
+      color:#ffffff;
+      background:linear-gradient(
+        135deg,
+        #24A9F3,
+        #1289D1
+      );
+      border-radius:50%;
+      font-size:36px;
+      font-weight:800;
+      box-shadow:0 12px 30px rgba(36,169,243,0.25);
+    }
+
+    .thank-you-card h1{
+      margin-bottom:12px;
+      color:#0f1724;
+      font-size:2rem;
+      line-height:1.2;
+    }
+
+    .thank-you-card p{
+      max-width:540px;
+      margin:0 auto 14px;
+      color:#4b5563;
+      font-size:1.05rem;
+      line-height:1.7;
+    }
+
+    .thank-you-note{
+      padding:14px 18px;
+      margin-top:20px;
+      color:#0C6CAD;
+      background:rgba(36,169,243,0.09);
+      border:1px solid rgba(36,169,243,0.20);
+      border-radius:10px;
+      font-weight:700;
+    }
+
+    .thank-you-actions{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .thank-you-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 22px;
+      color:#ffffff;
+      background:linear-gradient(
+        135deg,
+        #24A9F3,
+        #1289D1
+      );
+      border-radius:999px;
+      font-weight:800;
+      text-decoration:none;
+      box-shadow:0 12px 30px rgba(36,169,243,0.22);
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        background 180ms ease;
+    }
+
+    .thank-you-button:hover{
+      color:#ffffff;
+      background:linear-gradient(
+        135deg,
+        #1289D1,
+        #0C6CAD
+      );
+      transform:translateY(-2px);
+      box-shadow:0 16px 36px rgba(36,169,243,0.32);
+    }
+
+    .thank-you-button-secondary{
+      color:#1289D1;
+      background:#ffffff;
+      border:1px solid rgba(36,169,243,0.35);
+      box-shadow:none;
+    }
+
+    .thank-you-button-secondary:hover{
+      color:#ffffff;
+      background:#1289D1;
+    }
+
+    @media (max-width:600px){
+
+      .thank-you-card{
+        padding:30px 20px;
+      }
+
+      .thank-you-logo{
+        max-width:260px;
+        max-height:130px;
+      }
+
+      .thank-you-card h1{
+        font-size:1.6rem;
+      }
+
+      .thank-you-actions{
+        flex-direction:column;
+      }
+
+      .thank-you-button{
+        width:100%;
+      }
+    }
+  </style>
 </head>
 
-<body class="thank-you-body">
+<body>
 
   <main class="thank-you-page">
 
@@ -35,17 +190,10 @@
       class="thank-you-card"
       aria-labelledby="thank-you-title">
 
-      <a
-        href="index.html"
-        class="thank-you-logo-link"
-        aria-label="Zur ZofiGlas Startseite">
-
-        <img
-          src="logo-bild-svg.jpeg"
-          alt="ZofiGlas"
-          class="thank-you-logo">
-
-      </a>
+      <img
+        src="logo-bild-svg.jpeg"
+        alt="ZofiGlas"
+        class="thank-you-logo">
 
       <div
         class="thank-you-icon"
@@ -57,33 +205,27 @@
         Vielen Dank für Ihre Anfrage!
       </h1>
 
-      <p class="thank-you-lead">
+      <p>
         Ihre Anfrage wurde erfolgreich an ZofiGlas übermittelt.
       </p>
 
       <p>
-        Wir prüfen Ihr Anliegen und melden uns so schnell wie möglich
+        Wir prüfen Ihr Anliegen und melden uns schnellstmöglich
         bei Ihnen.
       </p>
 
       <div class="thank-you-note">
         In dringenden Fällen erreichen Sie uns telefonisch unter
-        <a href="tel:+41796628106">
-          079 662 81 06
-        </a>.
+        079 662 81 06.
       </div>
 
       <div class="thank-you-actions">
 
-        <a
-          href="index.html"
-          class="thank-you-button">
+        ./
           Zurück zur Startseite
         </a>
 
-        <a
-          href="tel:+41796628106"
-          class="thank-you-button thank-you-button-secondary">
+        tel:+41796628106
           Jetzt anrufen
         </a>
 
