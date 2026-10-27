@@ -21,7 +21,6 @@
   --surface:#ffffff;
   --muted:#f6f7f9;
 
-  /* ZofiGlas Logo-Blau */
   --accent:#24A9F3;
   --accent-600:#1289D1;
   --accent-700:#0C6CAD;
@@ -140,7 +139,6 @@ textarea{
   box-shadow:var(--focus-ring);
 }
 
-/* Unsichtbares Spam-Schutzfeld */
 .honeypot{
   position:absolute;
   left:-10000px;
@@ -217,7 +215,6 @@ textarea{
   margin-left:auto;
 }
 
-/* Wird durch das JavaScript gesteuert */
 .main-nav[hidden]{
   display:none !important;
 }
@@ -242,11 +239,6 @@ textarea{
   background:rgba(36,169,243,0.10);
   transform:translateY(-2px);
   outline:none;
-}
-
-.main-nav a.active{
-  color:var(--accent-600);
-  background:rgba(36,169,243,0.10);
 }
 
 
@@ -321,7 +313,6 @@ textarea{
     opacity var(--transition);
 }
 
-/* Burger wird beim Öffnen zu einem X */
 .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1){
   transform:translateY(9px) rotate(45deg);
 }
@@ -347,8 +338,8 @@ textarea{
   padding:56px 0;
   color:#ffffff;
   background-image:url("Banner_Website.png");
-  background-size:cover;
   background-position:center;
+  background-size:cover;
   background-repeat:no-repeat;
 }
 
@@ -369,7 +360,6 @@ textarea{
 }
 
 .hero .hero-text{
-  position:relative;
   max-width:720px;
   padding:28px 32px;
   background:linear-gradient(
@@ -459,7 +449,7 @@ textarea{
 
 
 /* =========================
-   Leistungskarten und Vorteile
+   Karten
    ========================= */
 
 .cards-4,
@@ -505,15 +495,11 @@ textarea{
 }
 
 .card h3{
-  margin:0;
-  color:var(--text);
   font-size:1.1rem;
 }
 
 .card p{
-  margin:0;
   color:var(--text-soft);
-  font-size:1rem;
 }
 
 .cards-3 .card{
@@ -530,24 +516,18 @@ textarea{
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  align-items:stretch;
-  gap:40px;
+  align-items:start;
+  gap:18px;
   margin-top:18px;
   padding:0 6px;
 }
 
 .project{
-  display:flex;
-  flex-direction:column;
   overflow:hidden;
   background:var(--surface);
   border:1px solid var(--border);
-
-  /* Rundere Form passend zum restlichen Design */
-  border-radius:20px;
-
-  box-shadow:0 8px 24px rgba(16,24,40,0.05);
-
+  border-radius:12px;
+  box-shadow:var(--shadow-sm);
   transition:
     transform var(--transition),
     box-shadow var(--transition),
@@ -555,73 +535,40 @@ textarea{
 }
 
 .project:hover{
-  transform:translateY(-4px);
-  border-color:rgba(36,169,243,0.22);
-  box-shadow:0 14px 32px rgba(16,24,40,0.08);
+  transform:translateY(-6px);
+  border-color:rgba(36,169,243,0.25);
+  box-shadow:0 16px 36px rgba(16,24,40,0.10);
 }
 
 .project a{
-  position:relative;
   display:block;
   overflow:hidden;
   color:inherit;
   text-decoration:none;
-
-  /* Obere Bildecken passend zur Karte */
-  border-radius:19px 19px 0 0;
 }
 
 .project img{
   display:block;
   width:100%;
-  height:250px;
+  height:260px;
   object-fit:cover;
-
-  /* Bilder etwas dezenter darstellen */
-  filter:
-    saturate(0.86)
-    contrast(0.96)
-    brightness(0.98);
-
   transition:
-    transform 350ms ease,
-    filter 350ms ease;
-}
-
-/* Sehr dezente, helle Überlagerung */
-.project a::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:rgba(255,255,255,0.04);
-  transition:background var(--transition);
+    transform 300ms ease,
+    filter 300ms ease;
 }
 
 .project:hover img{
-  transform:scale(1.025);
-
-  /* Beim Hover etwas klarer, aber nicht grell */
-  filter:
-    saturate(0.96)
-    contrast(1)
-    brightness(1);
-}
-
-.project:hover a::after{
-  background:rgba(255,255,255,0);
+  transform:scale(1.04);
+  filter:brightness(1.03);
 }
 
 .project p{
-  flex:1;
-  margin:0;
-  padding:15px 16px 17px;
+  padding:14px;
   color:var(--text);
-  background:var(--surface);
   font-size:1rem;
   font-weight:700;
-  text-align:center;
 }
+
 
 /* =========================
    Kontaktformular
@@ -653,11 +600,14 @@ select{
   width:100%;
   padding:14px 16px;
   color:var(--text);
-  background:linear-gradient(180deg,#ffffff,#fbfdff);
+  background:linear-gradient(
+    180deg,
+    #ffffff,
+    #fbfdff
+  );
   border:1px solid var(--border);
   border-radius:10px;
   box-shadow:0 2px 8px rgba(0,0,0,0.03);
-  font-family:inherit;
   font-size:1rem;
   transition:
     box-shadow var(--transition),
@@ -716,7 +666,6 @@ button[type="submit"]{
   );
   border:none;
   border-radius:999px;
-  font-family:inherit;
   font-size:1rem;
   font-weight:800;
   cursor:pointer;
@@ -815,6 +764,35 @@ button[type="submit"]:active{
 
 
 /* =========================
+   Bedienbarkeit und Fokus
+   ========================= */
+
+a,
+button,
+input,
+select,
+textarea{
+  touch-action:manipulation;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:var(--focus-ring);
+}
+
+p,
+li,
+label{
+  line-height:1.7;
+}
+
+
+/* =========================
    Tablet bis 900 Pixel
    ========================= */
 
@@ -867,22 +845,13 @@ button[type="submit"]:active{
   }
 
   .header-inner{
-    display:flex;
     flex-direction:column;
-    align-items:center;
     justify-content:flex-start;
     gap:4px;
     padding:6px 0 12px;
   }
 
-  .logo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
-    margin:0;
-  }
-
+  .logo,
   .logo a{
     display:flex;
     justify-content:center;
@@ -891,7 +860,6 @@ button[type="submit"]:active{
   }
 
   .site-logo{
-    display:block;
     width:auto;
     height:auto;
     max-width:92%;
@@ -934,14 +902,8 @@ button[type="submit"]:active{
   }
 
   .phone{
-    display:flex;
     justify-content:center;
     width:100%;
-    margin:0;
-  }
-
-  .phone-cta{
-    margin:0;
   }
 
   .hero{
@@ -1003,13 +965,8 @@ button[type="submit"]:active{
   }
 
   .site-logo{
-    width:auto;
-    height:auto;
     max-width:94%;
     max-height:190px;
-    margin:0 auto;
-    object-fit:contain;
-    transform:none;
   }
 
   .nav-toggle{
@@ -1032,57 +989,6 @@ button[type="submit"]:active{
 
 
 /* =========================
-   Bedienbarkeit und Fokus
-   ========================= */
-
-a,
-button,
-input,
-select,
-textarea{
-  touch-action:manipulation;
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible{
-  outline:none;
-  border-color:var(--accent);
-  box-shadow:var(--focus-ring);
-}
-
-p,
-li,
-label{
-  line-height:1.7;
-}
-
-
-/* =========================
-   Scrollbar
-   ========================= */
-
-::-webkit-scrollbar{
-  width:10px;
-}
-
-::-webkit-scrollbar-track{
-  background:#f4f6f8;
-}
-
-::-webkit-scrollbar-thumb{
-  background:var(--accent);
-  border-radius:999px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background:var(--accent-600);
-}
-
-
-/* =========================
    Reduzierte Animationen
    ========================= */
 
@@ -1099,202 +1005,5 @@ label{
     transition-duration:0.01ms !important;
     animation-duration:0.01ms !important;
     animation-iteration-count:1 !important;
-  }
-}
-
-/* =========================
-   Deutsche Danke-Seite
-   ========================= */
-
-.thank-you-body{
-  min-height:100vh;
-  margin:0;
-  background:linear-gradient(
-    135deg,
-    #f6f7f9,
-    #ffffff
-  );
-}
-
-.thank-you-page{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  min-height:100vh;
-  padding:32px 18px;
-}
-
-.thank-you-card{
-  width:100%;
-  max-width:680px;
-  padding:40px 32px;
-  text-align:center;
-  background:#ffffff;
-  border:1px solid var(--border);
-  border-top:5px solid var(--accent);
-  border-radius:16px;
-  box-shadow:var(--shadow-md);
-}
-
-.thank-you-logo-link{
-  display:inline-block;
-  text-decoration:none;
-}
-
-.thank-you-logo{
-  display:block;
-  width:auto;
-  max-width:320px;
-  max-height:160px;
-  margin:0 auto 18px;
-  object-fit:contain;
-}
-
-.thank-you-icon{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:72px;
-  height:72px;
-  margin:0 auto 20px;
-  color:#ffffff;
-  background:linear-gradient(
-    135deg,
-    var(--accent),
-    var(--accent-600)
-  );
-  border-radius:50%;
-  font-size:36px;
-  font-weight:800;
-  box-shadow:0 12px 30px rgba(36,169,243,0.25);
-}
-
-.thank-you-card h1{
-  margin-bottom:12px;
-  color:var(--text);
-  font-size:2rem;
-  line-height:1.2;
-}
-
-.thank-you-card p{
-  max-width:540px;
-  margin:0 auto 14px;
-  color:var(--text-soft);
-  font-size:1.05rem;
-  line-height:1.7;
-}
-
-.thank-you-card .thank-you-lead{
-  color:var(--text);
-  font-weight:700;
-}
-
-.thank-you-note{
-  margin-top:20px;
-  padding:14px 18px;
-  color:var(--accent-700);
-  background:rgba(36,169,243,0.09);
-  border:1px solid rgba(36,169,243,0.20);
-  border-radius:10px;
-  font-weight:700;
-}
-
-.thank-you-note a{
-  color:var(--accent-700);
-  text-decoration:underline;
-}
-
-.thank-you-actions{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:12px;
-  margin-top:26px;
-}
-
-.thank-you-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:48px;
-  padding:12px 22px;
-  color:#ffffff;
-  background:linear-gradient(
-    135deg,
-    var(--accent),
-    var(--accent-600)
-  );
-  border:1px solid transparent;
-  border-radius:999px;
-  font-weight:800;
-  text-decoration:none;
-  box-shadow:0 12px 30px rgba(36,169,243,0.22);
-  transition:
-    color var(--transition),
-    background var(--transition),
-    border-color var(--transition),
-    transform var(--transition),
-    box-shadow var(--transition);
-}
-
-.thank-you-button:hover{
-  color:#ffffff;
-  background:linear-gradient(
-    135deg,
-    var(--accent-600),
-    var(--accent-700)
-  );
-  transform:translateY(-2px);
-  box-shadow:0 16px 36px rgba(36,169,243,0.32);
-}
-
-.thank-you-button-secondary{
-  color:var(--accent-600);
-  background:#ffffff;
-  border-color:rgba(36,169,243,0.35);
-  box-shadow:none;
-}
-
-.thank-you-button-secondary:hover{
-  color:#ffffff;
-  background:var(--accent-600);
-  border-color:var(--accent-600);
-}
-
-
-/* Danke-Seite auf Mobilgeräten */
-
-@media (max-width:600px){
-
-  .thank-you-page{
-    padding:20px 14px;
-  }
-
-  .thank-you-card{
-    padding:30px 20px;
-  }
-
-  .thank-you-logo{
-    max-width:260px;
-    max-height:130px;
-  }
-
-  .thank-you-icon{
-    width:64px;
-    height:64px;
-    font-size:32px;
-  }
-
-  .thank-you-card h1{
-    font-size:1.6rem;
-  }
-
-  .thank-you-actions{
-    flex-direction:column;
-  }
-
-  .thank-you-button{
-    width:100%;
   }
 }
