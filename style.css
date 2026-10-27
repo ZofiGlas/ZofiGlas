@@ -525,24 +525,29 @@ textarea{
 
 /* =========================
    Referenzen und Galerie
-   Passend zu article.project
    ========================= */
 
 .gallery{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  align-items:start;
-  gap:18px;
+  align-items:stretch;
+  gap:20px;
   margin-top:18px;
   padding:0 6px;
 }
 
 .project{
+  display:flex;
+  flex-direction:column;
   overflow:hidden;
   background:var(--surface);
   border:1px solid var(--border);
-  border-radius:12px;
-  box-shadow:var(--shadow-sm);
+
+  /* Rundere Form passend zum restlichen Design */
+  border-radius:20px;
+
+  box-shadow:0 8px 24px rgba(16,24,40,0.05);
+
   transition:
     transform var(--transition),
     box-shadow var(--transition),
@@ -550,40 +555,73 @@ textarea{
 }
 
 .project:hover{
-  transform:translateY(-6px);
-  border-color:rgba(36,169,243,0.25);
-  box-shadow:0 16px 36px rgba(16,24,40,0.10);
+  transform:translateY(-4px);
+  border-color:rgba(36,169,243,0.22);
+  box-shadow:0 14px 32px rgba(16,24,40,0.08);
 }
 
 .project a{
+  position:relative;
   display:block;
   overflow:hidden;
   color:inherit;
   text-decoration:none;
+
+  /* Obere Bildecken passend zur Karte */
+  border-radius:19px 19px 0 0;
 }
 
 .project img{
   display:block;
   width:100%;
-  height:260px;
+  height:250px;
   object-fit:cover;
+
+  /* Bilder etwas dezenter darstellen */
+  filter:
+    saturate(0.86)
+    contrast(0.96)
+    brightness(0.98);
+
   transition:
-    transform 300ms ease,
-    filter 300ms ease;
+    transform 350ms ease,
+    filter 350ms ease;
+}
+
+/* Sehr dezente, helle Überlagerung */
+.project a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:rgba(255,255,255,0.04);
+  transition:background var(--transition);
 }
 
 .project:hover img{
-  transform:scale(1.04);
-  filter:brightness(1.03);
+  transform:scale(1.025);
+
+  /* Beim Hover etwas klarer, aber nicht grell */
+  filter:
+    saturate(0.96)
+    contrast(1)
+    brightness(1);
+}
+
+.project:hover a::after{
+  background:rgba(255,255,255,0);
 }
 
 .project p{
-  padding:14px;
+  flex:1;
+  margin:0;
+  padding:15px 16px 17px;
   color:var(--text);
+  background:var(--surface);
   font-size:1rem;
   font-weight:700;
+  text-align:center;
 }
-
 
 /* =========================
    Kontaktformular
