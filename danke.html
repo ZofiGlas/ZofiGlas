@@ -22,7 +22,9 @@
     name="robots"
     content="noindex, follow">
 
-  style.css?v=12.0
+  <link
+    rel="stylesheet"
+    href="style.css?v=12.1">
 
   <style>
     .thank-you-page{
@@ -81,6 +83,7 @@
     .thank-you-card h1{
       margin-bottom:12px;
       color:#0f1724;
+      font-family:"Inter","Segoe UI",Arial,sans-serif;
       font-size:2rem;
       line-height:1.2;
     }
@@ -89,6 +92,7 @@
       max-width:540px;
       margin:0 auto 14px;
       color:#4b5563;
+      font-family:"Inter","Segoe UI",Arial,sans-serif;
       font-size:1.05rem;
       line-height:1.7;
     }
@@ -100,6 +104,7 @@
       background:rgba(36,169,243,0.09);
       border:1px solid rgba(36,169,243,0.20);
       border-radius:10px;
+      font-family:"Inter","Segoe UI",Arial,sans-serif;
       font-weight:700;
     }
 
@@ -123,14 +128,19 @@
         #24A9F3,
         #1289D1
       );
+      border:1px solid transparent;
       border-radius:999px;
+      font-family:"Inter","Segoe UI",Arial,sans-serif;
+      font-size:1rem;
       font-weight:800;
       text-decoration:none;
       box-shadow:0 12px 30px rgba(36,169,243,0.22);
       transition:
+        color 180ms ease,
+        background 180ms ease,
+        border-color 180ms ease,
         transform 180ms ease,
-        box-shadow 180ms ease,
-        background 180ms ease;
+        box-shadow 180ms ease;
     }
 
     .thank-you-button:hover{
@@ -144,19 +154,32 @@
       box-shadow:0 16px 36px rgba(36,169,243,0.32);
     }
 
+    .thank-you-button:focus-visible{
+      outline:none;
+      box-shadow:
+        0 0 0 5px rgba(36,169,243,0.20),
+        0 16px 36px rgba(36,169,243,0.25);
+    }
+
     .thank-you-button-secondary{
       color:#1289D1;
       background:#ffffff;
-      border:1px solid rgba(36,169,243,0.35);
+      border-color:rgba(36,169,243,0.35);
       box-shadow:none;
     }
 
     .thank-you-button-secondary:hover{
       color:#ffffff;
       background:#1289D1;
+      border-color:#1289D1;
+      box-shadow:0 12px 28px rgba(36,169,243,0.22);
     }
 
     @media (max-width:600px){
+
+      .thank-you-page{
+        padding:20px 14px;
+      }
 
       .thank-you-card{
         padding:30px 20px;
@@ -177,6 +200,17 @@
 
       .thank-you-button{
         width:100%;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+
+      .thank-you-button{
+        transition:none;
+      }
+
+      .thank-you-button:hover{
+        transform:none;
       }
     }
   </style>
@@ -221,11 +255,15 @@
 
       <div class="thank-you-actions">
 
-        ./
+        <a
+          href="./"
+          class="thank-you-button">
           Zurück zur Startseite
         </a>
 
-        tel:+41796628106
+        <a
+          href="tel:+41796628106"
+          class="thank-you-button thank-you-button-secondary">
           Jetzt anrufen
         </a>
 
