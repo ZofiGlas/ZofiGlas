@@ -531,7 +531,7 @@ textarea{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   align-items:stretch;
-  gap:20px;
+  gap:40px;
   margin-top:18px;
   padding:0 6px;
 }
