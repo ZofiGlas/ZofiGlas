@@ -1,6 +1,6 @@
 /* =========================
    style.css – ZofiGlas
-   Vollständig bereinigte Version
+   Passend zur aktuellen index.html
    ========================= */
 
 
@@ -8,7 +8,9 @@
    Basis und Variablen
    ========================= */
 
-*{
+*,
+*::before,
+*::after{
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -67,16 +69,27 @@ body{
   font-family:"Inter","Segoe UI",Arial,sans-serif;
   background:var(--bg);
   color:var(--text);
+  font-size:var(--base-font);
+  line-height:1.65;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  line-height:1.65;
-  font-size:var(--base-font);
 }
 
 img{
   display:block;
   max-width:100%;
   height:auto;
+}
+
+a{
+  color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
 }
 
 
@@ -120,12 +133,14 @@ img{
   overflow:visible;
   clip:auto;
   white-space:normal;
-  background:#ffffff;
   color:var(--text);
+  background:#ffffff;
   border:2px solid var(--accent);
   border-radius:8px;
+  box-shadow:var(--focus-ring);
 }
 
+/* Unsichtbares Spam-Schutzfeld */
 .honeypot{
   position:absolute;
   left:-10000px;
@@ -148,10 +163,10 @@ img{
     rgba(255,255,255,0.98),
     rgba(255,255,255,0.96)
   );
-  backdrop-filter:blur(6px);
-  -webkit-backdrop-filter:blur(6px);
   border-bottom:2px solid rgba(36,169,243,0.15);
   box-shadow:0 8px 24px rgba(16,24,40,0.03);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
 }
 
 .header-inner{
@@ -202,6 +217,7 @@ img{
   margin-left:auto;
 }
 
+/* Wird durch das JavaScript gesteuert */
 .main-nav[hidden]{
   display:none !important;
 }
@@ -216,7 +232,8 @@ img{
   transition:
     background var(--transition),
     color var(--transition),
-    transform var(--transition);
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .main-nav a:hover,
@@ -228,7 +245,7 @@ img{
 }
 
 .main-nav a.active{
-  color:var(--accent);
+  color:var(--accent-600);
   background:rgba(36,169,243,0.10);
 }
 
@@ -280,6 +297,7 @@ img{
 .nav-toggle{
   display:none;
   padding:8px;
+  color:var(--text);
   background:transparent;
   border:none;
   border-radius:8px;
@@ -296,13 +314,14 @@ img{
   width:30px;
   height:4px;
   margin:5px 0;
-  background:var(--text);
+  background:currentColor;
   border-radius:4px;
   transition:
     transform var(--transition),
     opacity var(--transition);
 }
 
+/* Burger wird beim Öffnen zu einem X */
 .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(1){
   transform:translateY(9px) rotate(45deg);
 }
@@ -377,7 +396,7 @@ img{
 
 
 /* =========================
-   Buttons
+   Offerten-Button
    ========================= */
 
 .button{
@@ -394,6 +413,7 @@ img{
   text-decoration:none;
   box-shadow:0 12px 30px rgba(36,169,243,0.25);
   transition:
+    color var(--transition),
     transform var(--transition),
     box-shadow var(--transition),
     background var(--transition);
@@ -439,7 +459,7 @@ img{
 
 
 /* =========================
-   Karten
+   Leistungskarten und Vorteile
    ========================= */
 
 .cards-4,
@@ -447,6 +467,7 @@ img{
   display:grid;
   align-items:stretch;
   gap:20px;
+  width:100%;
   max-width:var(--container);
   margin:20px auto 0;
 }
@@ -503,21 +524,20 @@ img{
 
 
 /* =========================
-   Galerie
+   Referenzen und Galerie
+   Passend zu article.project
    ========================= */
 
 .gallery{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  align-items:stretch;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  align-items:start;
   gap:18px;
   margin-top:18px;
   padding:0 6px;
 }
 
 .project{
-  display:flex;
-  flex-direction:column;
   overflow:hidden;
   background:var(--surface);
   border:1px solid var(--border);
@@ -530,20 +550,22 @@ img{
 }
 
 .project:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
   border-color:rgba(36,169,243,0.25);
-  box-shadow:0 14px 34px rgba(16,24,40,0.10);
+  box-shadow:0 16px 36px rgba(16,24,40,0.10);
 }
 
 .project a{
   display:block;
   overflow:hidden;
+  color:inherit;
+  text-decoration:none;
 }
 
 .project img{
   display:block;
   width:100%;
-  height:250px;
+  height:260px;
   object-fit:cover;
   transition:
     transform 300ms ease,
@@ -551,13 +573,11 @@ img{
 }
 
 .project:hover img{
-  transform:scale(1.05);
+  transform:scale(1.04);
   filter:brightness(1.03);
 }
 
 .project p{
-  flex:1;
-  margin:0;
   padding:14px;
   color:var(--text);
   font-size:1rem;
@@ -586,6 +606,7 @@ label{
   display:block;
   color:var(--text-soft);
   font-size:0.95rem;
+  font-weight:600;
 }
 
 input,
@@ -597,13 +618,19 @@ select{
   background:linear-gradient(180deg,#ffffff,#fbfdff);
   border:1px solid var(--border);
   border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.03);
   font-family:inherit;
   font-size:1rem;
-  box-shadow:0 2px 8px rgba(0,0,0,0.03);
   transition:
     box-shadow var(--transition),
     border-color var(--transition),
     background var(--transition);
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#8a94a3;
+  opacity:1;
 }
 
 input:hover,
@@ -616,6 +643,7 @@ input:focus,
 textarea:focus,
 select:focus{
   outline:none;
+  background:#ffffff;
   border-color:var(--accent);
   box-shadow:var(--focus-ring);
 }
@@ -625,10 +653,6 @@ textarea{
   resize:vertical;
 }
 
-select{
-  cursor:pointer;
-}
-
 .form-row{
   display:flex;
   gap:12px;
@@ -636,6 +660,7 @@ select{
 
 .form-row .half{
   flex:1;
+  min-width:0;
 }
 
 
@@ -686,6 +711,7 @@ button[type="submit"]:active{
 .map{
   margin-top:18px;
   overflow:hidden;
+  background:var(--surface);
   border:1px solid var(--border);
   border-radius:12px;
   box-shadow:var(--shadow-sm);
@@ -962,7 +988,7 @@ button[type="submit"]:active{
   }
 
   .project img{
-    height:160px;
+    height:180px;
   }
 }
 
