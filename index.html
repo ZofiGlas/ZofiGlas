@@ -76,15 +76,13 @@
   </script>
 
   <!-- Versionsnummer nach CSS-Änderungen erhöhen -->
-  <link
-    rel="stylesheet"
-    href="style.css?v=11.2">
+  style.css?v=11.2
 </head>
 
 <body>
 
   <!-- Sprunglink für Tastatur und Screenreader -->
-  <a class="sr-only" href="#main">
+  #main
     Zum Inhalt springen
   </a>
 
@@ -130,19 +128,16 @@
         class="main-nav"
         aria-label="Hauptnavigation">
 
-        <a href="#leistungen">Leistungen</a>
-        <a href="#referenzen">Referenzen</a>
-        <a href="#vorteile">Warum wir</a>
-        <a href="#kontakt">Kontakt</a>
+        #leistungenLeistungen</a>
+        #referenzenReferenzen</a>
+        #vorteileWarum wir</a>
+        #kontaktKontakt</a>
 
       </nav>
 
       <div class="phone">
 
-        <a
-          href="tel:+41796628106"
-          class="phone-cta"
-          aria-label="ZofiGlas anrufen unter 079 662 81 06">
+        tel:+41796628106
 
           <span aria-hidden="true">☎</span>
           <span>079 662 81 06</span>
@@ -182,9 +177,7 @@
             Schnell, lokal und zuverlässig.
           </p>
 
-          <a
-            href="#kontakt"
-            class="button">
+          #kontakt
 
             Offerte anfragen
 
@@ -304,16 +297,9 @@
 
           <article class="project">
 
-            <a
-              href="projekte/Windfang_1.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
+            projekte/Windfang_1.jpeg
 
-              <img
-                src="projekte/Windfang_1.jpeg"
-                alt="Massgefertigter Windfang aus Glas"
-                loading="lazy"
-                decoding="async">
+              projekte/Windfang_1.jpeg
 
             </a>
 
@@ -323,16 +309,9 @@
 
           <article class="project">
 
-            <a
-              href="projekte/Windfang_2.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
+            projekte/Windfang_2.jpeg
 
-              <img
-                src="projekte/Windfang_2.jpeg"
-                alt="Einsetzen einer Glasscheibe bei einem Windfang"
-                loading="lazy"
-                decoding="async">
+              projekte/Windfang_2.jpeg
 
             </a>
 
@@ -342,16 +321,9 @@
 
           <article class="project">
 
-            <a
-              href="projekte/Montage.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
+            projekte/Montage.jpeg
 
-              <img
-                src="projekte/Montage.jpeg"
-                alt="Montagearbeiten an einer Glaskonstruktion"
-                loading="lazy"
-                decoding="async">
+              projekte/Montage.jpeg
 
             </a>
 
@@ -361,16 +333,9 @@
 
           <article class="project">
 
-            <a
-              href="projekte/Trennwand_1.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
+            projekte/Trennwand_1.jpeg
 
-              <img
-                src="projekte/Trennwand_1.jpeg"
-                alt="Massgefertigte Bürotrennwand aus Glas"
-                loading="lazy"
-                decoding="async">
+              projekte/Trennwand_1.jpeg
 
             </a>
 
@@ -380,16 +345,9 @@
 
           <article class="project">
 
-            <a
-              href="projekte/Trennwand_2.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
+            projekte/Trennwand_2.jpeg
 
-              <img
-                src="projekte/Trennwand_2.jpeg"
-                alt="Fertig montierte Bürotrennwand aus Glas"
-                loading="lazy"
-                decoding="async">
+              projekte/Trennwand_2.jpeg
 
             </a>
 
@@ -539,7 +497,73 @@
               required>
 
               <option value="">
-   "
+                Bitte wählen
+              </option>
+
+              <option value="Glasreparatur">
+                Glasreparatur
+              </option>
+
+              <option value="Duschglas">
+                Duschglas
+              </option>
+
+              <option value="Bürotrennwand">
+                Bürotrennwand
+              </option>
+
+              <option value="Fensterverglasung">
+                Fensterverglasung
+              </option>
+
+              <option value="Spezialanfertigung">
+                Spezialanfertigung
+              </option>
+
+            </select>
+
+            <div class="form-row">
+
+              <div class="half">
+
+                <label for="name">
+                  Name
+                </label>
+
+                <input
+                  id="name"
+                  name="Name"
+                  type="text"
+                  placeholder="Vorname Nachname"
+                  autocomplete="name"
+                  required>
+
+              </div>
+
+              <div class="half">
+
+                <label for="telefon">
+                  Telefon, optional
+                </label>
+
+                <input
+                  id="telefon"
+                  name="Telefon"
+                  type="tel"
+                  inputmode="tel"
+                  placeholder="079 662 81 06"
+                  autocomplete="tel">
+
+              </div>
+
+            </div>
+
+            <label for="email">
+              E-Mail
+            </label>
+
+            <input
+              id="email"
               name="email"
               type="email"
               inputmode="email"
