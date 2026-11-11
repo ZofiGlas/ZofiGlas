@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1">
@@ -77,15 +78,13 @@
   <!-- Versionsnummer nach CSS-Änderungen erhöhen -->
   <link
     rel="stylesheet"
-    href="style.css?v=12.0">
+    href="style.css?v=13.0">
 </head>
 
 <body>
 
   <!-- Sprunglink für Tastatur und Screenreader -->
-  <a
-    class="sr-only"
-    href="#main">
+  <a class="sr-only" href="#main">
     Zum Inhalt springen
   </a>
 
@@ -139,10 +138,21 @@
         class="main-nav"
         aria-label="Hauptnavigation">
 
-        <a href="#leistungen">Leistungen</a>
-        <a href="#referenzen">Referenzen</a>
-        <a href="#vorteile">Warum wir</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#leistungen">
+          Leistungen
+        </a>
+
+        <a href="#referenzen">
+          Referenzen
+        </a>
+
+        <a href="#vorteile">
+          Warum wir
+        </a>
+
+        <a href="#kontakt">
+          Kontakt
+        </a>
 
       </nav>
 
@@ -168,11 +178,11 @@
        Hauptinhalt
        ========================= -->
 
-  <main
-    id="main"
-    tabindex="-1">
+  <main id="main" tabindex="-1">
 
-    <!-- Hero -->
+    <!-- =========================
+         Hero
+         ========================= -->
 
     <section
       class="hero"
@@ -194,7 +204,9 @@
           <a
             href="#kontakt"
             class="button">
+
             Offerte anfragen
+
           </a>
 
         </div>
@@ -204,7 +216,7 @@
     </section>
 
     <!-- =========================
-         Leistungen
+         Leistungen mit Hintergrundbildern
          ========================= -->
 
     <section
@@ -225,44 +237,88 @@
 
         <div class="cards-4">
 
-          <article class="card">
+          <!-- Hintergrundbild:
+               projekte/Glasreparatur.png -->
 
-            <h3>Glasreparatur</h3>
+          <article
+            class="card service-card service-repair"
+            aria-labelledby="leistung-glasreparatur">
 
-            <p>
-              Schnelle Hilfe bei Glasbruch und Notfällen.
-            </p>
+            <div class="service-card-content">
 
-          </article>
+              <h3 id="leistung-glasreparatur">
+                Glasreparatur
+              </h3>
 
-          <article class="card">
+              <p>
+                Schnelle Hilfe bei Glasbruch und Notfällen.
+              </p>
 
-            <h3>Duschglas</h3>
-
-            <p>
-              Massgeschneiderte Glasduschen in verschiedenen
-              Ausführungen.
-            </p>
-
-          </article>
-
-          <article class="card">
-
-            <h3>Bürotrennwand</h3>
-
-            <p>
-              Elegante und schallreduzierende Trennwände für Büros.
-            </p>
+            </div>
 
           </article>
 
-          <article class="card">
+          <!-- Hintergrundbild:
+               projekte/Duschglas.png -->
 
-            <h3>Fensterverglasung</h3>
+          <article
+            class="card service-card service-shower"
+            aria-labelledby="leistung-duschglas">
 
-            <p>
-              Neue Verglasungen mit Fokus auf Energieeffizienz.
-            </p>
+            <div class="service-card-content">
+
+              <h3 id="leistung-duschglas">
+                Duschglas
+              </h3>
+
+              <p>
+                Massgeschneiderte Glasduschen in verschiedenen
+                Ausführungen.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- Hintergrundbild:
+               projekte/Bürotrennwand.png -->
+
+          <article
+            class="card service-card service-office"
+            aria-labelledby="leistung-buerotrennwand">
+
+            <div class="service-card-content">
+
+              <h3 id="leistung-buerotrennwand">
+                Bürotrennwand
+              </h3>
+
+              <p>
+                Elegante und schallreduzierende Trennwände für Büros.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- Hintergrundbild:
+               projekte/Fensterverglasung.png -->
+
+          <article
+            class="card service-card service-window"
+            aria-labelledby="leistung-fensterverglasung">
+
+            <div class="service-card-content">
+
+              <h3 id="leistung-fensterverglasung">
+                Fensterverglasung
+              </h3>
+
+              <p>
+                Neue Verglasungen mit Fokus auf Energieeffizienz.
+              </p>
+
+            </div>
 
           </article>
 
@@ -288,7 +344,7 @@
         </h2>
 
         <p class="lead">
-          Einige unserer abgeschlossenen Projekte.
+          Einblicke in unsere abgeschlossenen Projekte.
         </p>
 
         <div class="gallery">
@@ -308,7 +364,9 @@
 
             </a>
 
-            <p>Windfang nach Mass</p>
+            <p>
+              Windfang nach Mass
+            </p>
 
           </article>
 
@@ -327,7 +385,9 @@
 
             </a>
 
-            <p>Einsatz des Glases</p>
+            <p>
+              Einsatz des Glases
+            </p>
 
           </article>
 
@@ -340,13 +400,15 @@
 
               <img
                 src="projekte/Montage.jpeg"
-                alt="Montagearbeiten an einer Glaskonstruktion"
+                alt="Montagearbeiten an einem Windfang"
                 loading="lazy"
                 decoding="async">
 
             </a>
 
-            <p>Montagearbeiten</p>
+            <p>
+              Montage des Windfangs
+            </p>
 
           </article>
 
@@ -365,7 +427,9 @@
 
             </a>
 
-            <p>Bürotrennwand</p>
+            <p>
+              Bürotrennwand
+            </p>
 
           </article>
 
@@ -384,7 +448,9 @@
 
             </a>
 
-            <p>Bürotrennwand</p>
+            <p>
+              Bürotrennwand fertig montiert
+            </p>
 
           </article>
 
@@ -413,7 +479,9 @@
 
           <article class="card">
 
-            <h3>Lokal</h3>
+            <h3>
+              Lokal
+            </h3>
 
             <p>
               Regionaler Service in Zofingen und schnell vor Ort.
@@ -423,7 +491,9 @@
 
           <article class="card">
 
-            <h3>Schnell</h3>
+            <h3>
+              Schnell
+            </h3>
 
             <p>
               Kurze Reaktionszeiten und transparente Offerten.
@@ -433,7 +503,9 @@
 
           <article class="card">
 
-            <h3>Individuell</h3>
+            <h3>
+              Individuell
+            </h3>
 
             <p>
               Massgeschneiderte Lösungen nach Ihren Wünschen.
@@ -469,160 +541,167 @@
 
         <div class="contact">
 
-<form
-  id="offerForm"
-  action="https://formsubmit.co/zofiglas@gmx.ch"
-  method="POST">
+          <form
+            id="offerForm"
+            action="https://formsubmit.co/zofiglas@gmx.ch"
+            method="POST">
 
-  <!-- E-Mail-Betreff für ZofiGlas -->
-  <input
-    type="hidden"
-    name="_subject"
-    value="Neue Offertanfrage für ZofiGlas">
+            <!-- Betreff der zugestellten E-Mail -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Neue Offertanfrage für ZofiGlas">
 
-  <!-- Deutsche Seite nach erfolgreichem Versand -->
-  <input
-    type="hidden"
-    name="_next"
-    value="https://zofiglas.github.io/ZofiGlas/danke.html">
+            <!-- Deutsche Bestätigungsseite -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://zofiglas.github.io/ZofiGlas/danke.html">
 
-  <!-- Übersichtliche Tabellenansicht -->
-  <input
-    type="hidden"
-    name="_template"
-    value="table">
+            <!-- FormSubmit-Einstellungen -->
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false">
 
-  <!-- FormSubmit-Captcha deaktivieren -->
-  <input
-    type="hidden"
-    name="_captcha"
-    value="false">
+            <input
+              type="hidden"
+              name="_template"
+              value="table">
 
-  <!-- Deutsche automatische Bestätigung an den Kunden -->
-  <input
-    type="hidden"
-    name="_autoresponse"
-    value="Vielen Dank für Ihre Anfrage bei ZofiGlas. Ihre Anfrage ist bei uns eingegangen. Wir prüfen Ihr Anliegen und melden uns schnellstmöglich bei Ihnen. In dringenden Fällen erreichen Sie uns unter 079 662 81 06. Freundliche Grüsse, Ihr ZofiGlas-Team">
+            <!-- Deutsche automatische Bestätigung -->
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Vielen Dank für Ihre Anfrage bei ZofiGlas. Ihre Anfrage ist bei uns eingegangen. Wir prüfen Ihr Anliegen und melden uns schnellstmöglich bei Ihnen. In dringenden Fällen erreichen Sie uns unter 079 662 81 06. Freundliche Grüsse, Ihr ZofiGlas-Team.">
 
-  <!-- Unsichtbarer Spam-Schutz -->
-  <div class="honeypot" aria-hidden="true">
-    <label for="website">
-      Dieses Feld bitte leer lassen
-    </label>
+            <!-- Unsichtbarer Spam-Schutz -->
+            <div
+              class="honeypot"
+              aria-hidden="true">
 
-    <input
-      id="website"
-      type="text"
-      name="_honey"
-      tabindex="-1"
-      autocomplete="off">
-  </div>
+              <label for="website">
+                Dieses Feld bitte leer lassen
+              </label>
 
-  <label for="arbeit">
-    Leistung
-  </label>
+              <input
+                id="website"
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off">
 
-  <select
-    id="arbeit"
-    name="Gewünschte Leistung"
-    required>
+            </div>
 
-    <option value="">
-      Bitte wählen
-    </option>
+            <label for="arbeit">
+              Leistung
+            </label>
 
-    <option value="Glasreparatur">
-      Glasreparatur
-    </option>
+            <select
+              id="arbeit"
+              name="Gewünschte Leistung"
+              required>
 
-    <option value="Duschglas">
-      Duschglas
-    </option>
+              <option value="">
+                Bitte wählen
+              </option>
 
-    <option value="Bürotrennwand">
-      Bürotrennwand
-    </option>
+              <option value="Glasreparatur">
+                Glasreparatur
+              </option>
 
-    <option value="Fensterverglasung">
-      Fensterverglasung
-    </option>
+              <option value="Duschglas">
+                Duschglas
+              </option>
 
-    <option value="Spezialanfertigung">
-      Spezialanfertigung
-    </option>
+              <option value="Bürotrennwand">
+                Bürotrennwand
+              </option>
 
-  </select>
+              <option value="Fensterverglasung">
+                Fensterverglasung
+              </option>
 
-  <div class="form-row">
+              <option value="Spezialanfertigung">
+                Spezialanfertigung
+              </option>
 
-    <div class="half">
+            </select>
 
-      <label for="name">
-        Name
-      </label>
+            <div class="form-row">
 
-      <input
-        id="name"
-        name="Name des Kunden"
-        type="text"
-        placeholder="Vorname Nachname"
-        autocomplete="name"
-        required>
+              <div class="half">
 
-    </div>
+                <label for="name">
+                  Name
+                </label>
 
-    <div class="half">
+                <input
+                  id="name"
+                  name="Name des Kunden"
+                  type="text"
+                  placeholder="Vorname Nachname"
+                  autocomplete="name"
+                  required>
 
-      <label for="telefon">
-        Telefon, optional
-      </label>
+              </div>
 
-      <input
-        id="telefon"
-        name="Telefonnummer"
-        type="tel"
-        inputmode="tel"
-        placeholder="079 662 81 06"
-        autocomplete="tel">
+              <div class="half">
 
-    </div>
+                <label for="telefon">
+                  Telefon, optional
+                </label>
 
-  </div>
+                <input
+                  id="telefon"
+                  name="Telefonnummer"
+                  type="tel"
+                  inputmode="tel"
+                  placeholder="079 662 81 06"
+                  autocomplete="tel">
 
-  <label for="email">
-    E-Mail-Adresse
-  </label>
+              </div>
 
-  <input
-    id="email"
-    name="email"
-    type="email"
-    inputmode="email"
-    placeholder="name@example.com"
-    autocomplete="email"
-    required>
+            </div>
 
-  <label for="message">
-    Beschreibung
-  </label>
+            <label for="email">
+              E-Mail-Adresse
+            </label>
 
-  <textarea
-    id="message"
-    name="Beschreibung der Anfrage"
-    placeholder="Beschreiben Sie kurz Ihr Anliegen"
-    required></textarea>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              placeholder="name@example.com"
+              autocomplete="email"
+              required>
 
-  <button
-    type="submit"
-    class="submit-btn">
-    Offerte anfragen
-  </button>
+            <label for="message">
+              Beschreibung
+            </label>
 
-</form>
+            <textarea
+              id="message"
+              name="Beschreibung der Anfrage"
+              placeholder="Beschreiben Sie kurz Ihr Anliegen"
+              required></textarea>
+
+            <button
+              type="submit"
+              class="submit-btn">
+
+              Offerte anfragen
+
+            </button>
+
+          </form>
 
         </div>
 
-        <!-- Karte -->
+        <!-- =========================
+             Google-Karte
+             ========================= -->
 
         <div class="map">
 
@@ -652,7 +731,9 @@
       <a
         href="./"
         class="footer-brand">
+
         ZofiGlas
+
       </a>
 
       <nav
