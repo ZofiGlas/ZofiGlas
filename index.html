@@ -51,7 +51,7 @@
     property="og:locale"
     content="de_CH">
 
-  <!-- Strukturierte Daten -->
+  <!-- Strukturierte Daten für Suchmaschinen -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -78,13 +78,15 @@
   <!-- Versionsnummer nach CSS-Änderungen erhöhen -->
   <link
     rel="stylesheet"
-    href="style.css?v=13.1">
+    href="style.css?v=14.0">
 </head>
 
 <body>
 
   <!-- Sprunglink für Tastatur und Screenreader -->
-  <a class="sr-only" href="#main">
+  <a
+    class="sr-only"
+    href="#main">
     Zum Inhalt springen
   </a>
 
@@ -178,7 +180,9 @@
        Hauptinhalt
        ========================= -->
 
-  <main id="main" tabindex="-1">
+  <main
+    id="main"
+    tabindex="-1">
 
     <!-- =========================
          Hero
@@ -204,9 +208,7 @@
           <a
             href="#kontakt"
             class="button">
-
             Offerte anfragen
-
           </a>
 
         </div>
@@ -216,7 +218,7 @@
     </section>
 
     <!-- =========================
-         Leistungen mit Hintergrundbildern
+         Leistungen
          ========================= -->
 
     <section
@@ -237,12 +239,15 @@
 
         <div class="cards-4">
 
-          <!-- Hintergrundbild:
-               projekte/Glasreparatur.png -->
-
           <article
-            class="card service-card service-repair"
+            class="card service-card"
             aria-labelledby="leistung-glasreparatur">
+
+            <div
+              class="service-card-image service-repair"
+              role="img"
+              aria-label="Glasreparatur">
+            </div>
 
             <div class="service-card-content">
 
@@ -258,12 +263,15 @@
 
           </article>
 
-          <!-- Hintergrundbild:
-               projekte/Duschglas.png -->
-
           <article
-            class="card service-card service-shower"
+            class="card service-card"
             aria-labelledby="leistung-duschglas">
+
+            <div
+              class="service-card-image service-shower"
+              role="img"
+              aria-label="Individuell angefertigtes Duschglas">
+            </div>
 
             <div class="service-card-content">
 
@@ -280,12 +288,15 @@
 
           </article>
 
-          <!-- Hintergrundbild:
-               projekte/Bürotrennwand.png -->
-
           <article
-            class="card service-card service-office"
+            class="card service-card"
             aria-labelledby="leistung-buerotrennwand">
+
+            <div
+              class="service-card-image service-office"
+              role="img"
+              aria-label="Bürotrennwand aus Glas">
+            </div>
 
             <div class="service-card-content">
 
@@ -301,561 +312,16 @@
 
           </article>
 
-          <!-- Hintergrundbild:
-               projekte/Fensterverglasung.png -->
-
           <article
-            class="card service-card service-window"
+            class="card service-card"
             aria-labelledby="leistung-fensterverglasung">
+
+            <div
+              class="service-card-image service-window"
+              role="img"
+              aria-label="Fensterverglasung">
+            </div>
 
             <div class="service-card-content">
 
-              <h3 id="leistung-fensterverglasung">
-                Fensterverglasung
-              </h3>
-
-              <p>
-                Neue Verglasungen mit Fokus auf Energieeffizienz.
-              </p>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- =========================
-         Referenzen
-         ========================= -->
-
-    <section
-      id="referenzen"
-      class="section grey"
-      aria-labelledby="referenzen-title">
-
-      <div class="container">
-
-        <h2 id="referenzen-title">
-          Referenzen
-        </h2>
-
-        <p class="lead">
-          Einblicke in unsere abgeschlossenen Projekte.
-        </p>
-
-        <div class="gallery">
-
-          <article class="project">
-
-            <a
-              href="projekte/Windfang_1.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <img
-                src="projekte/Windfang_1.jpeg"
-                alt="Massgefertigter Windfang aus Glas"
-                loading="lazy"
-                decoding="async">
-
-            </a>
-
-            <p>
-              Windfang nach Mass
-            </p>
-
-          </article>
-
-          <article class="project">
-
-            <a
-              href="projekte/Windfang_2.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <img
-                src="projekte/Windfang_2.jpeg"
-                alt="Einsetzen einer Glasscheibe bei einem Windfang"
-                loading="lazy"
-                decoding="async">
-
-            </a>
-
-            <p>
-              Einsatz des Glases
-            </p>
-
-          </article>
-
-          <article class="project">
-
-            <a
-              href="projekte/Montage.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <img
-                src="projekte/Montage.jpeg"
-                alt="Montagearbeiten an einem Windfang"
-                loading="lazy"
-                decoding="async">
-
-            </a>
-
-            <p>
-              Montage des Windfangs
-            </p>
-
-          </article>
-
-          <article class="project">
-
-            <a
-              href="projekte/Trennwand_1.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <img
-                src="projekte/Trennwand_1.jpeg"
-                alt="Massgefertigte Bürotrennwand aus Glas"
-                loading="lazy"
-                decoding="async">
-
-            </a>
-
-            <p>
-              Bürotrennwand
-            </p>
-
-          </article>
-
-          <article class="project">
-
-            <a
-              href="projekte/Trennwand_2.jpeg"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              <img
-                src="projekte/Trennwand_2.jpeg"
-                alt="Fertig montierte Bürotrennwand aus Glas"
-                loading="lazy"
-                decoding="async">
-
-            </a>
-
-            <p>
-              Bürotrennwand fertig montiert
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- =========================
-         Vorteile
-         ========================= -->
-
-    <section
-      id="vorteile"
-      class="section"
-      aria-labelledby="vorteile-title">
-
-      <div class="container">
-
-        <h2 id="vorteile-title">
-          Warum ZofiGlas
-        </h2>
-
-        <div class="cards-3">
-
-          <article class="card">
-
-            <h3>
-              Lokal
-            </h3>
-
-            <p>
-              Regionaler Service in Zofingen und schnell vor Ort.
-            </p>
-
-          </article>
-
-          <article class="card">
-
-            <h3>
-              Schnell
-            </h3>
-
-            <p>
-              Kurze Reaktionszeiten und transparente Offerten.
-            </p>
-
-          </article>
-
-          <article class="card">
-
-            <h3>
-              Individuell
-            </h3>
-
-            <p>
-              Massgeschneiderte Lösungen nach Ihren Wünschen.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- =========================
-         Kontaktformular
-         ========================= -->
-
-    <section
-      id="kontakt"
-      class="section grey"
-      aria-labelledby="kontakt-title">
-
-      <div class="container">
-
-        <h2 id="kontakt-title">
-          Offerte anfragen
-        </h2>
-
-        <p class="lead">
-          Beschreiben Sie kurz Ihr Anliegen. Wir melden uns schnell
-          bei Ihnen zurück.
-        </p>
-
-        <div class="contact">
-
-          <form
-            id="offerForm"
-            action="https://formsubmit.co/zofiglas@gmx.ch"
-            method="POST">
-
-            <!-- Betreff der zugestellten E-Mail -->
-            <input
-              type="hidden"
-              name="_subject"
-              value="Neue Offertanfrage für ZofiGlas">
-
-            <!-- Deutsche Bestätigungsseite -->
-            <input
-              type="hidden"
-              name="_next"
-              value="https://zofiglas.github.io/ZofiGlas/danke.html">
-
-            <!-- FormSubmit-Einstellungen -->
-            <input
-              type="hidden"
-              name="_captcha"
-              value="false">
-
-            <input
-              type="hidden"
-              name="_template"
-              value="table">
-
-            <!-- Deutsche automatische Bestätigung -->
-            <input
-              type="hidden"
-              name="_autoresponse"
-              value="Vielen Dank für Ihre Anfrage bei ZofiGlas. Ihre Anfrage ist bei uns eingegangen. Wir prüfen Ihr Anliegen und melden uns schnellstmöglich bei Ihnen. In dringenden Fällen erreichen Sie uns unter 079 662 81 06. Freundliche Grüsse, Ihr ZofiGlas-Team.">
-
-            <!-- Unsichtbarer Spam-Schutz -->
-            <div
-              class="honeypot"
-              aria-hidden="true">
-
-              <label for="website">
-                Dieses Feld bitte leer lassen
-              </label>
-
-              <input
-                id="website"
-                type="text"
-                name="_honey"
-                tabindex="-1"
-                autocomplete="off">
-
-            </div>
-
-            <label for="arbeit">
-              Leistung
-            </label>
-
-            <select
-              id="arbeit"
-              name="Gewünschte Leistung"
-              required>
-
-              <option value="">
-                Bitte wählen
-              </option>
-
-              <option value="Glasreparatur">
-                Glasreparatur
-              </option>
-
-              <option value="Duschglas">
-                Duschglas
-              </option>
-
-              <option value="Bürotrennwand">
-                Bürotrennwand
-              </option>
-
-              <option value="Fensterverglasung">
-                Fensterverglasung
-              </option>
-
-              <option value="Spezialanfertigung">
-                Spezialanfertigung
-              </option>
-
-            </select>
-
-            <div class="form-row">
-
-              <div class="half">
-
-                <label for="name">
-                  Name
-                </label>
-
-                <input
-                  id="name"
-                  name="Name des Kunden"
-                  type="text"
-                  placeholder="Vorname Nachname"
-                  autocomplete="name"
-                  required>
-
-              </div>
-
-              <div class="half">
-
-                <label for="telefon">
-                  Telefon, optional
-                </label>
-
-                <input
-                  id="telefon"
-                  name="Telefonnummer"
-                  type="tel"
-                  inputmode="tel"
-                  placeholder="079 662 81 06"
-                  autocomplete="tel">
-
-              </div>
-
-            </div>
-
-            <label for="email">
-              E-Mail-Adresse
-            </label>
-
-            <input
-              id="email"
-              name="email"
-              type="email"
-              inputmode="email"
-              placeholder="name@example.com"
-              autocomplete="email"
-              required>
-
-            <label for="message">
-              Beschreibung
-            </label>
-
-            <textarea
-              id="message"
-              name="Beschreibung der Anfrage"
-              placeholder="Beschreiben Sie kurz Ihr Anliegen"
-              required></textarea>
-
-            <button
-              type="submit"
-              class="submit-btn">
-
-              Offerte anfragen
-
-            </button>
-
-          </form>
-
-        </div>
-
-        <!-- =========================
-             Google-Karte
-             ========================= -->
-
-        <div class="map">
-
-          <iframe
-            src="https://maps.google.com/maps?q=Zofingen&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-            title="Karte mit Standort Zofingen"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- =========================
-       Footer
-       ========================= -->
-
-  <footer class="footer">
-
-    <div class="container footer-inner">
-
-      <a
-        href="./"
-        class="footer-brand">
-
-        ZofiGlas
-
-      </a>
-
-      <nav
-        class="footer-nav"
-        aria-label="Footer-Navigation">
-
-        <a href="impressum.html">
-          Impressum
-        </a>
-
-        <a href="datenschutz.html">
-          Datenschutz
-        </a>
-
-        <a href="agb.html">
-          AGB
-        </a>
-
-      </nav>
-
-      <p class="footer-copyright">
-        © 2026 ZofiGlas – Glaserei in Zofingen
-      </p>
-
-    </div>
-
-  </footer>
-
-  <!-- =========================
-       Mobile Navigation
-       ========================= -->
-
-  <script>
-    (function () {
-      const navToggle = document.getElementById('navToggle');
-      const mainNav = document.getElementById('mainNav');
-      const mobileQuery = window.matchMedia('(max-width:600px)');
-
-      function closeNavigation() {
-        mainNav.classList.remove('open');
-        mainNav.hidden = true;
-
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', 'Menü öffnen');
-      }
-
-      function setNavigationState() {
-        mainNav.classList.remove('open');
-
-        if (mobileQuery.matches) {
-          closeNavigation();
-        } else {
-          mainNav.hidden = false;
-
-          navToggle.setAttribute('aria-expanded', 'false');
-          navToggle.setAttribute('aria-label', 'Menü öffnen');
-        }
-      }
-
-      navToggle.addEventListener('click', function () {
-        const isOpen =
-          navToggle.getAttribute('aria-expanded') === 'true';
-
-        if (isOpen) {
-          closeNavigation();
-        } else {
-          mainNav.hidden = false;
-          mainNav.classList.add('open');
-
-          navToggle.setAttribute('aria-expanded', 'true');
-          navToggle.setAttribute('aria-label', 'Menü schließen');
-        }
-      });
-
-      mainNav.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          if (mobileQuery.matches) {
-            closeNavigation();
-          }
-        });
-      });
-
-      document.addEventListener('click', function (event) {
-        const clickImMenue =
-          mainNav.contains(event.target);
-
-        const clickAufBurger =
-          navToggle.contains(event.target);
-
-        if (
-          mobileQuery.matches &&
-          !clickImMenue &&
-          !clickAufBurger &&
-          mainNav.classList.contains('open')
-        ) {
-          closeNavigation();
-        }
-      });
-
-      document.addEventListener('keydown', function (event) {
-        if (
-          event.key === 'Escape' &&
-          mainNav.classList.contains('open')
-        ) {
-          closeNavigation();
-          navToggle.focus();
-        }
-      });
-
-      if (typeof mobileQuery.addEventListener === 'function') {
-        mobileQuery.addEventListener(
-          'change',
-          setNavigationState
-        );
-      } else {
-        mobileQuery.addListener(setNavigationState);
-      }
-
-      setNavigationState();
-    })();
-  </script>
-
-</body>
-
-</html>
+              <h3 id="leistung-
