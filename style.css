@@ -220,8 +220,8 @@ textarea:focus-visible {
   width: auto;
   height: auto;
 
-  max-width: 310px;
-  max-height: 96px;
+  max-width: 380px;
+  max-height: 115px;
 
   object-fit: contain;
 }
