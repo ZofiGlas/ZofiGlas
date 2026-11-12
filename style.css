@@ -195,14 +195,14 @@ textarea:focus-visible {
 .header-inner {
   display: grid;
   grid-template-columns:
-    minmax(250px, auto)
+    minmax(320px, auto)
     minmax(0, 1fr)
     auto;
 
   align-items: center;
   gap: 28px;
 
-  min-height: 118px;
+  min-height: 135px;
 
   padding-top: 10px;
   padding-bottom: 10px;
