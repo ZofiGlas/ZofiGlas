@@ -22,7 +22,6 @@
     rel="canonical"
     href="https://zofiglas.github.io/ZofiGlas/">
 
-  <!-- Open Graph -->
   <meta
     property="og:title"
     content="ZofiGlas – Glaserei in Zofingen">
@@ -51,7 +50,6 @@
     property="og:locale"
     content="de_CH">
 
-  <!-- Strukturierte Daten -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,12 +75,11 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=13.2">
+    href="style.css?v=13.3">
 </head>
 
 <body>
 
-  <!-- Sprunglink für Tastatur und Screenreader -->
   <a
     class="sr-only"
     href="#main">
@@ -164,13 +161,8 @@
           class="phone-cta"
           aria-label="ZofiGlas anrufen unter 079 662 81 06">
 
-          <span aria-hidden="true">
-            ☎
-          </span>
-
-          <span>
-            079 662 81 06
-          </span>
+          <span aria-hidden="true">☎</span>
+          <span>079 662 81 06</span>
 
         </a>
 
@@ -498,47 +490,77 @@
           Projekt passen.
         </p>
 
-        <div class="cards-3">
+        <div class="cards-3 advantage-grid">
 
           <article
-            class="card"
+            class="card advantage-card"
             aria-labelledby="vorteil-lokal">
 
-            <h3 id="vorteil-lokal">
-              Lokal
-            </h3>
+            <div
+              class="advantage-card-image advantage-local"
+              role="img"
+              aria-label="Regionaler Service von ZofiGlas">
+            </div>
 
-            <p>
-              Regionaler Service in Zofingen und schnell vor Ort.
-            </p>
+            <div class="advantage-card-content">
+
+              <h3 id="vorteil-lokal">
+                Lokal
+              </h3>
+
+              <p>
+                Regionaler Service in Zofingen und schnell vor Ort.
+              </p>
+
+            </div>
 
           </article>
 
           <article
-            class="card"
+            class="card advantage-card"
             aria-labelledby="vorteil-schnell">
 
-            <h3 id="vorteil-schnell">
-              Schnell
-            </h3>
+            <div
+              class="advantage-card-image advantage-fast"
+              role="img"
+              aria-label="Schneller Service von ZofiGlas">
+            </div>
 
-            <p>
-              Kurze Reaktionszeiten und transparente Offerten.
-            </p>
+            <div class="advantage-card-content">
+
+              <h3 id="vorteil-schnell">
+                Schnell
+              </h3>
+
+              <p>
+                Kurze Reaktionszeiten und transparente Offerten.
+              </p>
+
+            </div>
 
           </article>
 
           <article
-            class="card"
+            class="card advantage-card"
             aria-labelledby="vorteil-individuell">
 
-            <h3 id="vorteil-individuell">
-              Individuell
-            </h3>
+            <div
+              class="advantage-card-image advantage-custom"
+              role="img"
+              aria-label="Individuelle Glaslösungen von ZofiGlas">
+            </div>
 
-            <p>
-              Massgeschneiderte Lösungen nach Ihren Wünschen.
-            </p>
+            <div class="advantage-card-content">
+
+              <h3 id="vorteil-individuell">
+                Individuell
+              </h3>
+
+              <p>
+                Massgeschneiderte Lösungen nach Ihren Wünschen.
+              </p>
+
+            </div>
 
           </article>
 
@@ -575,37 +597,31 @@
             action="https://formsubmit.co/zofiglas@gmx.ch"
             method="POST">
 
-            <!-- Betreff der E-Mail -->
             <input
               type="hidden"
               name="_subject"
               value="Neue Offertanfrage für ZofiGlas">
 
-            <!-- Deutsche Bestätigungsseite -->
             <input
               type="hidden"
               name="_next"
               value="https://zofiglas.github.io/ZofiGlas/danke.html">
 
-            <!-- Tabellenansicht -->
             <input
               type="hidden"
               name="_template"
               value="table">
 
-            <!-- FormSubmit-Captcha deaktivieren -->
             <input
               type="hidden"
               name="_captcha"
               value="false">
 
-            <!-- Deutsche automatische Bestätigung -->
             <input
               type="hidden"
               name="_autoresponse"
               value="Vielen Dank für Ihre Anfrage bei ZofiGlas. Ihre Anfrage ist bei uns eingegangen. Wir prüfen Ihr Anliegen und melden uns schnellstmöglich bei Ihnen. In dringenden Fällen erreichen Sie uns unter 079 662 81 06. Freundliche Grüsse, Ihr ZofiGlas-Team.">
 
-            <!-- Spam-Schutz -->
             <div
               class="honeypot"
               aria-hidden="true">
@@ -727,7 +743,6 @@
 
         </div>
 
-        <!-- Google-Karte -->
         <div class="map">
 
           <iframe
@@ -828,7 +843,7 @@
           mainNav.classList.add('open');
 
           navToggle.setAttribute('aria-expanded', 'true');
-          navToggle.setAttribute('aria-label', 'Menü schließen');
+          navToggle.setAttribute('aria-label', 'Menü schliessen');
         }
       });
 
