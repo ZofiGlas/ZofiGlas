@@ -75,10 +75,9 @@
   }
   </script>
 
-  <!-- Passend zur bereinigten CSS-Version -->
   <link
     rel="stylesheet"
-    href="style.css?v=13.1">
+    href="style.css?v=13.2">
 </head>
 
 <body>
@@ -165,8 +164,13 @@
           class="phone-cta"
           aria-label="ZofiGlas anrufen unter 079 662 81 06">
 
-          <span aria-hidden="true">☎</span>
-          <span>079 662 81 06</span>
+          <span aria-hidden="true">
+            ☎
+          </span>
+
+          <span>
+            079 662 81 06
+          </span>
 
         </a>
 
@@ -240,59 +244,99 @@
         <div class="cards-4">
 
           <article
-            class="card"
+            class="card service-card"
             aria-labelledby="leistung-glasreparatur">
 
-            <h3 id="leistung-glasreparatur">
-              Glasreparatur
-            </h3>
+            <div
+              class="service-card-image service-repair"
+              role="img"
+              aria-label="Glasreparatur">
+            </div>
 
-            <p>
-              Schnelle Hilfe bei Glasbruch und Notfällen.
-            </p>
+            <div class="service-card-content">
+
+              <h3 id="leistung-glasreparatur">
+                Glasreparatur
+              </h3>
+
+              <p>
+                Schnelle Hilfe bei Glasbruch und Notfällen.
+              </p>
+
+            </div>
 
           </article>
 
           <article
-            class="card"
+            class="card service-card"
             aria-labelledby="leistung-duschglas">
 
-            <h3 id="leistung-duschglas">
-              Duschglas
-            </h3>
+            <div
+              class="service-card-image service-shower"
+              role="img"
+              aria-label="Individuell angefertigtes Duschglas">
+            </div>
 
-            <p>
-              Massgeschneiderte Glasduschen in verschiedenen
-              Ausführungen.
-            </p>
+            <div class="service-card-content">
+
+              <h3 id="leistung-duschglas">
+                Duschglas
+              </h3>
+
+              <p>
+                Massgeschneiderte Glasduschen in verschiedenen
+                Ausführungen.
+              </p>
+
+            </div>
 
           </article>
 
           <article
-            class="card"
+            class="card service-card"
             aria-labelledby="leistung-buerotrennwand">
 
-            <h3 id="leistung-buerotrennwand">
-              Bürotrennwand
-            </h3>
+            <div
+              class="service-card-image service-office"
+              role="img"
+              aria-label="Bürotrennwand aus Glas">
+            </div>
 
-            <p>
-              Elegante und schallreduzierende Trennwände für Büros.
-            </p>
+            <div class="service-card-content">
+
+              <h3 id="leistung-buerotrennwand">
+                Bürotrennwand
+              </h3>
+
+              <p>
+                Elegante und schallreduzierende Trennwände für Büros.
+              </p>
+
+            </div>
 
           </article>
 
           <article
-            class="card"
+            class="card service-card"
             aria-labelledby="leistung-fensterverglasung">
 
-            <h3 id="leistung-fensterverglasung">
-              Fensterverglasung
-            </h3>
+            <div
+              class="service-card-image service-window"
+              role="img"
+              aria-label="Fensterverglasung">
+            </div>
 
-            <p>
-              Neue Verglasungen mit Fokus auf Energieeffizienz.
-            </p>
+            <div class="service-card-content">
+
+              <h3 id="leistung-fensterverglasung">
+                Fensterverglasung
+              </h3>
+
+              <p>
+                Neue Verglasungen mit Fokus auf Energieeffizienz.
+              </p>
+
+            </div>
 
           </article>
 
@@ -543,7 +587,7 @@
               name="_next"
               value="https://zofiglas.github.io/ZofiGlas/danke.html">
 
-            <!-- Tabellenansicht in der E-Mail -->
+            <!-- Tabellenansicht -->
             <input
               type="hidden"
               name="_template"
@@ -555,7 +599,7 @@
               name="_captcha"
               value="false">
 
-            <!-- Deutsche automatische Antwort -->
+            <!-- Deutsche automatische Bestätigung -->
             <input
               type="hidden"
               name="_autoresponse"
