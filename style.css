@@ -1,11 +1,6 @@
 /* =========================
    style.css – ZofiGlas
-   Zusammengeführter Stand Version 13.2
-   ========================= */
-
-
-/* =========================
-   Basis und Variablen
+   Vollständige Version 13.3
    ========================= */
 
 *,
@@ -42,16 +37,9 @@
   --logo-tablet:160px;
 
   --card-max-width:420px;
-
   --focus-ring:0 0 0 5px rgba(36,169,243,0.20);
-
   --base-font:18px;
 }
-
-
-/* =========================
-   Grundlegendes
-   ========================= */
 
 html,
 body{
@@ -91,18 +79,12 @@ textarea{
   font:inherit;
 }
 
-
-/* =========================
-   Container
-   ========================= */
-
 .container{
   width:100%;
   max-width:var(--container);
   margin:0 auto;
   padding:0 18px;
 }
-
 
 /* =========================
    Barrierefreiheit
@@ -147,7 +129,6 @@ textarea{
   overflow:hidden;
 }
 
-
 /* =========================
    Header
    ========================= */
@@ -175,11 +156,6 @@ textarea{
   padding:18px 0;
 }
 
-
-/* =========================
-   Logo
-   ========================= */
-
 .logo{
   display:flex;
   align-items:center;
@@ -203,9 +179,8 @@ textarea{
   transform:scale(1.02);
 }
 
-
 /* =========================
-   Desktop-Navigation
+   Navigation
    ========================= */
 
 .main-nav{
@@ -239,11 +214,6 @@ textarea{
   transform:translateY(-2px);
   outline:none;
 }
-
-
-/* =========================
-   Telefonnummer
-   ========================= */
 
 .phone{
   display:flex;
@@ -279,11 +249,6 @@ textarea{
   box-shadow:0 10px 25px rgba(36,169,243,0.25);
   transform:translateY(-2px);
 }
-
-
-/* =========================
-   Hamburger-Menü
-   ========================= */
 
 .nav-toggle{
   display:none;
@@ -323,7 +288,6 @@ textarea{
 .nav-toggle[aria-expanded="true"] .hamburger-line:nth-child(3){
   transform:translateY(-9px) rotate(-45deg);
 }
-
 
 /* =========================
    Hero
@@ -383,11 +347,6 @@ textarea{
   font-size:1.05rem;
 }
 
-
-/* =========================
-   Buttons
-   ========================= */
-
 .button{
   display:inline-block;
   padding:14px 22px;
@@ -418,7 +377,6 @@ textarea{
   box-shadow:0 18px 40px rgba(36,169,243,0.35);
 }
 
-
 /* =========================
    Sektionen
    ========================= */
@@ -444,7 +402,6 @@ textarea{
   color:var(--text-soft);
   font-size:1.05rem;
 }
-
 
 /* =========================
    Allgemeine Karten
@@ -502,19 +459,10 @@ textarea{
 .card p{
   margin:0;
   color:var(--text-soft);
-  font-size:1rem;
-  line-height:1.7;
 }
-
-.cards-3 .card{
-  align-items:center;
-  max-width:var(--card-max-width);
-  text-align:center;
-}
-
 
 /* =========================
-   Leistungskarten mit Bildern
+   Leistungskarten
    ========================= */
 
 .service-card{
@@ -541,7 +489,8 @@ textarea{
   transition:filter 300ms ease;
 }
 
-.service-card-image::after{
+.service-card-image::after,
+.advantage-card-image::after{
   content:"";
   position:absolute;
   inset:0;
@@ -553,7 +502,8 @@ textarea{
   );
 }
 
-.service-card:hover .service-card-image{
+.service-card:hover .service-card-image,
+.advantage-card:hover .advantage-card-image{
   filter:
     saturate(0.96)
     contrast(1)
@@ -570,21 +520,20 @@ textarea{
   background:var(--surface);
 }
 
-.service-card h3{
-  margin:0;
-  color:var(--text);
+.service-card h3,
+.advantage-card h3{
   font-size:1.1rem;
-  line-height:1.3;
 }
 
-.service-card p{
-  margin:0;
+.service-card p,
+.advantage-card p{
   color:var(--text-soft);
   font-size:0.95rem;
   line-height:1.6;
 }
 
-.service-card-content::after{
+.service-card-content::after,
+.advantage-card-content::after{
   content:"";
   display:block;
   width:42px;
@@ -593,11 +542,6 @@ textarea{
   background:var(--accent);
   border-radius:999px;
 }
-
-
-/* =========================
-   Bilder der Leistungskarten
-   ========================= */
 
 .service-repair{
   background-image:url("projekte/Glasreparatur.png");
@@ -615,9 +559,65 @@ textarea{
   background-image:url("projekte/Fensterverglasung.png");
 }
 
+/* =========================
+   Warum-ZofiGlas-Karten
+   ========================= */
+
+.advantage-grid{
+  align-items:stretch;
+}
+
+.advantage-card{
+  gap:0;
+  min-height:0;
+  max-width:var(--card-max-width);
+  padding:0;
+  overflow:hidden;
+}
+
+.advantage-card-image{
+  position:relative;
+  width:100%;
+  height:160px;
+  flex-shrink:0;
+  overflow:hidden;
+  background-color:var(--muted);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  filter:
+    saturate(0.86)
+    contrast(0.97)
+    brightness(0.98);
+  transition:filter 300ms ease;
+}
+
+.advantage-card-content{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  min-height:145px;
+  padding:20px 22px 22px;
+  background:var(--surface);
+  text-align:center;
+}
+
+.advantage-local{
+  background-image:url("projekte/Lokal.png");
+}
+
+.advantage-fast{
+  background-image:url("projekte/Schnell.png");
+}
+
+.advantage-custom{
+  background-image:url("projekte/Individuell.png");
+}
 
 /* =========================
-   Referenzen und Galerie
+   Referenzen
    ========================= */
 
 .gallery{
@@ -681,7 +681,6 @@ textarea{
   font-weight:700;
   text-align:center;
 }
-
 
 /* =========================
    Kontaktformular
@@ -764,11 +763,6 @@ textarea{
   min-width:0;
 }
 
-
-/* =========================
-   Formularbutton
-   ========================= */
-
 button[type="submit"]{
   padding:14px 20px;
   color:#ffffff;
@@ -799,11 +793,6 @@ button[type="submit"]:hover{
   box-shadow:0 22px 48px rgba(36,169,243,0.35);
 }
 
-button[type="submit"]:active{
-  transform:translateY(-1px);
-}
-
-
 /* =========================
    Google-Karte
    ========================= */
@@ -823,7 +812,6 @@ button[type="submit"]:active{
   min-height:360px;
   border:0;
 }
-
 
 /* =========================
    Footer
@@ -877,9 +865,8 @@ button[type="submit"]:active{
   font-size:14px;
 }
 
-
 /* =========================
-   Fokus und Bedienbarkeit
+   Fokus
    ========================= */
 
 a,
@@ -906,9 +893,8 @@ label{
   line-height:1.7;
 }
 
-
 /* =========================
-   Tablet bis 900 Pixel
+   Tablet
    ========================= */
 
 @media (max-width:900px){
@@ -944,9 +930,8 @@ label{
   }
 }
 
-
 /* =========================
-   Mobile bis 600 Pixel
+   Mobile
    ========================= */
 
 @media (max-width:600px){
@@ -980,11 +965,6 @@ label{
     max-width:92%;
     max-height:210px;
     margin:0 auto;
-    object-fit:contain;
-    transform:none;
-  }
-
-  .logo a:hover .site-logo{
     transform:none;
   }
 
@@ -1044,18 +1024,28 @@ label{
     padding:18px;
   }
 
-  .service-card{
+  .service-card,
+  .advantage-card{
+    width:100%;
+    max-width:420px;
     min-height:0;
+    margin:0 auto;
     padding:0;
   }
 
-  .service-card-image{
+  .service-card-image,
+  .advantage-card-image{
     height:160px;
   }
 
   .service-card-content{
     min-height:0;
     padding:17px 18px 19px;
+  }
+
+  .advantage-card-content{
+    min-height:0;
+    padding:18px 20px 20px;
   }
 
   .gallery{
@@ -1082,7 +1072,6 @@ label{
     min-height:300px;
   }
 }
-
 
 /* =========================
    Sehr kleine Displays
@@ -1112,7 +1101,8 @@ label{
     font-size:1.2rem;
   }
 
-  .service-card-image{
+  .service-card-image,
+  .advantage-card-image{
     height:145px;
   }
 
@@ -1120,7 +1110,6 @@ label{
     height:180px;
   }
 }
-
 
 /* =========================
    Reduzierte Animationen
