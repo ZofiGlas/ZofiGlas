@@ -1,6 +1,11 @@
 /* =========================
    style.css – ZofiGlas
-   Vollständige bereinigte Version
+   Wiederhergestellter Stand Version 13
+   ========================= */
+
+
+/* =========================
+   Basis und Variablen
    ========================= */
 
 *,
@@ -15,24 +20,38 @@
   --bg:#ffffff;
   --surface:#ffffff;
   --muted:#f6f7f9;
+
   --accent:#24A9F3;
   --accent-600:#1289D1;
   --accent-700:#0C6CAD;
+
   --text:#0f1724;
   --text-soft:#4b5563;
   --border:#e6e9ee;
+
   --shadow-sm:0 8px 24px rgba(16,24,40,0.06);
   --shadow-md:0 24px 60px rgba(16,24,40,0.10);
+
   --radius:12px;
   --gap:20px;
   --container:1100px;
+
   --transition:180ms cubic-bezier(.2,.9,.3,1);
+
   --logo-desktop:200px;
   --logo-tablet:160px;
+
   --card-max-width:420px;
+
   --focus-ring:0 0 0 5px rgba(36,169,243,0.20);
+
   --base-font:18px;
 }
+
+
+/* =========================
+   Grundlegendes
+   ========================= */
 
 html,
 body{
@@ -72,12 +91,22 @@ textarea{
   font:inherit;
 }
 
+
+/* =========================
+   Container
+   ========================= */
+
 .container{
   width:100%;
   max-width:var(--container);
   margin:0 auto;
   padding:0 18px;
 }
+
+
+/* =========================
+   Barrierefreiheit
+   ========================= */
 
 .sr-only{
   position:absolute;
@@ -118,7 +147,10 @@ textarea{
   overflow:hidden;
 }
 
-/* Header */
+
+/* =========================
+   Header
+   ========================= */
 
 .header{
   position:sticky;
@@ -143,6 +175,11 @@ textarea{
   padding:18px 0;
 }
 
+
+/* =========================
+   Logo
+   ========================= */
+
 .logo{
   display:flex;
   align-items:center;
@@ -166,7 +203,10 @@ textarea{
   transform:scale(1.02);
 }
 
-/* Navigation */
+
+/* =========================
+   Desktop-Navigation
+   ========================= */
 
 .main-nav{
   display:flex;
@@ -199,6 +239,11 @@ textarea{
   transform:translateY(-2px);
   outline:none;
 }
+
+
+/* =========================
+   Telefonnummer
+   ========================= */
 
 .phone{
   display:flex;
@@ -235,16 +280,24 @@ textarea{
   transform:translateY(-2px);
 }
 
-/* Hamburger */
+
+/* =========================
+   Hamburger-Menü
+   ========================= */
 
 .nav-toggle{
   display:none;
   padding:8px;
   color:var(--text);
   background:transparent;
-  border:none;
+  border:0;
   border-radius:8px;
   cursor:pointer;
+}
+
+.nav-toggle:focus-visible{
+  outline:none;
+  box-shadow:var(--focus-ring);
 }
 
 .hamburger-line{
@@ -271,7 +324,10 @@ textarea{
   transform:translateY(-9px) rotate(-45deg);
 }
 
-/* Hero */
+
+/* =========================
+   Hero
+   ========================= */
 
 .hero{
   position:relative;
@@ -327,6 +383,11 @@ textarea{
   font-size:1.05rem;
 }
 
+
+/* =========================
+   Buttons
+   ========================= */
+
 .button{
   display:inline-block;
   padding:14px 22px;
@@ -357,7 +418,10 @@ textarea{
   box-shadow:0 18px 40px rgba(36,169,243,0.35);
 }
 
-/* Sektionen */
+
+/* =========================
+   Sektionen
+   ========================= */
 
 .section{
   padding:56px 0;
@@ -381,7 +445,10 @@ textarea{
   font-size:1.05rem;
 }
 
-/* Allgemeine Karten */
+
+/* =========================
+   Karten
+   ========================= */
 
 .cards-4,
 .cards-3{
@@ -433,162 +500,16 @@ textarea{
   color:var(--text-soft);
 }
 
-/* Leistungskarten */
-
-.service-card{
-  gap:0;
-  min-height:0;
-  padding:0;
-  overflow:hidden;
-}
-
-.service-card-image{
-  position:relative;
-  width:100%;
-  height:150px;
-  flex-shrink:0;
-  overflow:hidden;
-  background-color:var(--muted);
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  filter:
-    saturate(0.84)
-    contrast(0.97)
-    brightness(0.98);
-  transition:filter 300ms ease;
-}
-
-.service-card-image::after,
-.advantage-card-image::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:linear-gradient(
-    180deg,
-    rgba(255,255,255,0.03),
-    rgba(15,23,36,0.09)
-  );
-}
-
-.service-card:hover .service-card-image,
-.advantage-card:hover .advantage-card-image{
-  filter:
-    saturate(0.95)
-    contrast(1)
-    brightness(1);
-}
-
-.service-card-content{
-  display:flex;
-  flex:1;
-  flex-direction:column;
-  gap:8px;
-  min-height:150px;
-  padding:18px 20px 20px;
-  background:var(--surface);
-}
-
-.service-card h3,
-.advantage-card h3{
-  margin:0;
-  color:var(--text);
-  font-size:1.1rem;
-  line-height:1.3;
-}
-
-.service-card p,
-.advantage-card p{
-  margin:0;
-  color:var(--text-soft);
-  font-size:0.95rem;
-  line-height:1.6;
-}
-
-.service-card-content::after,
-.advantage-card-content::after{
-  content:"";
-  display:block;
-  width:42px;
-  height:3px;
-  margin-top:auto;
-  background:var(--accent);
-  border-radius:999px;
-}
-
-.service-repair{
-  background-image:url("projekte/Glasreparatur.png");
-}
-
-.service-shower{
-  background-image:url("projekte/Duschglas.png");
-}
-
-.service-office{
-  background-image:url("projekte/Buerotrennwand.png");
-}
-
-.service-window{
-  background-image:url("projekte/Fensterverglasung.png");
-}
-
-/* Warum-ZofiGlas-Karten */
-
-.advantage-grid{
-  align-items:stretch;
-}
-
-.advantage-card{
-  gap:0;
-  min-height:0;
-  max-width:var(--card-max-width);
-  padding:0;
-  overflow:hidden;
-}
-
-.advantage-card-image{
-  position:relative;
-  width:100%;
-  height:160px;
-  flex-shrink:0;
-  overflow:hidden;
-  background-color:var(--muted);
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  filter:
-    saturate(0.84)
-    contrast(0.97)
-    brightness(0.98);
-  transition:filter 300ms ease;
-}
-
-.advantage-card-content{
-  display:flex;
-  flex:1;
-  flex-direction:column;
+.cards-3 .card{
   align-items:center;
-  gap:10px;
-  min-height:145px;
-  padding:20px 22px 22px;
-  background:var(--surface);
+  max-width:var(--card-max-width);
   text-align:center;
 }
 
-.advantage-local{
-  background-image:url("projekte/Lokal.png");
-}
 
-.advantage-fast{
-  background-image:url("projekte/Schnell.png");
-}
-
-.advantage-custom{
-  background-image:url("projekte/Individuell.png");
-}
-
-/* Referenzen */
+/* =========================
+   Referenzen und Galerie
+   ========================= */
 
 .gallery{
   display:grid;
@@ -625,10 +546,13 @@ textarea{
 }
 
 .project img{
+  display:block;
   width:100%;
   height:230px;
   object-fit:cover;
-  filter:saturate(0.90) contrast(0.98);
+  filter:
+    saturate(0.90)
+    contrast(0.98);
   transition:
     transform 300ms ease,
     filter 300ms ease;
@@ -636,7 +560,9 @@ textarea{
 
 .project:hover img{
   transform:scale(1.02);
-  filter:saturate(1) contrast(1);
+  filter:
+    saturate(1)
+    contrast(1);
 }
 
 .project p{
@@ -647,7 +573,10 @@ textarea{
   text-align:center;
 }
 
-/* Formular */
+
+/* =========================
+   Kontaktformular
+   ========================= */
 
 .contact{
   max-width:820px;
@@ -726,6 +655,11 @@ textarea{
   min-width:0;
 }
 
+
+/* =========================
+   Formularbutton
+   ========================= */
+
 button[type="submit"]{
   padding:14px 20px;
   color:#ffffff;
@@ -734,7 +668,7 @@ button[type="submit"]{
     var(--accent),
     var(--accent-600)
   );
-  border:none;
+  border:0;
   border-radius:999px;
   font-size:1rem;
   font-weight:800;
@@ -756,7 +690,10 @@ button[type="submit"]:hover{
   box-shadow:0 22px 48px rgba(36,169,243,0.35);
 }
 
-/* Karte */
+
+/* =========================
+   Google-Karte
+   ========================= */
 
 .map{
   margin-top:18px;
@@ -774,105 +711,10 @@ button[type="submit"]:hover{
   border:0;
 }
 
-/* Rechtliche Seiten */
 
-.legal-page{
-  min-height:60vh;
-  padding:56px 0;
-  background:var(--muted);
-}
-
-.legal-card{
-  width:100%;
-  max-width:860px;
-  margin:0 auto;
-  padding:36px;
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-top:4px solid var(--accent);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow-sm);
-}
-
-.legal-card h1{
-  margin:0 0 12px;
-  color:var(--text);
-  font-size:2rem;
-  line-height:1.2;
-}
-
-.legal-card h2{
-  margin:30px 0 10px;
-  color:var(--text);
-  font-size:1.25rem;
-  line-height:1.3;
-}
-
-.legal-card h3{
-  margin:20px 0 8px;
-  color:var(--text);
-  font-size:1.05rem;
-}
-
-.legal-card p{
-  margin:0 0 14px;
-  color:var(--text-soft);
-}
-
-.legal-card ul{
-  margin:0 0 16px 22px;
-  color:var(--text-soft);
-}
-
-.legal-card li{
-  margin-bottom:8px;
-}
-
-.legal-card address{
-  margin:0 0 14px;
-  color:var(--text-soft);
-  font-style:normal;
-}
-
-.legal-card a{
-  color:var(--accent-600);
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-.legal-note{
-  margin-top:28px;
-  padding:16px 18px;
-  color:var(--accent-700);
-  background:rgba(36,169,243,0.08);
-  border:1px solid rgba(36,169,243,0.20);
-  border-radius:10px;
-}
-
-.legal-back,
-.legal-home-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 20px;
-  color:#ffffff !important;
-  background:linear-gradient(
-    135deg,
-    var(--accent),
-    var(--accent-600)
-  );
-  border:1px solid transparent;
-  border-radius:999px;
-  font-weight:800;
-  text-decoration:none !important;
-  box-shadow:0 12px 30px rgba(36,169,243,0.22);
-}
-
-.legal-back{
-  margin-top:28px;
-}
-
-/* Footer */
+/* =========================
+   Footer
+   ========================= */
 
 .footer{
   margin-top:48px;
@@ -922,7 +764,10 @@ button[type="submit"]:hover{
   font-size:14px;
 }
 
-/* Fokus und Bedienbarkeit */
+
+/* =========================
+   Fokus und Bedienbarkeit
+   ========================= */
 
 a,
 button,
@@ -948,7 +793,10 @@ label{
   line-height:1.7;
 }
 
-/* Tablet */
+
+/* =========================
+   Tablet bis 900 Pixel
+   ========================= */
 
 @media (max-width:900px){
 
@@ -983,7 +831,10 @@ label{
   }
 }
 
-/* Mobile */
+
+/* =========================
+   Mobile bis 600 Pixel
+   ========================= */
 
 @media (max-width:600px){
 
@@ -998,7 +849,7 @@ label{
   .header-inner{
     flex-direction:column;
     justify-content:flex-start;
-    gap:8px;
+    gap:4px;
     padding:6px 0 12px;
   }
 
@@ -1016,6 +867,11 @@ label{
     max-width:92%;
     max-height:210px;
     margin:0 auto;
+    object-fit:contain;
+    transform:none;
+  }
+
+  .logo a:hover .site-logo{
     transform:none;
   }
 
@@ -1066,7 +922,8 @@ label{
   }
 
   .cards-4,
-  .cards-3{
+  .cards-3,
+  .gallery{
     grid-template-columns:1fr;
   }
 
@@ -1074,35 +931,7 @@ label{
     padding:18px;
   }
 
-  .service-card,
-  .advantage-card{
-    width:100%;
-    max-width:420px;
-    min-height:0;
-    margin:0 auto;
-    padding:0;
-  }
-
-  .service-card-image{
-    height:180px;
-  }
-
-  .service-card-content{
-    min-height:0;
-    padding:17px 18px 19px;
-  }
-
-  .advantage-card-image{
-    height:190px;
-  }
-
-  .advantage-card-content{
-    min-height:0;
-    padding:18px 20px 20px;
-  }
-
   .gallery{
-    grid-template-columns:1fr;
     gap:14px;
   }
 
@@ -1125,21 +954,12 @@ label{
   .map iframe{
     min-height:300px;
   }
-
-  .legal-page{
-    padding:32px 0;
-  }
-
-  .legal-card{
-    padding:26px 20px;
-  }
-
-  .legal-card h1{
-    font-size:1.65rem;
-  }
 }
 
-/* Sehr kleine Displays */
+
+/* =========================
+   Sehr kleine Displays
+   ========================= */
 
 @media (max-width:420px){
 
@@ -1165,20 +985,15 @@ label{
     font-size:1.2rem;
   }
 
-  .service-card-image{
-    height:165px;
-  }
-
-  .advantage-card-image{
-    height:170px;
-  }
-
   .project img{
     height:180px;
   }
 }
 
-/* Reduzierte Animationen */
+
+/* =========================
+   Reduzierte Animationen
+   ========================= */
 
 @media (prefers-reduced-motion:reduce){
 
