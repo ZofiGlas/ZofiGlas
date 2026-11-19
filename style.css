@@ -1,6 +1,6 @@
 /* =========================
    style.css – ZofiGlas
-   Bereinigter Stand Version 13.1
+   Zusammengeführter Stand Version 13.2
    ========================= */
 
 
@@ -447,7 +447,7 @@ textarea{
 
 
 /* =========================
-   Karten
+   Allgemeine Karten
    ========================= */
 
 .cards-4,
@@ -510,6 +510,109 @@ textarea{
   align-items:center;
   max-width:var(--card-max-width);
   text-align:center;
+}
+
+
+/* =========================
+   Leistungskarten mit Bildern
+   ========================= */
+
+.service-card{
+  gap:0;
+  min-height:0;
+  padding:0;
+  overflow:hidden;
+}
+
+.service-card-image{
+  position:relative;
+  width:100%;
+  height:150px;
+  flex-shrink:0;
+  overflow:hidden;
+  background-color:var(--muted);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  filter:
+    saturate(0.86)
+    contrast(0.97)
+    brightness(0.98);
+  transition:filter 300ms ease;
+}
+
+.service-card-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.03),
+    rgba(15,23,36,0.08)
+  );
+}
+
+.service-card:hover .service-card-image{
+  filter:
+    saturate(0.96)
+    contrast(1)
+    brightness(1);
+}
+
+.service-card-content{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  gap:8px;
+  min-height:150px;
+  padding:18px 20px 20px;
+  background:var(--surface);
+}
+
+.service-card h3{
+  margin:0;
+  color:var(--text);
+  font-size:1.1rem;
+  line-height:1.3;
+}
+
+.service-card p{
+  margin:0;
+  color:var(--text-soft);
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+.service-card-content::after{
+  content:"";
+  display:block;
+  width:42px;
+  height:3px;
+  margin-top:auto;
+  background:var(--accent);
+  border-radius:999px;
+}
+
+
+/* =========================
+   Bilder der Leistungskarten
+   ========================= */
+
+.service-repair{
+  background-image:url("projekte/Glasreparatur.png");
+}
+
+.service-shower{
+  background-image:url("projekte/Duschglas.png");
+}
+
+.service-office{
+  background-image:url("projekte/B%C3%BCrotrennwand.png");
+}
+
+.service-window{
+  background-image:url("projekte/Fensterverglasung.png");
 }
 
 
@@ -694,6 +797,10 @@ button[type="submit"]:hover{
   );
   transform:translateY(-3px);
   box-shadow:0 22px 48px rgba(36,169,243,0.35);
+}
+
+button[type="submit"]:active{
+  transform:translateY(-1px);
 }
 
 
@@ -937,6 +1044,20 @@ label{
     padding:18px;
   }
 
+  .service-card{
+    min-height:0;
+    padding:0;
+  }
+
+  .service-card-image{
+    height:160px;
+  }
+
+  .service-card-content{
+    min-height:0;
+    padding:17px 18px 19px;
+  }
+
   .gallery{
     gap:14px;
   }
@@ -989,6 +1110,10 @@ label{
 
   .hero h1{
     font-size:1.2rem;
+  }
+
+  .service-card-image{
+    height:145px;
   }
 
   .project img{
