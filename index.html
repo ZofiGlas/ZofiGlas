@@ -75,10 +75,10 @@
   }
   </script>
 
-  <!-- Passend zur wiederhergestellten CSS-Version -->
+  <!-- Passend zur bereinigten CSS-Version -->
   <link
     rel="stylesheet"
-    href="style.css?v=13.0">
+    href="style.css?v=13.1">
 </head>
 
 <body>
@@ -165,13 +165,8 @@
           class="phone-cta"
           aria-label="ZofiGlas anrufen unter 079 662 81 06">
 
-          <span aria-hidden="true">
-            ☎
-          </span>
-
-          <span>
-            079 662 81 06
-          </span>
+          <span aria-hidden="true">☎</span>
+          <span>079 662 81 06</span>
 
         </a>
 
@@ -244,9 +239,11 @@
 
         <div class="cards-4">
 
-          <article class="card">
+          <article
+            class="card"
+            aria-labelledby="leistung-glasreparatur">
 
-            <h3>
+            <h3 id="leistung-glasreparatur">
               Glasreparatur
             </h3>
 
@@ -256,9 +253,11 @@
 
           </article>
 
-          <article class="card">
+          <article
+            class="card"
+            aria-labelledby="leistung-duschglas">
 
-            <h3>
+            <h3 id="leistung-duschglas">
               Duschglas
             </h3>
 
@@ -269,9 +268,11 @@
 
           </article>
 
-          <article class="card">
+          <article
+            class="card"
+            aria-labelledby="leistung-buerotrennwand">
 
-            <h3>
+            <h3 id="leistung-buerotrennwand">
               Bürotrennwand
             </h3>
 
@@ -281,9 +282,11 @@
 
           </article>
 
-          <article class="card">
+          <article
+            class="card"
+            aria-labelledby="leistung-fensterverglasung">
 
-            <h3>
+            <h3 id="leistung-fensterverglasung">
               Fensterverglasung
             </h3>
 
@@ -446,11 +449,18 @@
           Warum ZofiGlas
         </h2>
 
+        <p class="lead">
+          Persönlicher Service, kurze Wege und Lösungen, die zu Ihrem
+          Projekt passen.
+        </p>
+
         <div class="cards-3">
 
-          <article class="card">
+          <article
+            class="card"
+            aria-labelledby="vorteil-lokal">
 
-            <h3>
+            <h3 id="vorteil-lokal">
               Lokal
             </h3>
 
@@ -460,9 +470,11 @@
 
           </article>
 
-          <article class="card">
+          <article
+            class="card"
+            aria-labelledby="vorteil-schnell">
 
-            <h3>
+            <h3 id="vorteil-schnell">
               Schnell
             </h3>
 
@@ -472,9 +484,11 @@
 
           </article>
 
-          <article class="card">
+          <article
+            class="card"
+            aria-labelledby="vorteil-individuell">
 
-            <h3>
+            <h3 id="vorteil-individuell">
               Individuell
             </h3>
 
@@ -523,13 +537,13 @@
               name="_subject"
               value="Neue Offertanfrage für ZofiGlas">
 
-            <!-- Deutsche Danke-Seite -->
+            <!-- Deutsche Bestätigungsseite -->
             <input
               type="hidden"
               name="_next"
               value="https://zofiglas.github.io/ZofiGlas/danke.html">
 
-            <!-- Tabellenansicht -->
+            <!-- Tabellenansicht in der E-Mail -->
             <input
               type="hidden"
               name="_template"
@@ -541,7 +555,7 @@
               name="_captcha"
               value="false">
 
-            <!-- Deutsche automatische Bestätigung -->
+            <!-- Deutsche automatische Antwort -->
             <input
               type="hidden"
               name="_autoresponse"
